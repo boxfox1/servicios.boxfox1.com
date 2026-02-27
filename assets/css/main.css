@@ -1,0 +1,1859 @@
+/* =========================================================
+   Boxfox1 — main.css (Consolidado / Limpio / Sin duplicados)
+   - Fondo forzado html/body
+   - overscroll y overflow-x controlado
+   - Navegación sticky + panel móvil
+   - Iconos footer SIN recuadro
+   - WhatsApp FAB con color real y sin hover “lavado”
+   ========================================================= */
+
+:root {
+  --fondo: #ffffff;
+  --grisBanda: #f3f5f8;
+  --grisHero: #e3e8ee;
+
+  --texto: #0f172a;
+  --muted: rgba(15, 23, 42, 0.7);
+
+  --linea: rgba(15, 23, 42, 0.12);
+  --linea2: rgba(15, 23, 42, 0.18);
+
+  --azul: #1a78ff;
+  --azulSuave: rgba(26, 120, 255, 0.1);
+
+  --ambar: #ff9f1a;
+  --ambarSuave: rgba(255, 159, 26, 0.14);
+
+  --verde: #0ea86b;
+  --verdeSuave: rgba(14, 168, 107, 0.14);
+
+  --mando: #0b1220;
+
+  --wrap: 1140px;
+
+  --sombra: 0 12px 28px rgba(2, 6, 23, 0.1);
+  --sombra2: 0 6px 14px rgba(2, 6, 23, 0.06);
+
+  --gNegra: 2px;
+  --gAzul: 1px;
+  --azulCorta: 110px;
+}
+
+/* =========================
+   Estabilidad visual global
+   ========================= */
+html,
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  margin: 0;
+  padding: 0;
+  overscroll-behavior-y: none;
+  overflow-x: clip;
+}
+
+body {
+  font-family:
+    "Roboto",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Arial,
+    "Noto Sans",
+    "Helvetica Neue",
+    sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(26, 120, 255, 0.55);
+  outline-offset: 3px;
+}
+
+.wrap {
+  width: min(var(--wrap), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+/* ===== Skip ===== */
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: #fff;
+  color: #000;
+  padding: 10px 12px;
+  border: 1px solid var(--linea);
+  z-index: 9999;
+}
+
+.skip:focus {
+  left: 10px;
+}
+
+/* =========================
+   Tira superior
+   ========================= */
+.tira {
+  background: #070d18;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tira__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  font-size: 12px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.sep {
+  color: rgba(15, 23, 42, 0.45);
+}
+
+.tira .muted,
+.tira .sep,
+.tira .chip {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.tira .chip {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border: 1px solid var(--linea);
+  background: #fff;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* =========================
+   Cabecera / Nav
+   ========================= */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--mando);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cabecera.is-scrolled {
+  box-shadow: var(--sombra2);
+}
+
+.cabecera__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.marca__logo {
+  height: 34px;
+  width: auto;
+}
+
+.marca__tag {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 12px;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__link {
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid transparent;
+  position: relative;
+  background: transparent;
+}
+
+.nav__link:hover {
+  background: rgba(26, 120, 255, 0.18);
+  border-color: rgba(26, 120, 255, 0.35);
+}
+
+.nav__link.is-active {
+  background: rgba(26, 120, 255, 0.14);
+  border-color: rgba(26, 120, 255, 0.26);
+  border-radius: 4px;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 159, 26, 0.28);
+  left: 10px;
+  right: 10px;
+  bottom: 6px;
+  height: 2px;
+  background: rgba(26, 120, 255, 0.95);
+}
+
+/* CTA navbar — Diagnóstico */
+.nav__link--cta {
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 159, 26, 0.08);
+  color: rgba(255, 255, 255, 0.95);
+
+  font-weight: 700;
+  transition:
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.nav__link--cta:hover {
+  background: rgba(255, 159, 26, 0.14);
+  border-color: rgba(255, 159, 26, 0.45);
+  transform: translateY(-1px);
+}
+
+/* ===== Móvil ===== */
+.navbtn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.navbtn__line {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.78);
+  margin: 4px auto;
+}
+
+.panel {
+  display: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(11, 18, 32, 0.98);
+}
+
+.panel.is-open {
+  display: block;
+}
+
+.panel__inner {
+  padding: 14px 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.panel__link {
+  padding: 12px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.panel__link--cta {
+  background: rgba(255, 159, 26, 0.12);
+  border-color: rgba(255, 159, 26, 0.22);
+}
+
+.panel__meta {
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.panel__metaTitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.panel__metaLink {
+  display: block;
+  padding: 8px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+/* =========================
+   Tipografía utilitaria
+   ========================= */
+.label {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.55);
+  font-weight: 700;
+}
+
+.h1 {
+  margin: 10px 0 10px;
+  font-size: clamp(34px, 4vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  max-width: 20ch;
+}
+
+.h2 {
+  margin: 10px 0 8px;
+  font-size: clamp(22px, 2.2vw, 30px);
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.h3 {
+  margin: 10px 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.lead {
+  margin: 0 0 14px;
+  color: rgba(15, 23, 42, 0.78);
+  font-size: 15.5px;
+  max-width: 70ch;
+}
+
+/* =========================
+   Hero
+   ========================= */
+.hero {
+  padding: 44px 0 28px; /* antes 42/26 y padding-bottom 90 */
+  padding-bottom: 44px; /* baja el “hueco” */
+  border-bottom: 1px solid var(--linea2);
+  position: relative;
+  padding-bottom: 50px;
+  background: #dee1e4; /* gris técnico suave */
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border: 1px solid var(--linea2);
+  background: #fff;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: rgba(15, 23, 42, 0.68);
+  font-size: 12px;
+}
+
+.kicker__dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(26, 120, 255, 0.95);
+}
+
+/* ===== Botones ===== */
+.hero__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--linea2);
+  font-weight: 700;
+  font-size: 13px;
+  transition:
+    transform 0.12s ease,
+    background 0.12s ease,
+    border-color 0.12s ease;
+  user-select: none;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primario {
+  background: var(--azulSuave);
+  border-color: rgba(26, 120, 255, 0.24);
+}
+
+.btn--primario:hover {
+  background: rgba(26, 120, 255, 0.14);
+  border-color: rgba(26, 120, 255, 0.32);
+}
+
+.btn--secundario {
+  background: #fff;
+  border-color: rgba(15, 23, 42, 0.14);
+}
+
+.btn--secundario:hover {
+  background: rgba(26, 120, 255, 0.06);
+  border-color: rgba(26, 120, 255, 0.2);
+}
+
+/* ===== Tarjeta derecha del hero ===== */
+.heroCard {
+  border: 1px solid var(--linea2);
+  background: #fff;
+  padding: 16px;
+  box-shadow: var(--sombra);
+  border: 1px solid rgba(15, 23, 42, 0.2);
+}
+
+.heroCard__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.heroCard__title {
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.pill {
+  padding: 6px 10px;
+  font-weight: 800;
+  font-size: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.pill--ok {
+  border-color: rgba(14, 168, 107, 0.22);
+  background: var(--verdeSuave);
+}
+
+.heroCard__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mini {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.06);
+  padding: 12px;
+}
+
+.mini__k {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.58);
+  font-weight: 700;
+}
+
+.mini__v {
+  margin-top: 6px;
+  font-weight: 800;
+  color: rgba(15, 23, 42, 0.86);
+  font-size: 13px;
+}
+
+.heroCard__foot {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--linea2);
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.link {
+  color: rgba(26, 120, 255, 0.95);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Secciones
+   ========================= */
+.seccion {
+  position: relative;
+  padding: 54px 0;
+  background: #fff;
+  border-top: 1px solid var(--linea2);
+  padding-block: 50px;
+}
+
+.seccion--banda {
+  background: var(--grisBanda);
+}
+
+/* ===== Centro mando (oscuro) ===== */
+.seccion--mando {
+  background: var(--mando);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.seccion--mando .p,
+.seccion--mando .muted,
+.seccion--mando .label {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.seccion--mando .h2,
+.seccion--mando .h3 {
+  color: #fff;
+}
+
+.seccion__head {
+  margin-bottom: 18px;
+  max-width: 78ch;
+  padding-left: 14px;
+  border-left: 4px solid var(--azul);
+}
+
+.seccion--mando .seccion__head {
+  border-left-color: var(--ambar);
+}
+
+/* =========================
+   Grids
+   ========================= */
+.cards3,
+.tiles,
+.flow,
+.trustGrid,
+.cta2,
+.contact {
+  display: grid;
+  gap: 12px;
+}
+
+.cards3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tiles {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.flow {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.trustGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cta2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+/* =========================
+   Cards / Tiles / Steps / CTA
+   ========================= */
+.card,
+.tile,
+.step,
+.trust,
+.cta,
+.contactCard {
+  position: relative;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  background: #fff;
+  padding: 16px;
+  box-shadow: var(--sombra2);
+  font-weight: 400;
+  border-top: 3px solid var(--azul);
+}
+
+.card::before,
+.tile::before,
+.step::before,
+.trust::before,
+.cta::before,
+.contactCard::before {
+  content: none !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(15, 23, 42, 0.16); /* antes ~.10 */
+  border-top: 3px solid rgba(26, 120, 255, 0.85); /* antes 2px y .65 */
+  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.07); /* un toque más marcado */
+}
+
+.card::before {
+  background: var(--azul);
+}
+
+/* Icono card (para SVG / Bootstrap icons) */
+.card__icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(26, 120, 255, 0.2);
+  background: rgba(26, 120, 255, 0.1);
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.78);
+}
+
+.card__icon svg {
+  width: 18px;
+  height: 18px;
+  fill: rgba(15, 23, 42, 0.78);
+}
+
+.list {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: rgba(15, 23, 42, 0.82);
+  font-weight: 500;
+}
+
+.list li {
+  margin: 6px 0;
+}
+
+.list--tight li {
+  margin: 5px 0;
+}
+
+.card__cta {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.microcta {
+  font-weight: 800;
+  color: rgba(26, 120, 255, 0.95);
+}
+
+.microcta:hover {
+  text-decoration: underline;
+}
+
+/* ===== Tiles ===== */
+.tile {
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.tile:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+  border-color: rgba(26, 120, 255, 0.2);
+}
+
+.tile__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: rgba(26, 120, 255, 0.1);
+  border: 1px solid rgba(26, 120, 255, 0.18);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  color: rgba(15, 23, 42, 0.72);
+}
+
+.badge--ambar {
+  background: rgba(255, 159, 26, 0.14);
+  border-color: rgba(255, 159, 26, 0.22);
+}
+
+.badge--verde {
+  background: rgba(14, 168, 107, 0.12);
+  border-color: rgba(14, 168, 107, 0.2);
+}
+
+.tile__num {
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.55);
+}
+
+.tile__title {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 15px;
+}
+
+.tile__desc {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tile__more {
+  margin-top: 14px;
+  font-weight: 900;
+  color: rgba(26, 120, 255, 0.95);
+}
+
+.tile__more::after {
+  content: "";
+  display: block;
+  margin-top: 8px;
+  height: 1px;
+  background: rgba(15, 23, 42, 0.08);
+}
+
+/* ===== Steps ===== */
+.step__num {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: rgba(26, 120, 255, 0.12);
+  border: 1px solid rgba(26, 120, 255, 0.18);
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.step__title {
+  margin-top: 10px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.step__desc {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ===== Trust ===== */
+.trust__k {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.55);
+  font-weight: 700;
+}
+
+.trust__v {
+  margin-top: 8px;
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.86);
+}
+
+/* ===== CTA cards ===== */
+.cta__tag {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.55);
+  font-weight: 700;
+}
+
+.seccion--bottom {
+  padding-bottom: 0;
+}
+
+/* =========================
+   Overrides modo mando (oscuro)
+   ========================= */
+.seccion--mando .card,
+.seccion--mando .tile,
+.seccion--mando .step,
+.seccion--mando .trust,
+.seccion--mando .cta,
+.seccion--mando .contactCard {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.seccion--mando .btn--primario {
+  background: rgba(26, 120, 255, 0.18);
+  border-color: rgba(26, 120, 255, 0.32);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.seccion--mando .btn--primario:hover {
+  background: rgba(26, 120, 255, 0.26);
+  border-color: rgba(26, 120, 255, 0.4);
+}
+
+.seccion--mando .btn--secundario {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.seccion--mando .btn--secundario:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.seccion--mando .list {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 500;
+}
+
+/* =========================
+   Contacto
+   ========================= */
+.contactCard--soft {
+  background: #fff;
+}
+
+.seccion--mando .contactCard--soft {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contactCard__title {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+/* Títulos dentro de soft card: borde correcto en claro, y override en mando */
+.contactCard--soft .contactCard__title {
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+  letter-spacing: 0.02em;
+}
+
+.seccion--mando .contactCard--soft .contactCard__title {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: #fff;
+  margin: 8px 0;
+  transition: background 0.12s ease;
+}
+
+.contactRow:hover {
+  background: rgba(26, 120, 255, 0.06);
+}
+
+.seccion--mando .contactRow {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.seccion--mando .contactRow:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contactRow__k {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.55);
+}
+
+.contactRow__v {
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.85);
+}
+
+.seccion--mando .contactRow__k {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.seccion--mando .contactRow__v {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Grid interno para “Qué incluye / Resultado esperado” */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.contactGrid > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contactGrid .list {
+  margin-top: 8px;
+}
+
+/* =========================
+   CTA (Infraestructura conocimiento)
+   Botones con más presencia (como pediste)
+   ========================= */
+.cta .btn {
+  margin-top: 14px;
+  padding: 12px 18px;
+}
+
+.cta .btn--secundario {
+  background: rgba(26, 120, 255, 0.08);
+  border-color: rgba(26, 120, 255, 0.25);
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.cta .btn--secundario:hover {
+  background: rgba(26, 120, 255, 0.15);
+  border-color: rgba(26, 120, 255, 0.35);
+}
+
+/* =========================
+   Footer
+   ========================= */
+.footer {
+  margin-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.footer__inner {
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer__col {
+  min-width: 240px;
+}
+
+.footer__col--right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.footer__legal {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__link--legal {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.footer__link--legal:hover {
+  text-decoration: underline;
+}
+
+.footer__icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Iconos footer SIN recuadro */
+.iconlink {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.12s ease;
+}
+
+.iconlink:hover {
+  background: transparent;
+  border: none;
+  opacity: 0.75;
+  transform: translateY(-1px);
+}
+
+.iconlink svg {
+  width: 18px;
+  height: 18px;
+  fill: rgba(255, 255, 255, 0.92);
+}
+
+/* WhatsApp FAB */
+.wafab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.22);
+  z-index: 60;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
+}
+
+.wafab:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 16px 36px rgba(2, 6, 23, 0.3);
+  filter: brightness(0.98);
+}
+
+.wafab:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+.wafab img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+/* SOLO si tu whatsapp.svg viene negro */
+.wafab img.is-black {
+  filter: invert(1);
+}
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 860px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .cards3,
+  .tiles,
+  .flow,
+  .trustGrid,
+  .cta2,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .navbtn {
+    display: inline-flex;
+  }
+
+  .marca__tag {
+    display: none;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__col--right {
+    align-items: flex-start;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+/* =========================
+   Contacto (interior page)
+   ========================= */
+.subhero {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.06),
+    rgba(15, 23, 42, 0)
+  );
+  border-bottom: 1px solid var(--linea2);
+  padding: 42px 0 22px;
+}
+.subhero__inner {
+  max-width: 82ch;
+}
+.subhero__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border: 1px solid var(--linea2);
+  background: #fff;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: rgba(15, 23, 42, 0.68);
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contactPage {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 14px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .contactPage {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   FORMULARIO CONTACTO
+   ========================================================= */
+
+.form {
+  margin-top: 18px;
+}
+
+.form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field--full {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+.field label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #3d4a5c;
+}
+
+/* Inputs */
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1.5px solid var(--linea2);
+  background: #fff;
+  color: var(--texto);
+  font-family: inherit;
+  font-size: 15px;
+  padding: 10px 12px;
+  outline: none;
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Focus industrial */
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(26, 120, 255, 0.12);
+}
+
+/* Help text */
+.help {
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.55);
+}
+
+/* Consent */
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid var(--linea2);
+  background: #fff;
+  font-size: 14px;
+}
+
+/* Botones */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .form__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.consent {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: rgba(255, 255, 255, 0.75);
+}
+.consent input {
+  margin-top: 3px;
+}
+
+.contactMini {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+}
+.contactMini__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.1);
+}
+.contactMini__row:last-child {
+  border-bottom: none;
+}
+.contactMini__k {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.62);
+}
+
+.privacyBox {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+}
+.contact-page {
+  min-height: calc(100vh - 260px);
+}
+.contactInfo {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+}
+/* HERO CONTACTO = mismo fondo que index */
+.contactHero {
+  background: #f3f5f8; /* mismo gris del hero index */
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+.hero--contact {
+  padding: 44px 0 26px; /* similar al index; ajusta si quieres */
+  border-bottom: 1px solid var(--linea2);
+}
+/* =========================
+   Modal Privacidad (V3)
+   ========================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 120;
+}
+.modal.is-open {
+  display: block;
+}
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.62);
+}
+.modal__panel {
+  position: relative;
+  width: min(720px, calc(100% - 40px));
+  margin: 10vh auto 0;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  box-shadow: var(--sombra);
+  padding: 18px;
+}
+.modal__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+.modal__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 1px solid var(--linea2);
+  background: #fff;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: rgba(15, 23, 42, 0.68);
+  font-size: 12px;
+}
+.modal__x {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #fff;
+  cursor: pointer;
+}
+.modal__x:hover {
+  background: rgba(26, 120, 255, 0.06);
+  border-color: rgba(26, 120, 255, 0.2);
+}
+.modal__actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+body.is-modal-open {
+  overflow: hidden;
+}
+.heroLine {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heroLine__k {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.58);
+}
+
+/* 👇 clave para que corra a lo largo */
+.heroLine__flow {
+  max-width: none; /* quita límite de .h1 */
+  width: 100%;
+  line-height: 1.05;
+}
+
+/* opcional */
+.heroLine__sub {
+  max-width: none;
+}
+.callout {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #f3f5f8; /* fondo claro industrial */
+  border-radius: 4px;
+}
+
+.callout__k {
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.callout__v {
+  color: rgba(15, 23, 42, 0.75);
+  line-height: 1.5;
+}
+
+.microcta {
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 6px;
+}
+.ctaBand {
+  margin-top: 24px;
+  padding: 18px 20px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #f3f5f8; /* mismo gris del sistema */
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.ctaBand__k {
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.ctaBand__v {
+  color: rgba(15, 23, 42, 0.75);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .ctaBand {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.softHr {
+  border: 0;
+  border-top: 2px solid rgba(15, 23, 42, 0.15);
+  margin: 50px 0;
+}
+.callout__v {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .callout__v {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.iconlink img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  /* negro → blanco */
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+}
+.iconlink:hover img {
+  opacity: 0.75;
+}
+/* ========================================
+   BOTONES HERO NOMs — diferenciación
+   ======================================== */
+
+/* Paquete Maestro (acción técnica) */
+.btn--paquete {
+  background: rgba(255, 159, 26, 0.14);
+  border-color: rgba(255, 159, 26, 0.35);
+  color: #0f172a;
+}
+
+.btn--paquete:hover {
+  background: rgba(255, 159, 26, 0.22);
+  transform: translateY(-1px);
+}
+
+/* Solicitar diagnóstico (CTA principal) */
+.btn--diagnostico {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.45);
+  font-weight: 800;
+}
+
+.btn--diagnostico:hover {
+  background: rgba(16, 185, 129, 0.22);
+  transform: translateY(-1px);
+}
+/* Botones tipo “tabs” (navegación interna consistente) */
+.btn--tab {
+  background: rgba(26, 120, 255, 0.1);
+  border: 1px solid rgba(26, 120, 255, 0.28);
+  color: #0f172a;
+  font-weight: 600;
+}
+.btn--tab:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.98);
+}
+
+/* CTA principal (consistente: verde = acción) */
+.btn--cta {
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #0f172a;
+  font-weight: 700;
+}
+.btn--cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.97);
+}
+.tira__inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Diagnóstico en tira → jerarquía baja */
+.tira__cta {
+  background: transparent;
+  border: none;
+  padding: 0 2px;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+  font-size: 13px;
+
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-left: auto; /* ← esto lo manda completamente a la derecha */
+}
+/* línea inferior estilo nav */
+.tira__cta:hover::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 4px;
+  background: #1a78ff;
+}
+
+/* hover sutil */
+.tira__cta:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+/* CTA suave: "Diagnóstico" */
+.nav__link--soft {
+  background: transparent;
+  border-color: rgba(26, 120, 255, 0.22);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.nav__link--soft:hover {
+  background: rgba(26, 120, 255, 0.16);
+  border-color: rgba(26, 120, 255, 0.3);
+}
+/* ========================================
+   Tira: Diagnóstico (solo borde + activo)
+   Se activa con .is-active en esas páginas
+   ======================================== */
+.tira__cta {
+  /* ya tienes margin-left:auto; bien */
+  display: inline-flex;
+  align-items: center;
+
+  /* QUE NO SE QUEDE “texto suelto” */
+  padding: 6px 10px; /* antes 0 2px */
+  border: 1px solid rgba(255, 255, 255, 0.22); /* borde visible */
+  border-radius: 6px;
+
+  background: transparent !important; /* conserva el fondo */
+  text-decoration: none;
+  position: relative; /* para ::after controlado */
+}
+
+/* Hover: mismo fondo (transparente) + borde un poco más fuerte */
+.tira__cta:hover {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.38);
+  color: #fff;
+  text-decoration: none; /* evita underline + linea doble */
+}
+
+/* Línea inferior estilo "Contacto", pero bien controlada */
+.tira__cta:hover::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 4px;
+  height: 2px;
+  background: rgba(26, 120, 255, 0.95);
+  border-radius: 2px;
+}
+
+/* Activo: NO cambia fondo, solo refuerza borde + línea fija */
+.tira__cta.is-active {
+  background: transparent !important;
+  border-color: rgba(26, 120, 255, 0.55);
+  color: #fff;
+}
+
+/* Activo con línea (sin “cuadrito” raro) */
+.tira__cta.is-active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 4px;
+  height: 2px;
+  background: rgba(26, 120, 255, 0.95);
+  border-radius: 2px;
+}
+/* Tira CTA Diagnóstico: barra inferior 1px */
+.tira__cta:hover::after,
+.tira__cta.is-active::after {
+  height: 1px !important;
+  bottom: 6px; /* ajusta 4–6 según se vea */
+  opacity: 0.85;
+}
+/* ===============================
+   Diagnóstico — tira superior
+   línea fina + hover correcto
+   =============================== */
+
+/* línea MUY fina (activo) */
+.tira__cta.is-active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 5px;
+
+  height: 1px;
+  opacity: 0.25; /* ← se ve más delgada */
+  transform: scaleY(0.85); /* ← efecto <1px */
+  transform-origin: center;
+
+  background: rgba(26, 120, 255, 0.9);
+}
+
+/* hover visible (solo cuando pasas el mouse) */
+.tira__cta.is-active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 5px;
+
+  height: 1px;
+  background: rgba(26, 120, 255, 0.55); /* ← más suave */
+}
+.page-brigadas hr.brig-hr {
+  border: 0 !important;
+  height: 1px;
+  background: rgba(15, 23, 42, 0.1);
+  margin: 26px 0;
+}
+.hero--banner {
+  background:
+    linear-gradient(180deg, rgba(11, 18, 32, 0.72), rgba(11, 18, 32, 0.35)),
+    url("../assets/img/hero/brigadas.webp");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.hero--banner .heroLine__k {
+  color: rgba(255, 255, 255, 0.78);
+}
+.hero--banner .lead {
+  color: rgba(255, 255, 255, 0.86);
+}
+.hero--banner .kicker {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.88);
+}
+.hero--banner .kicker__dot {
+  background: rgba(255, 159, 26, 0.95);
+}
+
+/* Layout contenido */
+.cols {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 12px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Accordions V3 */
+.acc {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: rgba(26, 120, 255, 0.035);
+  box-shadow: var(--sombra2);
+}
+.acc + .acc {
+  margin-top: 10px;
+}
+details.acc {
+  overflow: hidden;
+}
+details.acc > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+details.acc > summary::-webkit-details-marker {
+  display: none;
+}
+.acc__meta {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.62);
+}
+.acc__caret {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(15, 23, 42, 0.02);
+  flex: 0 0 auto;
+}
+details[open].acc > summary .acc__caret {
+  background: rgba(26, 120, 255, 0.08);
+  border-color: rgba(26, 120, 255, 0.2);
+}
+.acc__body {
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 14px 16px 16px;
+}
+.acc__k {
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+.acc__benef {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(15, 23, 42, 0.14);
+  color: rgba(15, 23, 42, 0.74);
+  font-size: 13px;
+}
+
+
+/* CTA final */
+.ctaInline {
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid rgba(26, 120, 255, 0.2);
+  background: rgba(26, 120, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.ctaInline__k {
+  font-weight: 900;
+}
+.ctaInline__v {
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 13px;
+  margin-top: 4px;
+}
+/* SOLO acordeones (forzado y visible) */
+details.acc,
+details.acc > summary,
+details.acc .acc__body {
+  background: #e9edf1 !important;
+}
