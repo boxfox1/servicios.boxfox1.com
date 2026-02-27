@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GGRX2Q2LLB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-GGRX2Q2LLB");
+    </script>
+
+    <title>Checklists STPS | Servicios Industriales Boxfox1</title>
+    <meta
+      name="description"
+      content="Biblioteca técnica de checklists STPS Boxfox1: recursos PDF para autoevaluación preliminar de brigadas, NOMs, documentación y cumplimiento industrial."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0b1220" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Checklists STPS | Boxfox1" />
+    <meta
+      property="og:description"
+      content="Biblioteca técnica: checklists PDF para autoevaluación preliminar (brigadas, NOMs y documentación) con enfoque industrial."
+    />
+    <meta
+      property="og:url"
+      content="https://servicios.boxfox1.com/stps/checklists/"
+    />
+    <meta property="og:site_name" content="Boxfox1" />
+
+    <link rel="icon" href="../../assets/img/favicon.ico" />
+
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Ajustes LOCALES (solo esta página) -->
+    <style>
+      /* Lista técnica tipo “biblioteca” */
+      .dl {
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        background: #fff;
+        padding: 16px;
+      }
+      .dl + .dl {
+        margin-top: 12px;
+      }
+
+      .dlRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px dashed rgba(15, 23, 42, 0.12);
+      }
+      .dlRow:last-child {
+        border-bottom: none;
+      }
+
+      .dlRow__l {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        min-width: 0;
+      }
+
+      .dlRow__k {
+        font-weight: 900;
+        letter-spacing: -0.01em;
+        color: rgba(15, 23, 42, 0.9);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 70ch;
+      }
+
+      .dlRow__m {
+        font-size: 12px;
+        color: rgba(15, 23, 42, 0.62);
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .dlRow__a {
+        flex: 0 0 auto;
+      }
+
+      .noteBox {
+        margin-top: 14px;
+        padding: 14px 16px;
+        border: 1px solid rgba(255, 159, 26, 0.22);
+        background: rgba(255, 159, 26, 0.08);
+      }
+      .noteBox__k {
+        font-weight: 900;
+        margin-bottom: 6px;
+      }
+      .noteBox__v {
+        color: rgba(15, 23, 42, 0.78);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      /* “Catálogo” por categorías (dos columnas si cabe) */
+      .catGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      @media (max-width: 900px) {
+        .catGrid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        background: rgba(26, 120, 255, 0.06);
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 11px;
+        color: rgba(15, 23, 42, 0.74);
+        margin-bottom: 10px;
+      }
+
+      .quick {
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(15, 23, 42, 0.1);
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip" href="#principal">Saltar al contenido</a>
+
+    <!-- Tira superior -->
+    <div class="tira" role="note" aria-label="Identidad y alcance">
+      <div class="wrap tira__inner">
+        <span class="chip">Industry Standard</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">NOM-STPS</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">Checklists técnicas</span>
+
+        <a
+          class="nav__link nav__link--soft tira__cta"
+          href="../diagnostico-industrial.html"
+        >
+          Diagnóstico
+        </a>
+      </div>
+    </div>
+
+    <!-- Cabecera -->
+    <header class="cabecera" data-cabecera>
+      <div class="wrap cabecera__inner">
+        <a
+          class="marca"
+          href="../../index.html#inicio"
+          aria-label="Ir al inicio"
+        >
+          <img
+            class="marca__logo"
+            src="../../assets/img/boxfox1.logo.white.svg"
+            alt="Boxfox1"
+            width="170"
+            height="40"
+            loading="eager"
+            decoding="async"
+          />
+          <span class="marca__tag">Servicios Industriales</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav__link" href="../../index.html#inicio">Inicio</a>
+          <a class="nav__link" href="../index.html">Sistema STPS</a>
+          <a class="nav__link" href="../cursos-para-la-industria.html"
+            >Cursos para la industria</a
+          >
+          <a class="nav__link" href="../cursos-noms.html">Cursos de NOMs</a>
+          <a
+            class="nav__link"
+            href="https://corporativo.boxfox1.com"
+            target="_blank"
+            rel="noopener"
+            >Corporativo</a
+          >
+          <a class="nav__link" href="#contacto">Contacto</a>
+        </nav>
+
+        <button
+          class="navbtn"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          data-navbtn
+        >
+          <span class="navbtn__line" aria-hidden="true"></span>
+          <span class="navbtn__line" aria-hidden="true"></span>
+          <span class="navbtn__line" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Panel móvil -->
+      <div class="panel" data-panel aria-hidden="true">
+        <div class="wrap panel__inner">
+          <a class="panel__link" href="../../index.html#inicio">Inicio</a>
+          <a class="panel__link" href="../index.html">Sistema STPS</a>
+          <a class="panel__link" href="../cursos-para-la-industria.html"
+            >Cursos para la industria</a
+          >
+          <a class="panel__link" href="../cursos-noms.html">Cursos de NOMs</a>
+          <a
+            class="panel__link"
+            href="https://corporativo.boxfox1.com"
+            target="_blank"
+            rel="noopener"
+            >Corporativo</a
+          >
+          <a class="panel__link panel__link--cta" href="#contacto">Contacto</a>
+
+          <div class="panel__meta">
+            <div class="panel__metaTitle">Contacto directo</div>
+            <a
+              class="panel__metaLink"
+              href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20Checklists%20STPS&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20sobre%20checklists%20y%20paquetes%20completos%20para%20cumplimiento%20STPS.%0A%0AEmpresa%3A%0ACiudad%2FPlanta%3A%0A"
+              >info@boxfox1.com</a
+            >
+            <a
+              class="panel__metaLink"
+              target="_blank"
+              rel="noopener"
+              href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20sobre%20checklists%20y%20paquetes%20completos%20STPS.%0A%0AEmpresa%3A%20%0ACiudad%2FPlanta%3A%20"
+              >WhatsApp 444 498 9198</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="principal">
+      <!-- HERO V3 -->
+      <section
+        class="hero hero--compact hero--dark"
+        aria-label="Entrada principal"
+      >
+        <div class="wrap">
+          <div class="heroLine">
+            <div class="heroLine__k">SISTEMA BOXFOX1</div>
+            <div class="h1 heroLine__flow">Checklists STPS</div>
+
+            <p class="lead heroLine__sub">
+              Biblioteca técnica con recursos PDF para
+              <strong>autoevaluación preliminar</strong>, control inicial y
+              preparación documental. Útiles para brigadas, cumplimiento
+              NOM-STPS y auditoría industrial.
+            </p>
+
+            <div class="hero__actions" style="margin-top: 12px">
+              <a class="btn btn--tab" href="../index.html">Sistema STPS</a>
+              <a class="btn btn--tab" href="../cursos-noms.html">Ver NOMs</a>
+              <a class="btn btn--cta" href="../diagnostico-industrial.html"
+                >Solicitar diagnóstico</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENIDO -->
+      <section class="seccion" aria-label="Biblioteca de checklists">
+        <div class="wrap">
+          <header class="seccion__head">
+            <div class="label">RECURSOS</div>
+            <h2 class="h2">Centro de descargas</h2>
+            <p class="p">
+              Checklists base para control interno. Si requieres la versión
+              completa por giro/área, te la integramos en paquete (Hub) con
+              evidencia y formatos.
+            </p>
+          </header>
+
+          <div class="noteBox">
+            <div class="noteBox__k">Nota</div>
+            <div class="noteBox__v">
+              Estas checklists son guías de referencia para autoevaluación
+              preliminar. No sustituyen capacitación formal, procedimientos
+              internos ni diagnóstico específico del centro de trabajo.
+            </div>
+          </div>
+
+          <div class="quick">
+            <a class="btn btn--primario" href="#brigadas">Brigadas</a>
+            <a class="btn btn--primario" href="#noms">NOMs</a>
+            <a class="btn btn--primario" href="#documentacion">Documentación</a>
+          </div>
+
+          <!-- BRIGADAS -->
+          <header class="seccion__head" id="brigadas" style="margin-top: 26px">
+            <div class="label">CATEGORÍA</div>
+            <h2 class="h2">Brigadas industriales</h2>
+            <p class="p">
+              Descargas base para implementación inicial y simulacros.
+            </p>
+          </header>
+
+          <div class="dl">
+            <div class="tag">BRIGADAS</div>
+
+            <!-- AJUSTA NOMBRES EXACTOS -->
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Brigada Contra Incendio
+                </div>
+                <div class="dlRow__m">PDF · Autoevaluación preliminar</div>
+              </div>
+              <div class="dlRow__a">
+                <a
+                  class="link"
+                  target="_blank"
+                  rel="noopener"
+                  href="./checklist-brigada-contra-incendio.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Brigada de Evacuación
+                </div>
+                <div class="dlRow__m">PDF · Control inicial</div>
+              </div>
+              <div class="dlRow__a">
+                <a
+                  class="link"
+                  target="_blank"
+                  rel="noopener"
+                  href="./checklist-brigada-evacuacion.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Brigada de Primeros Auxilios
+                </div>
+                <div class="dlRow__m">PDF · Preparación y equipo</div>
+              </div>
+              <div class="dlRow__a">
+                <a
+                  class="link"
+                  target="_blank"
+                  rel="noopener"
+                  href="./checklist-brigada-primeros-auxilios.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- NOMS -->
+          <header class="seccion__head" id="noms" style="margin-top: 26px">
+            <div class="label">CATEGORÍA</div>
+            <h2 class="h2">NOM-STPS</h2>
+            <p class="p">Descargas base por norma (según aplicación y giro).</p>
+          </header>
+
+          <div class="dl">
+            <div class="tag">NOM-STPS</div>
+
+            <!-- EJEMPLOS, AJUSTA -->
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — NOM-002-STPS (Prevención y protección
+                  contra incendios)
+                </div>
+                <div class="dlRow__m">PDF · Evidencia y control</div>
+              </div>
+              <div class="dlRow__a">
+                <a
+                  class="link"
+                  target="_blank"
+                  rel="noopener"
+                  href="./checklist-nom-002-stps.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- DOCUMENTACIÓN -->
+          <header
+            class="seccion__head"
+            id="documentacion"
+            style="margin-top: 26px"
+          >
+            <div class="label">CATEGORÍA</div>
+            <h2 class="h2">Documentación</h2>
+            <p class="p">Recursos base para orden documental y auditoría.</p>
+          </header>
+
+          <div class="dl">
+            <div class="tag">DOCUMENTACIÓN</div>
+
+            <!-- EJEMPLOS, AJUSTA -->
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Documentación DC-3 (control y expediente)
+                </div>
+                <div class="dlRow__m">PDF · Control documental</div>
+              </div>
+              <div class="dlRow__a">
+                <a
+                  class="link"
+                  target="_blank"
+                  rel="noopener"
+                  href="./checklist-documentacion-dc3.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA diagnóstico -->
+          <div class="ctaInline" style="margin-top: 16px">
+            <div>
+              <div class="ctaInline__k">
+                ¿Quieres el paquete completo por giro/área?
+              </div>
+              <div class="ctaInline__v">
+                Integramos checklists completas, formatos, evidencias y ruta
+                30/60/90 días con diagnóstico.
+              </div>
+            </div>
+            <a class="btn btn--cta" href="../diagnostico-industrial.html"
+              >Solicitar diagnóstico NOM-STPS</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO + FOOTER (ESTÁNDAR) -->
+      <section
+        id="contacto"
+        class="seccion seccion--mando seccion--bottom"
+        aria-label="Contacto y pie"
+      >
+        <div class="wrap">
+          <header class="seccion__head">
+            <div class="label">04 · CONTACTO</div>
+            <h2 class="h2">Solicitar diagnóstico</h2>
+            <p class="p">
+              Respondemos por correo o WhatsApp. (Incluye origen:
+              servicios.boxfox1.com)
+            </p>
+          </header>
+
+          <div class="contact">
+            <div class="contactCard">
+              <div class="contactCard__title">Contacto directo</div>
+
+              <a
+                class="contactRow"
+                href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20Checklists%20STPS&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20sobre%20checklists%20y%20paquetes%20completos%20para%20cumplimiento%20STPS.%0A%0AEmpresa%3A%0ACiudad%2FPlanta%3A%0A"
+              >
+                <span class="contactRow__k">Enviar mensaje por correo →</span>
+                <span class="contactRow__v">info@boxfox1.com</span>
+              </a>
+
+              <a
+                class="contactRow"
+                target="_blank"
+                rel="noopener"
+                href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20sobre%20checklists%20y%20paquetes%20completos%20STPS.%0A%0AEmpresa%3A%20%0ACiudad%2FPlanta%3A%20"
+              >
+                <span class="contactRow__k">Enviar mensaje por WhatsApp →</span>
+                <span class="contactRow__v">+52 444 498 9198</span>
+              </a>
+            </div>
+
+            <div class="contactCard contactCard--soft">
+              <div class="contactGrid">
+                <div>
+                  <div class="contactCard__title">Qué incluye</div>
+                  <ul class="list list--tight">
+                    <li>Brechas por área y criticidad</li>
+                    <li>Alcance NOM aplicable</li>
+                    <li>Mapa documental y evidencia</li>
+                    <li>Ruta de implementación</li>
+                    <li>Plan de capacitación por rol</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div class="contactCard__title">Resultado esperado</div>
+                  <ul class="list list--tight">
+                    <li>Diagnóstico claro y accionable</li>
+                    <li>Prioridades definidas por riesgo</li>
+                    <li>Evidencia organizada para auditoría</li>
+                    <li>Base lista para implementación inmediata</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER V3 -->
+        <footer class="footer" aria-label="Pie de página">
+          <div class="wrap footer__inner">
+            <div class="footer__col">
+              <div class="footer__legal">
+                Corporativo Boxfox1 © 2026 &nbsp; | &nbsp;
+                <a
+                  class="footer__link footer__link--legal"
+                  href="#"
+                  data-open-privacy
+                >
+                  Aviso de privacidad
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__col footer__col--right">
+              <div class="footer__icons" aria-label="Redes sociales Boxfox1">
+                <a
+                  class="iconlink"
+                  href="https://blog.boxfox1.com/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Blog Boxfox1"
+                >
+                  <img
+                    src="../../assets/img/icons/blog.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.linkedin.com/company/boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                >
+                  <img
+                    src="../../assets/img/icons/linkedin.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.facebook.com/boxfox1industria/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                >
+                  <img
+                    src="../../assets/img/icons/facebook.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://x.com/Boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="X"
+                >
+                  <img
+                    src="../../assets/img/icons/x.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.instagram.com/boxfox1.industry/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <img
+                    src="../../assets/img/icons/instagram.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://open.spotify.com/show/6O8W2euH2owYs06F3bGgIo"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Spotify"
+                >
+                  <img
+                    src="../../assets/img/icons/spotify.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.youtube.com/@Boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="YouTube"
+                >
+                  <img
+                    src="../../assets/img/icons/youtube.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+      <!-- Botón flotante: WhatsApp -->
+      <a
+        class="wafab"
+        target="_blank"
+        rel="noopener"
+        href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20sobre%20checklists%20STPS."
+        aria-label="Contactar por WhatsApp"
+      >
+        <img
+          src="../../assets/img/icons/whatsapp.svg"
+          alt="WhatsApp"
+          aria-hidden="true"
+        />
+      </a>
+
+      <!-- PRIVACIDAD MODAL (V3) -->
+      <div
+        class="modal"
+        id="privacyModal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="privacyTitle"
+        aria-describedby="privacyDesc"
+      >
+        <div class="modal__backdrop" data-modal-close></div>
+
+        <div class="modal__panel" role="document">
+          <div class="modal__top">
+            <div class="modal__kicker">
+              <span class="kicker__dot" aria-hidden="true"></span>
+              AVISO DE PRIVACIDAD
+            </div>
+
+            <button
+              class="modal__x"
+              type="button"
+              aria-label="Cerrar"
+              data-modal-close
+            >
+              ×
+            </button>
+          </div>
+
+          <h2 class="h2" id="privacyTitle" style="margin-top: 8px">
+            Tratamiento de datos personales
+          </h2>
+
+          <p class="p" id="privacyDesc" style="margin-top: 6px">
+            Al proporcionar tus datos (nombre, empresa, correo y/o teléfono),
+            autorizas a Boxfox1 a utilizarlos únicamente para contactarte, dar
+            seguimiento a tu solicitud y enviarte información relacionada con
+            nuestros servicios. No vendemos ni compartimos tus datos con
+            terceros, salvo cuando sea necesario para cumplir obligaciones
+            legales. Puedes solicitar acceso, rectificación o eliminación de tus
+            datos escribiendo a
+            <a
+              class="link"
+              href="mailto:info@boxfox1.com?subject=Privacidad%20|%20Solicitud%20ARCO&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20ejercer%20mis%20derechos%20ARCO.%0A%0ANombre%3A%0ACorreo%3A%0ASolicitud%3A%0A"
+              >info@boxfox1.com</a
+            >.
+          </p>
+
+          <div class="modal__actions">
+            <button class="btn btn--primario" type="button" data-modal-close>
+              Aceptar
+            </button>
+          </div>
+
+          <p class="muted" style="font-size: 12px; margin-top: 10px">
+            Origen: servicios.boxfox1.com
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="../../assets/js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+User-agent: *
+
+# =========================
+# CONTENIDO PRINCIPAL
+# =========================
+Allow: /
+Allow: /stps/
+
+# =========================
+# BLOQUEOS TÉCNICOS
+# =========================
+
+# recursos internos (si existieran)
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /admin/
+
+# evitar indexación con parámetros
+Disallow: /*?*
+Disallow: /*&*
+
+# =========================
+# ASSETS
+# =========================
+
+# permitir imágenes (SEO visual)
+Allow: /assets/img/
+
+# opcional: bloquear js/css si quieres crawl limpio
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# =========================
+# SISTEMA BOXFOX1
+# =========================
+
+# IMPORTANTE:
+# Si quieres posicionar el diagnóstico, NO bloquear /sistema/
+Allow: /sistema/
+
+# =========================
+# SITEMAP
+# =========================
+Sitemap: https://servicios.boxfox1.com/sitemap.xml
