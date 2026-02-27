@@ -1,285 +1,828 @@
 <!doctype html>
 <html lang="es-MX">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Brigada de Materiales Peligrosos (HAZMAT) | Servicios Industriales Boxfox1</title>
-<meta name="description"
-content="Curso teórico–práctico de Brigada HAZMAT (respuesta inicial). Identificación, control primario, comunicación y coordinación con SCI." />
-<meta name="robots" content="index,follow" />
-<meta name="theme-color" content="#0b1220" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GGRX2Q2LLB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-GGRX2Q2LLB");
+    </script>
 
-<link rel="icon" href="../assets/img/favicon.ico" />
-<link rel="stylesheet" href="../assets/css/main.css" />
+    <title>
+      Brigada de Materiales Peligrosos (HAZMAT) (Curso Teórico–Práctico) |
+      Servicios Industriales Boxfox1
+    </title>
+    <meta
+      name="description"
+      content="Curso teórico–práctico de Brigada HAZMAT (respuesta inicial) para industria. Identificación, evaluación inicial, control primario, comunicación y coordinación con SCI, simulación y evidencias."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0b1220" />
 
-<style>
-.infoGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
-@media(max-width:900px){.infoGrid{grid-template-columns:1fr}}
-.infoCard{background:#fff;border:1px solid rgba(15,23,42,.14);border-top:2px solid rgba(26,120,255,.55);padding:18px}
-.infoCard__k{font-weight:900;margin:0 0 8px}
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Brigada HAZMAT (Respuesta Inicial) (Curso Teórico–Práctico) | Boxfox1"
+    />
+    <meta
+      property="og:description"
+      content="Capacitación industrial para Brigada de Materiales Peligrosos (HAZMAT): identificación, control primario, coordinación con SCI y simulación."
+    />
+    <meta
+      property="og:url"
+      content="https://servicios.boxfox1.com/stps/brigada-de-materiales-peligrosos.html"
+    />
+    <meta property="og:site_name" content="Boxfox1" />
 
-.note{margin-top:14px;padding:14px 16px;border:1px solid rgba(255,159,26,.25);background:rgba(255,159,26,.08)}
-.note__k{font-weight:900;margin-bottom:6px}
-.note__v{font-size:13px;line-height:1.55;color:rgba(15,23,42,.78)}
+    <link rel="icon" href="../assets/img/favicon.ico" />
 
-.ctaInline{
-margin-top:14px;padding:16px;
-border:1px solid rgba(26,120,255,.2);
-background:rgba(26,120,255,.06);
-display:flex;justify-content:space-between;
-align-items:center;gap:14px;flex-wrap:wrap
-}
-.ctaInline__k{font-weight:900}
-.ctaInline__v{font-size:13px;color:rgba(15,23,42,.72)}
-</style>
-</head>
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <link rel="stylesheet" href="../assets/css/main.css" />
 
-<main id="principal">
+    <!-- Ajustes LOCALES V3 (no tocan main.css) -->
+    <style>
+      /* Bloques informativos (rápidos) */
+      .infoGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 10px;
+      }
+      @media (max-width: 900px) {
+        .infoGrid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .infoCard {
+        background: #fff;
+        border: 1px solid rgba(15, 23, 42, 0.14);
+        border-top: 2px solid rgba(26, 120, 255, 0.55);
+        padding: 18px;
+      }
+      .infoCard__k {
+        font-weight: 900;
+        margin: 0 0 8px;
+      }
 
-<!-- HERO -->
-<section class="hero hero--compact hero--dark">
-<div class="wrap">
-<div class="heroLine">
+      /* Nota / CTA */
+      .note {
+        margin-top: 14px;
+        padding: 14px 16px;
+        border: 1px solid rgba(255, 159, 26, 0.25);
+        background: rgba(255, 159, 26, 0.08);
+      }
+      .note__k {
+        font-weight: 900;
+        margin-bottom: 6px;
+      }
+      .note__v {
+        color: rgba(15, 23, 42, 0.78);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .ctaInline {
+        margin-top: 14px;
+        padding: 16px;
+        border: 1px solid rgba(26, 120, 255, 0.2);
+        background: rgba(26, 120, 255, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .ctaInline__k {
+        font-weight: 900;
+      }
+      .ctaInline__v {
+        color: rgba(15, 23, 42, 0.72);
+        font-size: 13px;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
 
-<div class="heroLine__k">SISTEMA BOXFOX1</div>
+  <body>
+    <a class="skip" href="#principal">Saltar al contenido</a>
 
-<div class="h1 heroLine__flow">
-Brigada de Materiales Peligrosos (HAZMAT)
-</div>
+    <!-- Tira superior -->
+    <div class="tira" role="note" aria-label="Identidad y alcance">
+      <div class="wrap tira__inner">
+        <span class="chip">Industry Standard</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">NOM-STPS</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">Brigadas multifuncionales</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">Implementación + Capacitación</span>
 
-<p class="lead heroLine__sub">
-Capacitación para respuesta inicial ante incidentes con materiales peligrosos:
-identificación, control primario seguro, uso básico de EPP y coordinación con el
-Sistema de Comando de Incidentes (SCI).
-</p>
+        <!-- CTA derecha -->
+        <a
+          class="nav__link nav__link--soft tira__cta"
+          href="../stps/diagnostico-industrial.html"
+        >
+          Diagnóstico
+        </a>
+      </div>
+    </div>
 
-<div class="hero__actions">
-<a class="btn btn--primario" href="#temario">Ver temario</a>
-<a class="btn btn--primario" href="#entregables">Entregables</a>
-<a class="btn btn--cta" href="../stps/diagnostico-industrial.html">
-Solicitar diagnóstico
-</a>
-</div>
+    <!-- Cabecera -->
+    <header class="cabecera" data-cabecera>
+      <div class="wrap cabecera__inner">
+        <a class="marca" href="../index.html#inicio" aria-label="Ir al inicio">
+          <img
+            class="marca__logo"
+            src="../assets/img/boxfox1.logo.white.svg"
+            alt="Boxfox1"
+            width="170"
+            height="40"
+            loading="eager"
+            decoding="async"
+          />
+          <span class="marca__tag">Servicios Industriales</span>
+        </a>
 
-</div>
-</div>
-</section>
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav__link" href="../index.html#inicio">Inicio</a>
+          <a class="nav__link" href="../stps/cursos-para-la-industria.html"
+            >Cursos para la industria</a
+          >
+          <a class="nav__link" href="../stps/cursos-noms.html"
+            >Cursos de NOMs</a
+          >
+          <a
+            class="nav__link"
+            href="https://corporativo.boxfox1.com"
+            target="_blank"
+            rel="noopener"
+            >Corporativo</a
+          >
+          <a class="nav__link" href="#contacto">Contacto</a>
+        </nav>
 
-<!-- CONTENIDO -->
-<section class="seccion">
-<div class="wrap">
+        <button
+          class="navbtn"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          data-navbtn
+        >
+          <span class="navbtn__line" aria-hidden="true"></span>
+          <span class="navbtn__line" aria-hidden="true"></span>
+          <span class="navbtn__line" aria-hidden="true"></span>
+        </button>
+      </div>
 
-<header class="seccion__head">
-<div class="label">OBJETIVO DEL CURSO</div>
-<h2 class="h2">Qué lograrán los participantes</h2>
-<p class="p">
-Capacitar al personal para una <strong>respuesta inicial segura</strong>,
-minimizando riesgo al personal y mejorando coordinación con brigadas externas.
-</p>
-</header>
+      <!-- Panel móvil -->
+      <div class="panel" data-panel aria-hidden="true">
+        <div class="wrap panel__inner">
+          <a class="panel__link" href="../index.html#inicio">Inicio</a>
+          <a class="panel__link" href="../stps/cursos-para-la-industria.html"
+            >Cursos para la industria</a
+          >
+          <a class="panel__link" href="../stps/cursos-noms.html"
+            >Cursos de NOMs</a
+          >
+          <a
+            class="panel__link"
+            href="https://corporativo.boxfox1.com"
+            target="_blank"
+            rel="noopener"
+            >Corporativo</a
+          >
+          <a class="panel__link panel__link--cta" href="#contacto">Contacto</a>
 
-<div class="infoGrid">
-<article class="infoCard">
-<h3 class="infoCard__k">¿A quién va dirigido?</h3>
-<ul class="list list--tight">
-<li>Integrantes designados como Brigada HAZMAT</li>
-<li>Supervisores y líderes de turno</li>
-<li>Personal HSE / Seguridad Industrial</li>
-<li>Brigadas multifuncionales</li>
-<li>Participantes del SCI</li>
-</ul>
-</article>
+          <div class="panel__meta">
+            <div class="panel__metaTitle">Contacto directo</div>
+            <a
+              class="panel__metaLink"
+              href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20Brigada%20HAZMAT%20(Respuesta%20Inicial)&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20del%20curso%20Brigada%20de%20Materiales%20Peligrosos%20(HAZMAT)%20(Respuesta%20Inicial)%20(te%C3%B3rico%E2%80%93pr%C3%A1ctico).%0A%0AEmpresa%3A%0ACiudad%2FPlanta%3A%0AN%C3%BAmero%20de%20participantes%3A%0AFechas%20tentativas%3A%0A"
+              >info@boxfox1.com</a
+            >
+            <a
+              class="panel__metaLink"
+              target="_blank"
+              rel="noopener"
+              href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20del%20curso%20Brigada%20de%20Materiales%20Peligrosos%20(HAZMAT)%20(Respuesta%20Inicial)%20(te%C3%B3rico%E2%80%93pr%C3%A1ctico).%0A%0AEmpresa%3A%20%0ACiudad%2FPlanta%3A%20%0AN%C3%BAmero%20de%20participantes%3A%20%0AFechas%20tentativas%3A%20"
+              >WhatsApp 444 498 9198</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
 
-<article class="infoCard">
-<h3 class="infoCard__k">Modalidad</h3>
-<ul class="list list--tight">
-<li>Teórico + práctico</li>
-<li>Adaptado a materiales y riesgos reales del centro de trabajo</li>
-</ul>
+    <main id="principal">
+      <!-- HERO V3 -->
+      <section
+        id="inicio"
+        class="hero hero--compact hero--dark"
+        aria-label="Entrada principal"
+      >
+        <div class="wrap">
+          <div class="heroLine">
+            <div class="heroLine__k">SISTEMA BOXFOX1</div>
 
-<div style="margin-top:12px">
-<h3 class="infoCard__k">Datos rápidos</h3>
-<ul class="list list--tight">
-<li><strong>Duración:</strong> 6 a 8 horas</li>
-<li><strong>Nivel:</strong> Básico / Intermedio</li>
-<li><strong>Constancia:</strong> lista + evaluación</li>
-</ul>
-</div>
-</article>
-</div>
+            <div class="h1 heroLine__flow">
+              Brigada de Materiales Peligrosos (HAZMAT)<br />
+            </div>
 
-<!-- TEMARIO -->
-<header class="seccion__head" id="temario" style="margin-top:28px">
-<div class="label">TEMARIO</div>
-<h2 class="h2">Módulos del curso</h2>
-</header>
+            <p class="lead heroLine__sub">
+              Capacitación aplicada para identificar, aislar y realizar la
+              respuesta inicial segura ante incidentes con materiales peligrosos
+              en el centro de trabajo. Operación controlada, uso básico de EPP,
+              comunicación efectiva y coordinación con brigadas externas
+              especializadas, alineada al Sistema de Comando de Incidentes (SCI).
+            </p>
 
-<details class="acc">
-<summary><div>1) Rol de la Brigada HAZMAT<div class="acc__meta">respuesta inicial</div></div><div class="acc__caret">⌄</div></summary>
-<div class="acc__body">
-<ul class="list list--tight">
-<li>Funciones antes, durante y después</li>
-<li>Alcance y límites de actuación</li>
-<li>Coordinación con mando y externos</li>
-</ul>
-</div>
-</details>
+            <div class="hero__actions" style="margin-top: 12px">
+              <a class="btn btn--primario" href="#temario">Ver temario</a>
+              <a class="btn btn--primario" href="#entregables">Entregables</a>
+              <a class="btn btn--cta" href="../stps/diagnostico-industrial.html"
+                >Solicitar diagnóstico</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-<details class="acc">
-<summary><div>2) Identificación de materiales peligrosos<div class="acc__meta">etiquetas + SDS</div></div><div class="acc__caret">⌄</div></summary>
-<div class="acc__body">
-<ul class="list list--tight">
-<li>Tipos de materiales peligrosos</li>
-<li>Lectura básica de etiquetas y pictogramas</li>
-<li>Reconocimiento visual y documental</li>
-</ul>
-</div>
-</details>
+      <!-- CONTENIDO -->
+      <section class="seccion" aria-label="Contenido del curso">
+        <div class="wrap">
+          <!-- Objetivo -->
+          <header class="seccion__head" style="margin-bottom: 12px">
+            <div class="label">OBJETIVO DEL CURSO</div>
+            <h2 class="h2">Qué lograrán los participantes</h2>
+            <p class="p">
+              Capacitar al personal designado para identificar, aislar y realizar
+              respuesta inicial segura ante incidentes con materiales peligrosos,
+              minimizando riesgos a personas, instalaciones y al medio ambiente,
+              y fortaleciendo la coordinación con el SCI.
+            </p>
+            <p class="p" style="margin-top: 8px">
+              <strong>Nota:</strong> Este curso no sustituye la intervención de
+              brigadas externas especializadas en HAZMAT.
+            </p>
+          </header>
 
-<details class="acc">
-<summary><div>3) Evaluación inicial y seguridad<div class="acc__meta">escena segura</div></div><div class="acc__caret">⌄</div></summary>
-<div class="acc__body">
-<ul class="list list--tight">
-<li>Riesgos inmediatos</li>
-<li>Delimitación y aislamiento</li>
-<li>Uso básico de EPP</li>
-</ul>
-</div>
-</details>
+          <div class="infoGrid">
+            <article class="infoCard">
+              <h3 class="infoCard__k">¿A quién va dirigido?</h3>
+              <ul class="list list--tight">
+                <li>Integrantes designados como Brigada HAZMAT (respuesta inicial)</li>
+                <li>Supervisores, jefaturas y líderes de turno</li>
+                <li>Personal HSE / Seguridad Industrial</li>
+                <li>Integrantes de brigadas de emergencia multifuncionales</li>
+                <li>Personal que participa en el SCI (roles internos)</li>
+              </ul>
+            </article>
 
-<details class="acc">
-<summary><div>4) Control primario del incidente<div class="acc__meta">acciones permitidas</div></div><div class="acc__caret">⌄</div></summary>
-<div class="acc__body">
-<ul class="list list--tight">
-<li>Contención inicial</li>
-<li>Ventilación e identificación de fuentes</li>
-<li>Protección de drenajes / áreas sensibles</li>
-</ul>
-</div>
-</details>
+            <article class="infoCard">
+              <h3 class="infoCard__k">Modalidad</h3>
+              <ul class="list list--tight">
+                <li>Teórico + práctico (demostraciones, ejercicios y simulación)</li>
+                <li>
+                  En planta o aula, adaptado a <strong>materiales, procesos y sustancias</strong>
+                  del centro de trabajo
+                </li>
+              </ul>
 
-<details class="acc">
-<summary><div>5) Comunicación y notificación<div class="acc__meta">SCI</div></div><div class="acc__caret">⌄</div></summary>
-<div class="acc__body">
-<ul class="list list--tight">
-<li>Reportes al Comandante del Incidente</li>
-<li>Activación de servicios externos</li>
-</ul>
-</div>
-</details>
+              <div style="margin-top: 12px">
+                <h3 class="infoCard__k">Datos rápidos</h3>
+                <ul class="list list--tight">
+                  <li><strong>Duración sugerida:</strong> 6 a 8 horas</li>
+                  <li><strong>Nivel:</strong> Básico / Intermedio</li>
+                  <li><strong>Constancia:</strong> lista de asistencia + evaluación</li>
+                </ul>
+              </div>
+            </article>
+          </div>
 
-<details class="acc">
-<summary><div>6) Coordinación con brigadas externas</div><div class="acc__caret">⌄</div></summary>
-<div class="acc__body">
-<ul class="list list--tight">
-<li>Preparación del sitio</li>
-<li>Apoyo logístico</li>
-<li>Control perimetral</li>
-</ul>
-</div>
-</details>
+          <!-- Temario -->
+          <header
+            class="seccion__head"
+            id="temario"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">TEMARIO</div>
+            <h2 class="h2">Módulos del curso</h2>
+            <p class="p">
+              Temario modular para ejecución real: identificación, evaluación inicial,
+              control primario, comunicación y coordinación con SCI.
+            </p>
+          </header>
 
-<details class="acc">
-<summary><div>7) Registro y actuación posterior</div><div class="acc__caret">⌄</div></summary>
-<div class="acc__body">
-<ul class="list list--tight">
-<li>Bitácora del incidente</li>
-<li>Lecciones aprendidas</li>
-</ul>
-</div>
-</details>
+          <details class="acc">
+            <summary>
+              <div>
+                1) Rol de la Brigada HAZMAT
+                <div class="acc__meta">respuesta inicial</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Función antes, durante y después de un incidente</li>
+                <li>Alcances y límites de actuación</li>
+                <li>Coordinación con mando, otras brigadas y servicios externos</li>
+              </ul>
+            </div>
+          </details>
 
-<details class="acc">
-<summary><div>8) Ejercicio práctico (simulación)</div><div class="acc__caret">⌄</div></summary>
-<div class="acc__body">
-<ul class="list list--tight">
-<li>Escenario controlado</li>
-<li>Comunicación y cierre</li>
-</ul>
-</div>
-</details>
+          <details class="acc">
+            <summary>
+              <div>
+                2) Identificación de materiales peligrosos
+                <div class="acc__meta">etiquetas + pictogramas + SDS</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Tipos de materiales peligrosos (químicos, biológicos, inflamables, corrosivos)</li>
+                <li>Lectura de etiquetas, pictogramas y hojas de seguridad (SDS)</li>
+                <li>Reconocimiento visual y documental</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- METODOLOGIA -->
-<header class="seccion__head" style="margin-top:28px">
-<div class="label">EJECUCIÓN</div>
-<h2 class="h2">Metodología</h2>
-</header>
+          <details class="acc">
+            <summary>
+              <div>
+                3) Evaluación inicial y seguridad de la escena
+                <div class="acc__meta">aislamiento + control de accesos</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Identificación de riesgos inmediatos</li>
+                <li>Delimitación y aislamiento del área</li>
+                <li>Control de accesos</li>
+                <li>Uso de EPP básico para respuesta inicial</li>
+              </ul>
+            </div>
+          </details>
 
-<div class="infoGrid">
-<article class="infoCard">
-<h3 class="infoCard__k">Metodología</h3>
-<ul class="list list--tight">
-<li>Teoría aplicada a industria</li>
-<li>Simulación controlada</li>
-<li>Evaluación práctica con checklist</li>
-</ul>
-</article>
+          <details class="acc">
+            <summary>
+              <div>
+                4) Control primario del incidente
+                <div class="acc__meta">acciones permitidas / prohibidas</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Acciones iniciales permitidas y prohibidas</li>
+                <li>Contención básica (sin intervención especializada)</li>
+                <li>Ventilación, eliminación de fuentes de ignición</li>
+                <li>Protección de drenajes y áreas sensibles (cuando aplique)</li>
+              </ul>
+            </div>
+          </details>
 
-<article class="infoCard" id="entregables">
-<h3 class="infoCard__k">Entregables</h3>
-<ul class="list list--tight">
-<li>Manual digital</li>
-<li>Lista de asistencia</li>
-<li>Checklist Brigada HAZMAT</li>
-</ul>
-</article>
-</div>
+          <details class="acc">
+            <summary>
+              <div>
+                5) Comunicación y notificación
+                <div class="acc__meta">reportes + activación externa</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Comunicación con brigada de comunicación</li>
+                <li>Reportes al Comandante del Incidente</li>
+                <li>Activación de servicios externos especializados</li>
+                <li>Información crítica a proporcionar</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- DESCARGABLE -->
-<header class="seccion__head" style="margin-top:28px">
-<div class="label">RECURSOS</div>
-<h2 class="h2">Descargables para tu empresa</h2>
-</header>
+          <details class="acc">
+            <summary>
+              <div>
+                6) Coordinación con brigadas externas
+                <div class="acc__meta">sitio + apoyo logístico</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Preparación del sitio para intervención externa</li>
+                <li>Entrega de información técnica</li>
+                <li>Apoyo logístico y control perimetral</li>
+                <li>Restricción de reingreso</li>
+              </ul>
+            </div>
+          </details>
 
-<div class="infoCard">
-<a class="link" href="#">📎 Descargar checklist base (PDF)</a>
+          <details class="acc">
+            <summary>
+              <div>
+                7) Registro y actuación posterior
+                <div class="acc__meta">bitácora + reporte + mejora</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Bitácora del incidente</li>
+                <li>Reporte de acciones realizadas</li>
+                <li>Lecciones aprendidas</li>
+                <li>Revisión de procedimientos y mejoras</li>
+              </ul>
+            </div>
+          </details>
 
-<div class="note">
-<div class="note__k">Nota</div>
-<div class="note__v">
-Guía básica de referencia. No sustituye capacitación especializada ni
-intervención HAZMAT avanzada.
-</div>
-</div>
-</div>
+          <details class="acc">
+            <summary>
+              <div>
+                8) Ejercicio práctico (simulación)
+                <div class="acc__meta">escenario + ejecución + cierre</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Escenario simulado con material peligroso</li>
+                <li>Identificación, aislamiento y comunicación</li>
+                <li>Evaluación, retroalimentación y cierre</li>
+              </ul>
+            </div>
+          </details>
 
-<!-- CTA -->
-<div class="ctaInline">
-<div>
-<div class="ctaInline__k">¿Tu empresa cumple con brigada HAZMAT?</div>
-<div class="ctaInline__v">
-Diagnóstico rápido de cumplimiento y definición de plan de acción.
-</div>
-</div>
-<a class="btn btn--cta" href="../stps/diagnostico-industrial.html">
-Solicitar diagnóstico
-</a>
-</div>
+          <!-- Metodología / Entregables -->
+          <header
+            class="seccion__head"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">EJECUCIÓN</div>
+            <h2 class="h2">Metodología</h2>
+            <p class="p">
+              Entrenamiento aplicado con enfoque industrial y evidencia para auditoría.
+            </p>
+          </header>
 
-<!-- BENEFICIOS -->
-<header class="seccion__head" style="margin-top:28px">
-<div class="label">IMPACTO</div>
-<h2 class="h2">Beneficios para la empresa</h2>
-</header>
+          <div class="infoGrid">
+            <article class="infoCard">
+              <h3 class="infoCard__k">Metodología</h3>
+              <ul class="list list--tight">
+                <li>Teoría aplicada con ejemplos industriales reales</li>
+                <li>Prácticas supervisadas de respuesta inicial</li>
+                <li>Simulación de escenarios controlados</li>
+                <li>Evaluación práctica mediante checklist</li>
+              </ul>
+            </article>
 
-<div class="infoCard">
-<ul class="list list--tight">
-<li>Respuesta inicial segura</li>
-<li>Reducción de exposición del personal</li>
-<li>Mejor coordinación con servicios externos</li>
-<li>Evidencia documental para auditoría</li>
-<li>Operación alineada al SCI</li>
-</ul>
-</div>
+            <article class="infoCard" id="entregables">
+              <h3 class="infoCard__k">Entregables</h3>
+              <ul class="list list--tight">
+                <li>Manual digital del participante</li>
+                <li>Lista de asistencia</li>
+                <li>Evaluación teórica y práctica</li>
+                <li><strong>Checklist</strong> de Brigada HAZMAT (respuesta inicial)</li>
+                <li>(Opcional) Formatos: bitácora HAZMAT, reporte de incidente, control de área</li>
+              </ul>
+            </article>
+          </div>
 
-</div>
-</section>
+          <!-- Descargables -->
+          <header
+            class="seccion__head"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">RECURSOS</div>
+            <h2 class="h2">Descargables para tu empresa</h2>
+            <p class="p">
+              Checklist base de referencia (PDF) para una autoevaluación preliminar.
+            </p>
+          </header>
 
-</main>
+          <div class="infoCard">
+            <a class="link" href="#" aria-label="Descargar checklist PDF"
+              >📎 Descargar checklist básico (PDF)</a
+            >
+            <div class="note" style="margin-top: 12px">
+              <div class="note__k">Nota</div>
+              <div class="note__v">
+                Esta checklist es una guía básica de referencia. No sustituye la
+                capacitación formal, los procedimientos internos ni un diagnóstico
+                específico del centro de trabajo. El cumplimiento total depende de
+                giro, procesos, materiales, nivel de riesgo y condiciones reales.
+              </div>
+            </div>
+          </div>
 
-<script src="../assets/js/main.js" defer></script>
-</body>
+          <!-- CTA diagnóstico -->
+          <div class="ctaInline" style="margin-top: 16px">
+            <div>
+              <div class="ctaInline__k">
+                ¿No sabes si tu empresa cumple con esta brigada / normativa?
+              </div>
+              <div class="ctaInline__v">
+                Diagnóstico rápido de cumplimiento (sin costo). Te ayudamos a
+                identificar brechas y definir un plan de acción.
+              </div>
+            </div>
+            <a class="btn btn--cta" href="../stps/diagnostico-industrial.html"
+              >Solicitar diagnóstico NOM-STPS</a
+            >
+          </div>
+
+          <!-- Beneficios -->
+          <header
+            class="seccion__head"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">IMPACTO</div>
+            <h2 class="h2">Beneficios para la empresa</h2>
+            <p class="p">
+              Respuesta inicial segura, reducción de exposición y evidencia para auditoría.
+            </p>
+          </header>
+
+          <div class="infoCard">
+            <ul class="list list--tight">
+              <li>Respuesta inicial segura ante incidentes con materiales peligrosos</li>
+              <li>Reducción del riesgo por exposición del personal</li>
+              <li>Mejor coordinación con autoridades y servicios especializados</li>
+              <li><strong>Evidencia documental</strong> para auditorías</li>
+              <li>Operación alineada al Sistema de Comando de Incidentes</li>
+            </ul>
+          </div>
+
+          <header class="seccion__head" style="margin-top: 18px; margin-bottom: 8px">
+            <div class="label">NOTA IMPORTANTE</div>
+          </header>
+          <div class="infoCard">
+            <p class="p" style="margin: 0">
+              Este curso está enfocado a <strong>respuesta inicial</strong>, aislamiento y notificación.
+              No incluye ni sustituye operaciones HAZMAT avanzadas o especializadas.
+            </p>
+          </div>
+
+          <div class="ctaInline">
+            <div>
+              <div class="ctaInline__k">¿Quieres cotización o fechas?</div>
+              <div class="ctaInline__v">
+                Envíanos participantes estimados, sede y fechas tentativas.
+              </div>
+            </div>
+            <a class="btn btn--primario" href="#contacto">Contactar ahora</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO + FOOTER (ESTÁNDAR) -->
+      <section
+        id="contacto"
+        class="seccion seccion--mando seccion--bottom"
+        aria-label="Contacto y pie"
+      >
+        <div class="wrap">
+          <header class="seccion__head">
+            <div class="label">04 · CONTACTO</div>
+            <h2 class="h2">Solicitar diagnóstico</h2>
+            <p class="p">
+              Respondemos por correo o WhatsApp. (Incluye origen:
+              servicios.boxfox1.com)
+            </p>
+          </header>
+
+          <div class="contact">
+            <div class="contactCard">
+              <div class="contactCard__title">Contacto directo</div>
+
+              <a
+                class="contactRow"
+                href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20Brigada%20HAZMAT%20(Respuesta%20Inicial)&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20del%20curso%20Brigada%20de%20Materiales%20Peligrosos%20(HAZMAT)%20(Respuesta%20Inicial)%20(te%C3%B3rico%E2%80%93pr%C3%A1ctico).%0A%0AEmpresa%3A%0ACiudad%2FPlanta%3A%0AN%C3%BAmero%20de%20participantes%3A%0AFechas%20tentativas%3A%0A"
+              >
+                <span class="contactRow__k">Enviar mensaje por correo →</span>
+                <span class="contactRow__v">info@boxfox1.com</span>
+              </a>
+
+              <a
+                class="contactRow"
+                target="_blank"
+                rel="noopener"
+                href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20del%20curso%20Brigada%20de%20Materiales%20Peligrosos%20(HAZMAT)%20(Respuesta%20Inicial)%20(te%C3%B3rico%E2%80%93pr%C3%A1ctico).%0A%0AEmpresa%3A%20%0ACiudad%2FPlanta%3A%20%0AN%C3%BAmero%20de%20participantes%3A%20%0AFechas%20tentativas%3A%20"
+              >
+                <span class="contactRow__k">Enviar mensaje por WhatsApp →</span>
+                <span class="contactRow__v">+52 444 498 9198</span>
+              </a>
+            </div>
+
+            <div class="contactCard contactCard--soft">
+              <div class="contactGrid">
+                <div>
+                  <div class="contactCard__title">Qué incluye</div>
+                  <ul class="list list--tight">
+                    <li>Brechas por área y criticidad</li>
+                    <li>Alcance NOM aplicable</li>
+                    <li>Mapa documental y evidencia</li>
+                    <li>Ruta de implementación</li>
+                    <li>Plan de capacitación por rol</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div class="contactCard__title">Resultado esperado</div>
+                  <ul class="list list--tight">
+                    <li>Diagnóstico claro y accionable</li>
+                    <li>Prioridades definidas por riesgo</li>
+                    <li>Evidencia organizada para auditoría</li>
+                    <li>Base lista para implementación inmediata</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER V3 -->
+        <footer class="footer" aria-label="Pie de página">
+          <div class="wrap footer__inner">
+            <div class="footer__col">
+              <div class="footer__legal">
+                Corporativo Boxfox1 © 2026 &nbsp; | &nbsp;
+                <a
+                  class="footer__link footer__link--legal"
+                  href="#"
+                  data-open-privacy
+                >
+                  Aviso de privacidad
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__col footer__col--right">
+              <div class="footer__icons" aria-label="Redes sociales Boxfox1">
+                <a
+                  class="iconlink"
+                  href="https://blog.boxfox1.com/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Blog Boxfox1"
+                >
+                  <img src="../assets/img/icons/blog.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.linkedin.com/company/boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                >
+                  <img src="../assets/img/icons/linkedin.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.facebook.com/boxfox1industria/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                >
+                  <img src="../assets/img/icons/facebook.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://x.com/Boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="X"
+                >
+                  <img src="../assets/img/icons/x.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.instagram.com/boxfox1.industry/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <img src="../assets/img/icons/instagram.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://open.spotify.com/show/6O8W2euH2owYs06F3bGgIo"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Spotify"
+                >
+                  <img src="../assets/img/icons/spotify.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.youtube.com/@Boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="YouTube"
+                >
+                  <img src="../assets/img/icons/youtube.svg" alt="" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+      <!-- Botón flotante: WhatsApp -->
+      <a
+        class="wafab"
+        target="_blank"
+        rel="noopener"
+        href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20del%20curso%20Brigada%20de%20Materiales%20Peligrosos%20(HAZMAT)%20(Respuesta%20Inicial)%20(te%C3%B3rico%E2%80%93pr%C3%A1ctico)."
+        aria-label="Contactar por WhatsApp"
+      >
+        <img src="../assets/img/icons/whatsapp.svg" alt="WhatsApp" aria-hidden="true" />
+      </a>
+
+      <!-- PRIVACIDAD MODAL (V3) -->
+      <div
+        class="modal"
+        id="privacyModal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="privacyTitle"
+        aria-describedby="privacyDesc"
+      >
+        <div class="modal__backdrop" data-modal-close></div>
+
+        <div class="modal__panel" role="document">
+          <div class="modal__top">
+            <div class="modal__kicker">
+              <span class="kicker__dot" aria-hidden="true"></span>
+              AVISO DE PRIVACIDAD
+            </div>
+
+            <button
+              class="modal__x"
+              type="button"
+              aria-label="Cerrar"
+              data-modal-close
+            >
+              ×
+            </button>
+          </div>
+
+          <h2 class="h2" id="privacyTitle" style="margin-top: 8px">
+            Tratamiento de datos personales
+          </h2>
+
+          <p class="p" id="privacyDesc" style="margin-top: 6px">
+            Al proporcionar tus datos (nombre, empresa, correo y/o teléfono),
+            autorizas a Boxfox1 a utilizarlos únicamente para contactarte, dar
+            seguimiento a tu solicitud y enviarte información relacionada con
+            nuestros servicios. No vendemos ni compartimos tus datos con
+            terceros, salvo cuando sea necesario para cumplir obligaciones
+            legales. Puedes solicitar acceso, rectificación o eliminación de tus
+            datos escribiendo a
+            <a
+              class="link"
+              href="mailto:info@boxfox1.com?subject=Privacidad%20|%20Solicitud%20ARCO&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20ejercer%20mis%20derechos%20ARCO.%0A%0ANombre%3A%0ACorreo%3A%0ASolicitud%3A%0A"
+              >info@boxfox1.com</a
+            >.
+          </p>
+
+          <div class="modal__actions">
+            <button class="btn btn--primario" type="button" data-modal-close>
+              Aceptar
+            </button>
+          </div>
+
+          <p class="muted" style="font-size: 12px; margin-top: 10px">
+            Origen: servicios.boxfox1.com
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
 </html>
