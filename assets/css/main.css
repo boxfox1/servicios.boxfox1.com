@@ -1857,3 +1857,14 @@ details.acc > summary,
 details.acc .acc__body {
   background: #e9edf1 !important;
 }
+.link-more{
+  color: var(--azul);
+  font-weight: 700;
+  margin-left: 10px;   /* un poco más de aire */
+  font-size: .95em;    /* ligeramente más fino */
+  white-space: nowrap; /* evita salto raro */
+}
+
+.link-more:hover{
+  text-decoration: underline;
+}
