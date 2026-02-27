@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Brigada de Primeros Auxilios | Servicios Industriales Boxfox1</title>
+
+<meta name="description"
+content="Curso teórico–práctico de Brigada de Primeros Auxilios. Atención inicial, evaluación del lesionado, estabilización y coordinación con el Sistema de Comando de Incidentes." />
+
+<meta name="theme-color" content="#0b1220" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Brigada de Primeros Auxilios | Boxfox1" />
+<meta property="og:url"
+content="https://servicios.boxfox1.com/stps/brigada-de-primeros-auxilios.html" />
+
+<link rel="stylesheet" href="../assets/css/main.css" />
+
+<style>
+.infoGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+@media(max-width:900px){.infoGrid{grid-template-columns:1fr}}
+.infoCard{
+background:#fff;
+border:1px solid rgba(15,23,42,.14);
+border-top:2px solid rgba(26,120,255,.55);
+padding:18px;
+}
+.infoCard__k{font-weight:900;margin:0 0 8px}
+.note{margin-top:12px;padding:14px;border:1px solid rgba(255,159,26,.25);background:rgba(255,159,26,.08)}
+.note__k{font-weight:900;margin-bottom:5px}
+.note__v{font-size:13px;line-height:1.55}
+.ctaInline{
+margin-top:14px;padding:16px;
+border:1px solid rgba(26,120,255,.2);
+background:rgba(26,120,255,.06);
+display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap
+}
+.ctaInline__k{font-weight:900}
+.ctaInline__v{font-size:13px;color:rgba(15,23,42,.7)}
+</style>
+</head>
+
+<body>
+
+<main id="principal">
+
+<!-- HERO -->
+<section class="hero hero--compact hero--dark">
+<div class="wrap">
+<div class="heroLine">
+
+<div class="heroLine__k">SISTEMA BOXFOX1</div>
+
+<div class="h1 heroLine__flow">
+Brigada de Primeros Auxilios
+</div>
+
+<p class="lead heroLine__sub">
+Capacitación práctica para brindar atención inmediata y segura a personas lesionadas
+hasta la llegada de servicios médicos especializados, reduciendo la gravedad de lesiones.
+</p>
+
+<div class="hero__actions">
+<a class="btn btn--primario" href="#temario">Ver temario</a>
+<a class="btn btn--primario" href="#entregables">Entregables</a>
+<a class="btn btn--cta" href="../stps/diagnostico-industrial.html">
+Solicitar diagnóstico
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTENIDO -->
+<section class="seccion">
+<div class="wrap">
+
+<header class="seccion__head">
+<div class="label">OBJETIVO DEL CURSO</div>
+<h2 class="h2">Qué lograrán los participantes</h2>
+<p class="p">
+Responder de forma organizada ante emergencias médicas, estabilizando al lesionado
+y coordinando acciones bajo el Sistema de Comando de Incidentes.
+</p>
+</header>
+
+<div class="infoGrid">
+<article class="infoCard">
+<h3 class="infoCard__k">¿A quién va dirigido?</h3>
+<ul class="list list--tight">
+<li>Integrantes de Brigada de Primeros Auxilios</li>
+<li>Supervisores y líderes de turno</li>
+<li>Personal HSE / Seguridad Industrial</li>
+<li>Brigadas multifuncionales</li>
+<li>Participantes del SCI</li>
+</ul>
+</article>
+
+<article class="infoCard">
+<h3 class="infoCard__k">Modalidad</h3>
+<ul class="list list--tight">
+<li>Teórico + práctico (simulación)</li>
+<li>Adaptado al riesgo y perfil del personal</li>
+</ul>
+
+<div style="margin-top:12px">
+<h3 class="infoCard__k">Datos rápidos</h3>
+<ul class="list list--tight">
+<li><strong>Duración:</strong> 6 a 8 horas</li>
+<li><strong>Nivel:</strong> Básico / Intermedio</li>
+<li><strong>Constancia:</strong> lista + evaluación</li>
+</ul>
+</div>
+</article>
+</div>
+
+<!-- TEMARIO -->
+<header class="seccion__head" id="temario" style="margin-top:28px">
+<div class="label">TEMARIO</div>
+<h2 class="h2">Módulos del curso</h2>
+</header>
+
+<details class="acc"><summary><div>1) Rol de la Brigada de Primeros Auxilios</div><div class="acc__caret">⌄</div></summary>
+<div class="acc__body"><ul class="list list--tight">
+<li>Funciones antes, durante y después</li>
+<li>Alcance del brigadista</li>
+<li>Coordinación con mando y brigadas</li>
+</ul></div></details>
+
+<details class="acc"><summary><div>2) Seguridad de la escena</div><div class="acc__caret">⌄</div></summary>
+<div class="acc__body"><ul class="list list--tight">
+<li>Evaluación inicial</li>
+<li>Identificación de riesgos</li>
+<li>Uso de EPP</li>
+</ul></div></details>
+
+<details class="acc"><summary><div>3) Valoración primaria del lesionado</div><div class="acc__caret">⌄</div></summary>
+<div class="acc__body"><ul class="list list--tight">
+<li>Estado de conciencia</li>
+<li>ABC básico</li>
+<li>Activación de servicios médicos</li>
+</ul></div></details>
+
+<details class="acc"><summary><div>4) Lesiones traumáticas</div><div class="acc__caret">⌄</div></summary>
+<div class="acc__body"><ul class="list list--tight">
+<li>Hemorragias y fracturas</li>
+<li>Inmovilización básica</li>
+</ul></div></details>
+
+<details class="acc"><summary><div>5) Emergencias médicas comunes</div><div class="acc__caret">⌄</div></summary>
+<div class="acc__body"><ul class="list list--tight">
+<li>Convulsiones y desmayos</li>
+<li>RCP básica</li>
+</ul></div></details>
+
+<details class="acc"><summary><div>6) Quemaduras e intoxicaciones</div><div class="acc__caret">⌄</div></summary>
+<div class="acc__body"><ul class="list list--tight">
+<li>Acciones iniciales</li>
+<li>Reporte y seguridad</li>
+</ul></div></details>
+
+<details class="acc"><summary><div>7) Entrega del lesionado</div><div class="acc__caret">⌄</div></summary>
+<div class="acc__body"><ul class="list list--tight">
+<li>Comunicación con servicios externos</li>
+<li>Reporte al Comandante del Incidente</li>
+</ul></div></details>
+
+<details class="acc"><summary><div>8) Simulación práctica</div><div class="acc__caret">⌄</div></summary>
+<div class="acc__body"><ul class="list list--tight">
+<li>Escenarios reales</li>
+<li>Evaluación final</li>
+</ul></div></details>
+
+<!-- ENTREGABLES -->
+<header class="seccion__head" style="margin-top:28px">
+<div class="label">EJECUCIÓN</div>
+<h2 class="h2">Entregables</h2>
+</header>
+
+<div class="infoCard" id="entregables">
+<ul class="list list--tight">
+<li>Manual digital</li>
+<li>Lista de asistencia</li>
+<li>Evaluación teórica y práctica</li>
+<li><strong>Checklist Brigada Primeros Auxilios</strong></li>
+</ul>
+</div>
+
+<!-- DESCARGABLE -->
+<header class="seccion__head" style="margin-top:28px">
+<div class="label">RECURSOS</div>
+<h2 class="h2">Descargables para tu empresa</h2>
+</header>
+
+<div class="infoCard">
+<a class="link" href="#">📎 Descargar checklist base (PDF)</a>
+
+<div class="note">
+<div class="note__k">Nota</div>
+<div class="note__v">
+Guía de referencia. No sustituye capacitación formal ni diagnóstico específico.
+</div>
+</div>
+</div>
+
+<div class="ctaInline">
+<div>
+<div class="ctaInline__k">
+¿No sabes si tu empresa cumple con esta brigada?
+</div>
+<div class="ctaInline__v">
+Te ayudamos a identificar brechas y definir plan de acción.
+</div>
+</div>
+<a class="btn btn--cta" href="../stps/diagnostico-industrial.html">
+Solicitar diagnóstico
+</a>
+</div>
+
+<!-- BENEFICIOS -->
+<header class="seccion__head" style="margin-top:28px">
+<div class="label">IMPACTO</div>
+<h2 class="h2">Beneficios para la empresa</h2>
+</header>
+
+<div class="infoCard">
+<ul class="list list--tight">
+<li>Respuesta inmediata ante lesiones</li>
+<li>Mejor coordinación médica</li>
+<li>Evidencia documental para auditorías</li>
+<li>Operación alineada al SCI</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACTO + FOOTER estándar -->
+<section id="contacto" class="seccion seccion--mando seccion--bottom">
+<div class="wrap">
+<header class="seccion__head">
+<div class="label">04 · CONTACTO</div>
+<h2 class="h2">Solicitar diagnóstico</h2>
+<p class="p">Respondemos por correo o WhatsApp.</p>
+</header>
+</div>
+
+<footer class="footer">
+<div class="wrap footer__inner">
+<div class="footer__legal">
+Corporativo Boxfox1 © 2026 |
+<a class="footer__link footer__link--legal" href="#" data-open-privacy>
+Aviso de privacidad
+</a>
+</div>
+</div>
+</footer>
+</section>
+
+</main>
+
+<script src="../assets/js/main.js" defer></script>
+
+</body>
+</html>
