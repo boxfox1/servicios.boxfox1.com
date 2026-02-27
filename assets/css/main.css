@@ -633,7 +633,7 @@ a {
   padding: 16px;
   box-shadow: var(--sombra2);
   font-weight: 400;
-  border-top: 3px solid var(--azul);
+  border-top: 2px solid var(--azul);
 }
 
 .card::before,
@@ -1830,7 +1830,6 @@ details[open].acc > summary .acc__caret {
   font-size: 13px;
 }
 
-
 /* CTA final */
 .ctaInline {
   margin-top: 14px;
@@ -1857,14 +1856,56 @@ details.acc > summary,
 details.acc .acc__body {
   background: #e9edf1 !important;
 }
-.link-more{
+.link-more {
   color: var(--azul);
   font-weight: 700;
-  margin-left: 10px;   /* un poco más de aire */
-  font-size: .95em;    /* ligeramente más fino */
+  margin-left: 10px; /* un poco más de aire */
+  font-size: 0.95em; /* ligeramente más fino */
   white-space: nowrap; /* evita salto raro */
 }
 
-.link-more:hover{
+.link-more:hover {
   text-decoration: underline;
+}
+/* PROCESO: cards responsive 4 fases */
+#proceso .cards3 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  #proceso .cards3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 620px) {
+  #proceso .cards3 {
+    grid-template-columns: 1fr;
+  }
+}
+.fase {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.65);
+}
+.cta--diag{
+  margin-top:0;
+  border-top:0;
+  background:#f8fafc;
+}
+.cta--diag .btn--primary{
+  background:var(--azul);
+  color:#fff;
+  border-color:var(--azul);
+}
+.card--active{
+  border-top:3px solid var(--azul);
+  box-shadow:0 4px 14px rgba(26,120,255,.10);
+}
+.card--start{
+  box-shadow:0 6px 18px rgba(26,120,255,.12);
 }
