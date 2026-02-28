@@ -1,292 +1,379 @@
 <!doctype html>
 <html lang="es-MX">
-<head>
-<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GGRX2Q2LLB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-GGRX2Q2LLB');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GGRX2Q2LLB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<title>Diagnóstico | Sistema Boxfox1</title>
+      gtag("config", "G-GGRX2Q2LLB");
+    </script>
 
-<link rel="icon" href="../assets/img/favicon.ico">
+    <title>Diagnóstico | Sistema Boxfox1</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/img/favicon.ico" />
 
-<link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-<style>
-.diagGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
-@media(max-width:900px){.diagGrid{grid-template-columns:1fr}}
-.diagCard{
-border:1px solid rgba(15,23,42,.18);
-background:#fff;padding:16px;
-box-shadow:var(--sombra2);
-border-top:3px solid var(--azul);
-}
-.tag{
-display:inline-flex;padding:6px 10px;
-border:1px solid rgba(15,23,42,.12);
-font-weight:800;font-size:12px;margin:4px;
-}
-</style>
-</head>
+    <link rel="stylesheet" href="../assets/css/main.css" />
 
-<body>
+    <style>
+      .diagGrid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 14px;
+      }
+      @media (max-width: 900px) {
+        .diagGrid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .diagCard {
+        border: 1px solid rgba(15, 23, 42, 0.18);
+        background: #fff;
+        padding: 16px;
+        box-shadow: var(--sombra2);
+        border-top: 3px solid var(--azul);
+      }
+      .tag {
+        display: inline-flex;
+        padding: 6px 10px;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        font-weight: 800;
+        font-size: 12px;
+        margin: 4px;
+      }
+    </style>
+  </head>
 
-<a class="skip" href="#principal">Saltar al contenido</a>
+  <body>
+    <a class="skip" href="#principal">Saltar al contenido</a>
 
-<!-- ===== TIRA ===== -->
-<div class="tira">
-<div class="wrap tira__inner">
-<span class="chip">Industry Standard</span>
-<span class="sep">·</span>
-<span class="muted">NOM-STPS</span>
-<span class="sep">·</span>
-<span class="muted">Brigadas multifuncionales</span>
-<span class="sep">·</span>
-<span class="muted">Implementación + Capacitación</span>
+    <!-- ===== TIRA ===== -->
+    <div class="tira">
+      <div class="wrap tira__inner">
+        <span class="chip">Industry Standard</span>
+        <span class="sep">·</span>
+        <span class="muted">NOM-STPS</span>
+        <span class="sep">·</span>
+        <span class="muted">Brigadas multifuncionales</span>
+        <span class="sep">·</span>
+        <span class="muted">Implementación + Capacitación</span>
 
-<a class="nav__link nav__link--soft tira__cta is-active"
-href="../sistema/diagnostico.html">
-Diagnóstico
-</a>
-</div>
-</div>
-
-<!-- ===== HEADER ===== -->
-<header class="cabecera" data-cabecera>
-<div class="wrap cabecera__inner">
-
-<a class="marca" href="../index.html#inicio">
-<img class="marca__logo"
-src="../assets/img/boxfox1.logo.white.svg"
-alt="Boxfox1" width="170" height="40">
-<span class="marca__tag">Servicios Industriales</span>
-</a>
-
-<nav class="nav">
-<a class="nav__link" href="../index.html#inicio">Inicio</a>
-<a class="nav__link" href="../stps/cursos-para-la-industria.html">Cursos para la industria</a>
-<a class="nav__link" href="../stps/cursos-noms.html">Cursos de NOMs</a>
-<a class="nav__link" href="https://corporativo.boxfox1.com" target="_blank" rel="noopener">Corporativo</a>
-<a class="nav__link" href="../index.html#contacto">Contacto</a>
-</nav>
-
-<button class="navbtn" type="button" data-navbtn>
-<span class="navbtn__line"></span>
-<span class="navbtn__line"></span>
-<span class="navbtn__line"></span>
-</button>
-
-</div>
-
-<!-- PANEL MOVIL -->
-<div class="panel" data-panel aria-hidden="true">
-<div class="wrap panel__inner">
-<a class="panel__link" href="../index.html#inicio">Inicio</a>
-<a class="panel__link" href="../stps/cursos-para-la-industria.html">Cursos para la industria</a>
-<a class="panel__link" href="../stps/cursos-noms.html">Cursos de NOMs</a>
-<a class="panel__link panel__link--cta" href="../sistema/diagnostico.html">Diagnóstico</a>
-<a class="panel__link" href="https://corporativo.boxfox1.com">Corporativo</a>
-</div>
-</div>
-
-</header>
-
-<main id="principal">
-
-<!-- HERO -->
-<section class="hero hero--compact">
-<div class="wrap">
-<div class="heroLine">
-<div class="heroLine__k">Sistema Boxfox1</div>
-<div class="h1 heroLine__flow">
-Diagnóstico NOM-STPS + Brigadas
-</div>
-<p class="lead">
-Selecciona el giro y el sistema activa automáticamente normas y brigadas recomendadas.
-</p>
-</div>
-</div>
-</section>
-
-<!-- SISTEMA -->
-<section class="seccion">
-<div class="wrap">
-
-<div class="diagGrid">
-
-<article class="diagCard">
-<h2 class="h2">Giro / Sector</h2>
-
-<select id="giro" style="width:100%;padding:10px;margin-top:8px;">
-<option value="">Selecciona</option>
-<option value="manufactura">Manufactura</option>
-<option value="hospital">Hospitales</option>
-<option value="consultorio">Consultorios / Dentales</option>
-<option value="hotel">Hoteles</option>
-<option value="comercio">Comercio / Plazas</option>
-<option value="escuela">Colegios / Escuelas</option>
-<option value="logistica">Logística</option>
-</select>
-
-<div style="margin-top:16px">
-<strong>Brigadas sugeridas:</strong>
-<div id="brigadas"></div>
-</div>
-
-</article>
-
-<aside class="diagCard">
-<h2 class="h2">NOM sugeridas</h2>
-<div id="noms"></div>
-</aside>
-
-</div>
-</div>
-</section>
-
-<!-- FOOTER -->
-<section class="seccion seccion--mando seccion--bottom">
-<footer class="footer" aria-label="Pie de página">
-  <div class="wrap footer__inner">
-    <div class="footer__col">
-      <div class="footer__legal">
-        Corporativo Boxfox1 © 2026 &nbsp; | &nbsp;
-        <a class="footer__link footer__link--legal" href="#" data-open-privacy>
-          Aviso de privacidad
+        <a
+          class="nav__link nav__link--soft tira__cta is-active"
+          href="../sistema/diagnostico.html"
+        >
+          Diagnóstico
         </a>
       </div>
     </div>
 
-    <div class="footer__col footer__col--right">
-      <div class="footer__icons" aria-label="Redes sociales Boxfox1">
-        <!-- Blog -->
-        <a
-          class="iconlink"
-          href="https://blog.boxfox1.com/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Blog Boxfox1"
-        >
-          <img src="../assets/img/icons/blog.svg" alt="" aria-hidden="true" />
+    <!-- ===== HEADER ===== -->
+    <header class="cabecera" data-cabecera>
+      <div class="wrap cabecera__inner">
+        <a class="marca" href="../index.html#inicio">
+          <img
+            class="marca__logo"
+            src="../assets/img/boxfox1.logo.white.svg"
+            alt="Boxfox1"
+            width="170"
+            height="40"
+          />
+          <span class="marca__tag">Servicios Industriales</span>
         </a>
 
-        <!-- LinkedIn -->
-        <a
-          class="iconlink"
-          href="https://www.linkedin.com/company/boxfox1industry"
-          target="_blank"
-          rel="noopener"
-          aria-label="LinkedIn"
-        >
-          <img src="../assets/img/icons/linkedin.svg" alt="" aria-hidden="true" />
-        </a>
+        <nav class="nav">
+          <a class="nav__link" href="../index.html#inicio">Inicio</a>
+          <a class="nav__link" href="../stps/cursos-para-la-industria.html"
+            >Capacitación</a
+          >
+          <a class="nav__link" href="../stps/cursos-noms.html">Cursos NOMs</a>
+          <a class="nav__link" href="../stps/reporte-de-incidentes.html">Reporte de Incidentes</a>
+        </nav>
+          <a class="nav__link" href="../index.html#contacto">Contacto</a>
+        </nav>
 
-        <!-- Facebook -->
-        <a
-          class="iconlink"
-          href="https://www.facebook.com/boxfox1industria/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Facebook"
-        >
-          <img src="../assets/img/icons/facebook.svg" alt="" aria-hidden="true" />
-        </a>
-
-        <!-- X -->
-        <a
-          class="iconlink"
-          href="https://x.com/Boxfox1industry"
-          target="_blank"
-          rel="noopener"
-          aria-label="X"
-        >
-          <img src="../assets/img/icons/x.svg" alt="" aria-hidden="true" />
-        </a>
-
-        <!-- Instagram -->
-        <a
-          class="iconlink"
-          href="https://www.instagram.com/boxfox1.industry/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Instagram"
-        >
-          <img src="../assets/img/icons/instagram.svg" alt="" aria-hidden="true" />
-        </a>
-
-        <!-- Spotify -->
-        <a
-          class="iconlink"
-          href="https://open.spotify.com/show/6O8W2euH2owYs06F3bGgIo"
-          target="_blank"
-          rel="noopener"
-          aria-label="Spotify"
-        >
-          <img src="../assets/img/icons/spotify.svg" alt="" aria-hidden="true" />
-        </a>
-
-        <!-- YouTube -->
-        <a
-          class="iconlink"
-          href="https://www.youtube.com/@Boxfox1industry"
-          target="_blank"
-          rel="noopener"
-          aria-label="YouTube"
-        >
-          <img src="../assets/img/icons/youtube.svg" alt="" aria-hidden="true" />
-        </a>
+        <button class="navbtn" type="button" data-navbtn>
+          <span class="navbtn__line"></span>
+          <span class="navbtn__line"></span>
+          <span class="navbtn__line"></span>
+        </button>
       </div>
-    </div>
-  </div>
-</footer>
-</section>
 
-</main>
+      <!-- PANEL MOVIL -->
+      <div class="panel" data-panel aria-hidden="true">
+        <div class="wrap panel__inner">
+          <a class="panel__link" href="../index.html#inicio">Inicio</a>
+          <a class="panel__link" href="../stps/cursos-para-la-industria.html"
+            >Capacitación</a
+          >
+          <a class="panel__link" href="../stps/cursos-noms.html">Cursos NOMs</a>
+          <a
+            class="panel__link panel__link--cta"
+            href="../sistema/diagnostico.html"
+            >Diagnóstico</a
+          >
+          <a class="panel__link" href="https://corporativo.boxfox1.com"
+            >Corporativo</a
+          >
+        </div>
+      </div>
+    </header>
 
-<!-- WHATSAPP FAB -->
-<a class="wafab"
-target="_blank"
-href="https://wa.me/524444989198">
-<img src="../assets/img/icons/whatsapp.svg" alt="">
-</a>
+    <main id="principal">
+      <!-- HERO -->
+      <section class="hero hero--compact">
+        <div class="wrap">
+          <div class="heroLine">
+            <div class="heroLine__k">Sistema Boxfox1</div>
+            <div class="h1 heroLine__flow">Diagnóstico NOM-STPS + Brigadas</div>
+            <p class="lead">
+              Selecciona el giro y el sistema activa automáticamente normas y
+              brigadas recomendadas.
+            </p>
+          </div>
+        </div>
+      </section>
 
-<script src="../assets/js/main.js" defer></script>
+      <!-- SISTEMA -->
+      <section class="seccion">
+        <div class="wrap">
+          <div class="diagGrid">
+            <article class="diagCard">
+              <h2 class="h2">Giro / Sector</h2>
 
-<!-- MOTOR -->
-<script>
-const MAP={
-manufactura:{noms:["NOM-004","NOM-017","NOM-002","NOM-030"],brigadas:["Incendio","Evacuación","Primeros auxilios"]},
-hospital:{noms:["NOM-005","NOM-010","NOM-017","NOM-035"],brigadas:["Evacuación","Primeros auxilios","Bioseguridad"]},
-consultorio:{noms:["NOM-005","NOM-017","NOM-030"],brigadas:["Primeros auxilios","Evacuación"]},
-hotel:{noms:["NOM-002","NOM-019","NOM-030"],brigadas:["Evacuación","Incendio","Primeros auxilios"]},
-comercio:{noms:["NOM-002","NOM-026","NOM-030"],brigadas:["Evacuación","Incendio"]},
-escuela:{noms:["NOM-002","NOM-019","NOM-030","NOM-035"],brigadas:["Evacuación","Primeros auxilios","Incendio"]},
-logistica:{noms:["NOM-006","NOM-017","NOM-002"],brigadas:["Evacuación","Incendio"]}
-};
+              <select
+                id="giro"
+                style="width: 100%; padding: 10px; margin-top: 8px"
+              >
+                <option value="">Selecciona</option>
+                <option value="manufactura">Manufactura</option>
+                <option value="hospital">Hospitales</option>
+                <option value="consultorio">Consultorios / Dentales</option>
+                <option value="hotel">Hoteles</option>
+                <option value="comercio">Comercio / Plazas</option>
+                <option value="escuela">Colegios / Escuelas</option>
+                <option value="logistica">Logística</option>
+              </select>
 
-const giro=document.getElementById("giro");
-const noms=document.getElementById("noms");
-const brig=document.getElementById("brigadas");
+              <div style="margin-top: 16px">
+                <strong>Brigadas sugeridas:</strong>
+                <div id="brigadas"></div>
+              </div>
+            </article>
 
-giro.addEventListener("change",()=>{
-const v=MAP[giro.value];
-if(!v){noms.innerHTML="";brig.innerHTML="";return;}
-noms.innerHTML=v.noms.map(n=>`<span class="tag">${n}</span>`).join("");
-brig.innerHTML=v.brigadas.map(b=>`<span class="tag">${b}</span>`).join("");
-});
-</script>
+            <aside class="diagCard">
+              <h2 class="h2">NOM sugeridas</h2>
+              <div id="noms"></div>
+            </aside>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <!-- FOOTER -->
+      <section class="seccion seccion--mando seccion--bottom">
+        <footer class="footer" aria-label="Pie de página">
+          <div class="wrap footer__inner">
+            <div class="footer__col">
+              <div class="footer__legal">
+                Corporativo Boxfox1 © 2026 &nbsp; | &nbsp;
+                <a
+                  class="footer__link footer__link--legal"
+                  href="#"
+                  data-open-privacy
+                >
+                  Aviso de privacidad
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__col footer__col--right">
+              <div class="footer__icons" aria-label="Redes sociales Boxfox1">
+                <!-- Blog -->
+                <a
+                  class="iconlink"
+                  href="https://blog.boxfox1.com/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Blog Boxfox1"
+                >
+                  <img
+                    src="../assets/img/icons/blog.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <!-- LinkedIn -->
+                <a
+                  class="iconlink"
+                  href="https://www.linkedin.com/company/boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                >
+                  <img
+                    src="../assets/img/icons/linkedin.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <!-- Facebook -->
+                <a
+                  class="iconlink"
+                  href="https://www.facebook.com/boxfox1industria/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                >
+                  <img
+                    src="../assets/img/icons/facebook.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <!-- X -->
+                <a
+                  class="iconlink"
+                  href="https://x.com/Boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="X"
+                >
+                  <img
+                    src="../assets/img/icons/x.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <!-- Instagram -->
+                <a
+                  class="iconlink"
+                  href="https://www.instagram.com/boxfox1.industry/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <img
+                    src="../assets/img/icons/instagram.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <!-- Spotify -->
+                <a
+                  class="iconlink"
+                  href="https://open.spotify.com/show/6O8W2euH2owYs06F3bGgIo"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Spotify"
+                >
+                  <img
+                    src="../assets/img/icons/spotify.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+
+                <!-- YouTube -->
+                <a
+                  class="iconlink"
+                  href="https://www.youtube.com/@Boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="YouTube"
+                >
+                  <img
+                    src="../assets/img/icons/youtube.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <!-- WHATSAPP FAB -->
+    <a class="wafab" target="_blank" href="https://wa.me/524444989198">
+      <img src="../assets/img/icons/whatsapp.svg" alt="" />
+    </a>
+
+    <script src="../assets/js/main.js" defer></script>
+
+    <!-- MOTOR -->
+    <script>
+      const MAP = {
+        manufactura: {
+          noms: ["NOM-004", "NOM-017", "NOM-002", "NOM-030"],
+          brigadas: ["Incendio", "Evacuación", "Primeros auxilios"],
+        },
+        hospital: {
+          noms: ["NOM-005", "NOM-010", "NOM-017", "NOM-035"],
+          brigadas: ["Evacuación", "Primeros auxilios", "Bioseguridad"],
+        },
+        consultorio: {
+          noms: ["NOM-005", "NOM-017", "NOM-030"],
+          brigadas: ["Primeros auxilios", "Evacuación"],
+        },
+        hotel: {
+          noms: ["NOM-002", "NOM-019", "NOM-030"],
+          brigadas: ["Evacuación", "Incendio", "Primeros auxilios"],
+        },
+        comercio: {
+          noms: ["NOM-002", "NOM-026", "NOM-030"],
+          brigadas: ["Evacuación", "Incendio"],
+        },
+        escuela: {
+          noms: ["NOM-002", "NOM-019", "NOM-030", "NOM-035"],
+          brigadas: ["Evacuación", "Primeros auxilios", "Incendio"],
+        },
+        logistica: {
+          noms: ["NOM-006", "NOM-017", "NOM-002"],
+          brigadas: ["Evacuación", "Incendio"],
+        },
+      };
+
+      const giro = document.getElementById("giro");
+      const noms = document.getElementById("noms");
+      const brig = document.getElementById("brigadas");
+
+      giro.addEventListener("change", () => {
+        const v = MAP[giro.value];
+        if (!v) {
+          noms.innerHTML = "";
+          brig.innerHTML = "";
+          return;
+        }
+        noms.innerHTML = v.noms
+          .map((n) => `<span class="tag">${n}</span>`)
+          .join("");
+        brig.innerHTML = v.brigadas
+          .map((b) => `<span class="tag">${b}</span>`)
+          .join("");
+      });
+    </script>
+  </body>
 </html>
