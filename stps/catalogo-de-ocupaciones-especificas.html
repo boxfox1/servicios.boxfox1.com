@@ -58,45 +58,6 @@
 
     <!-- Ajustes LOCALES V3 (no tocan main.css) -->
     <style>
-      /* Hero banner (imagen opcional) */
-      .hero--banner {
-        background:
-          linear-gradient(
-            180deg,
-            rgba(11, 18, 32, 0.72),
-            rgba(11, 18, 32, 0.35)
-          ),
-          url("../assets/img/hero/ocupacion.webp");
-        background-size: cover;
-        background-position: center;
-        color: #fff;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      }
-      .hero--banner .heroLine__k {
-        color: rgba(255, 255, 255, 0.78);
-      }
-      .hero--banner .lead {
-        color: rgba(255, 255, 255, 0.86);
-      }
-
-      /* Banda informativa (azul) como tu referencia */
-      .blueBand {
-        margin-top: 14px;
-        padding: 18px 18px;
-        border: 1px solid rgba(26, 120, 255, 0.22);
-        background: rgba(26, 120, 255, 0.1);
-      }
-      .blueBand__k {
-        font-weight: 900;
-        margin: 0 0 8px;
-      }
-      .blueBand__p {
-        margin: 0;
-        color: rgba(15, 23, 42, 0.78);
-        font-size: 13px;
-        line-height: 1.6;
-      }
-
       /* Tabs */
       .tabRow {
         margin-top: 14px;
@@ -312,7 +273,7 @@
     <main id="principal">
       <!-- HERO V3 (banner) -->
       <section
-        class="hero hero--compact hero--dark hero--banner"
+        class="hero hero--compact hero--dark"
         aria-label="Entrada principal"
       >
         <div class="wrap">
@@ -320,37 +281,18 @@
             <div class="heroLine__k">SISTEMA BOXFOX1</div>
             <div class="h1 heroLine__flow">Ocupación Específica<br /></div>
 
-            <p class="lead heroLine__sub" style="max-width: 78ch">
-              Referencia para el llenado administrativo de la constancia DC-3:
-              claves de ocupación específica (áreas y subáreas) y áreas
-              temáticas de los cursos, conforme al Catálogo Nacional de
-              Ocupaciones.
-            </p>
-
-            <div class="hero__actions" style="margin-top: 12px">
-              <a class="btn btn--primario" href="#como-usar">Cómo usar</a>
-              <a class="btn btn--primario" href="#areas-subareas"
-                >Áreas / Subáreas</a
-              >
-              <a class="btn btn--cta" href="../stps/diagnostico-industrial.html"
-                >Solicitar diagnóstico</a
-              >
-            </div>
-
-            <div class="blueBand">
-              <div class="blueBand__k">Ocupación Específica para DC-3</div>
-              <p class="blueBand__p">
+            <p class="lead heroLine__sub">
                 Estas claves se utilizan para identificar la actividad del
                 trabajador y el tipo de capacitación recibida, siendo un
                 requisito administrativo para el cumplimiento ante la STPS. En
                 Boxfox1 te apoyamos en la correcta selección de estas claves y
                 en la emisión de tus constancias DC-3.
-              </p>
+            </p>
 
-              <div class="tabRow" aria-label="Accesos rápidos">
+            <div class="hero__actions" style="margin-top: 12px">
                 <a
                   class="btn btn--tab"
-                  href="../stps/que-es-normatividad-mexicana.html"
+                  href="../stps/que-es-la-normatividad-mexicana.html"
                   >¿Qué es la Normatividad Mexicana?</a
                 >
                 <a class="btn btn--tab" href="../stps/cursos-noms.html"
@@ -361,9 +303,11 @@
                   href="../stps/documentacion-para-dc3.html"
                   >Documentación para llenar una DC-3</a
                 >
+
+                <a class="btn btn--cta" href="../stps/diagnostico-industrial.html"
+                >Solicitar diagnóstico</a
+              >
               </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -739,11 +683,6 @@
             </a>
           </div>
 
-          <p class="muted" style="text-align: center; margin-top: 10px">
-            Envíanos tu requerimiento y te respondemos con una propuesta clara y
-            enfocada a resultados. Capacitación industrial y cumplimiento STPS
-            para empresas en México.
-          </p>
         </div>
       </section>
 
