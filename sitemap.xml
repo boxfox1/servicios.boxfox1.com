@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+  <!-- Raíz -->
+  <url><loc>https://servicios.boxfox1.com/</loc></url>
+  <url><loc>https://servicios.boxfox1.com/index.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/contacto.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/calendario.html</loc></url>
+
+  <!-- Sistema -->
+  <url><loc>https://servicios.boxfox1.com/sistema/diagnostico.html</loc></url>
+
+  <!-- STPS (hub) -->
+  <url><loc>https://servicios.boxfox1.com/stps/</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/index.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/cumplimiento.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/cursos-para-la-industria.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/cursos-noms.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/diagnostico-industrial.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/documentacion-para-dc3.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/catalogo-de-ocupaciones-especificas.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/que-brigada-me-corresponde.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/reporte-de-incidentes.html</loc></url>
+
+  <!-- Brigadas -->
+  <url><loc>https://servicios.boxfox1.com/stps/brigada-multifuncional.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/brigada-tecnica.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/brigada-contra-incendio.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-evacuacion.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-primeros-auxilios.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-comunicacion.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-busqueda-y-rescate.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-rescate-especializado.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-materiales-peligrosos.html</loc></url>
+
+  <!-- Sistema de Comando -->
+  <url><loc>https://servicios.boxfox1.com/stps/sistema-de-comando-de-incidentes.html</loc></url>
+
+  <!-- NOMs -->
+  <url><loc>https://servicios.boxfox1.com/stps/nom-001.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-002.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-004.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-005.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-006.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-009.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-010.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-017.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-018.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-019.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-020.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-026.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-030.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-033.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-035.html</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/nom-036.html</loc></url>
+
+  <!-- Directorios con index -->
+  <url><loc>https://servicios.boxfox1.com/stps/checklists/</loc></url>
+  <url><loc>https://servicios.boxfox1.com/stps/documentacion-nom/</loc></url>
+</urlset>

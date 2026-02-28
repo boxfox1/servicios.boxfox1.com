@@ -21,7 +21,7 @@
     <title>Checklists STPS | Servicios Industriales Boxfox1</title>
     <meta
       name="description"
-      content="Biblioteca técnica de checklists STPS Boxfox1: recursos PDF para autoevaluación preliminar de brigadas, NOMs, documentación y cumplimiento industrial."
+      content="Biblioteca técnica de checklists STPS Boxfox1: recursos PDF para autoevaluación preliminar de brigadas, inspección NOM-STPS y control documental."
     />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#0b1220" />
@@ -31,7 +31,7 @@
     <meta property="og:title" content="Checklists STPS | Boxfox1" />
     <meta
       property="og:description"
-      content="Biblioteca técnica: checklists PDF para autoevaluación preliminar (brigadas, NOMs y documentación) con enfoque industrial."
+      content="Biblioteca técnica: checklists PDF para autoevaluación preliminar (brigadas, NOMs y cumplimiento) con enfoque industrial."
     />
     <meta
       property="og:url"
@@ -118,18 +118,6 @@
         color: rgba(15, 23, 42, 0.78);
         font-size: 13px;
         line-height: 1.55;
-      }
-
-      /* “Catálogo” por categorías (dos columnas si cabe) */
-      .catGrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-      @media (max-width: 900px) {
-        .catGrid {
-          grid-template-columns: 1fr;
-        }
       }
 
       .tag {
@@ -320,7 +308,7 @@
           <div class="quick">
             <a class="btn btn--primario" href="#brigadas">Brigadas</a>
             <a class="btn btn--primario" href="#noms">NOMs</a>
-            <a class="btn btn--primario" href="#documentacion">Documentación</a>
+            <a class="btn btn--primario" href="#sci">Sistema de Comando</a>
           </div>
 
           <!-- BRIGADAS -->
@@ -328,27 +316,21 @@
             <div class="label">CATEGORÍA</div>
             <h2 class="h2">Brigadas industriales</h2>
             <p class="p">
-              Descargas base para implementación inicial y simulacros.
+              Descargas base para implementación inicial, roles y simulacros.
             </p>
           </header>
 
           <div class="dl">
             <div class="tag">BRIGADAS</div>
 
-            <!-- AJUSTA NOMBRES EXACTOS -->
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">
-                  Checklist básica — Brigada Contra Incendio
-                </div>
-                <div class="dlRow__m">PDF · Autoevaluación preliminar</div>
+                <div class="dlRow__k">Brigada Contra Incendio</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
               </div>
               <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./checklist-brigada-contra-incendio.pdf"
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Brigada-Contra-Incendio.pdf"
                   >Descargar →</a
                 >
               </div>
@@ -356,17 +338,12 @@
 
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">
-                  Checklist básica — Brigada de Evacuación
-                </div>
-                <div class="dlRow__m">PDF · Control inicial</div>
+                <div class="dlRow__k">Brigada de Búsqueda y Rescate</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
               </div>
               <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./checklist-brigada-evacuacion.pdf"
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Brigada-de-Busqueda-y-Rescate.pdf"
                   >Descargar →</a
                 >
               </div>
@@ -374,17 +351,77 @@
 
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">
-                  Checklist básica — Brigada de Primeros Auxilios
-                </div>
-                <div class="dlRow__m">PDF · Preparación y equipo</div>
+                <div class="dlRow__k">Brigada de Comunicación</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
               </div>
               <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./checklist-brigada-primeros-auxilios.pdf"
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Brigada-de-Comunicacion.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Brigada de Evacuación</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Brigada-de-Evacuacion.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Brigada de Materiales Peligrosos</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Brigada-de-materiales-peligrosos.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Brigada de Primeros Auxilios</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Brigada-de-Primeros-Auxilios.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Brigada de Rescate Especializado</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Brigada-de-Rescate-Especializado.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Brigada Técnica</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Brigada-Tecnica.pdf"
                   >Descargar →</a
                 >
               </div>
@@ -394,62 +431,247 @@
           <!-- NOMS -->
           <header class="seccion__head" id="noms" style="margin-top: 26px">
             <div class="label">CATEGORÍA</div>
-            <h2 class="h2">NOM-STPS</h2>
-            <p class="p">Descargas base por norma (según aplicación y giro).</p>
+            <h2 class="h2">Checklists de inspección NOM-STPS</h2>
+            <p class="p">
+              Descargas base por norma para autoevaluación preliminar y control
+              inicial.
+            </p>
           </header>
 
           <div class="dl">
             <div class="tag">NOM-STPS</div>
 
-            <!-- EJEMPLOS, AJUSTA -->
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">
-                  Checklist básica — NOM-002-STPS (Prevención y protección
-                  contra incendios)
-                </div>
-                <div class="dlRow__m">PDF · Evidencia y control</div>
+                <div class="dlRow__k">Inspección NOM-001-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
               </div>
               <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./checklist-nom-002-stps.pdf"
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-001-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-002-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-002-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-004-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-004-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-005-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-005-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-006-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-006-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-009-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-009-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-010-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-010-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-017-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-017-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-018-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-018-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-019-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-019-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-020-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-020-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-026-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-026-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-030-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-030-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-033-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-033-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-035-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-035-STPS.pdf"
+                  >Descargar →</a
+                >
+              </div>
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">Inspección NOM-036-1-STPS</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
+              </div>
+              <div class="dlRow__a">
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Inspeccion-NOM-036-1-STPS.pdf"
                   >Descargar →</a
                 >
               </div>
             </div>
           </div>
 
-          <!-- DOCUMENTACIÓN -->
-          <header
-            class="seccion__head"
-            id="documentacion"
-            style="margin-top: 26px"
-          >
+          <!-- SCI -->
+          <header class="seccion__head" id="sci" style="margin-top: 26px">
             <div class="label">CATEGORÍA</div>
-            <h2 class="h2">Documentación</h2>
-            <p class="p">Recursos base para orden documental y auditoría.</p>
+            <h2 class="h2">Sistema de Comando de Incidentes</h2>
+            <p class="p">
+              Checklist base para estructura, roles y control operativo.
+            </p>
           </header>
 
           <div class="dl">
-            <div class="tag">DOCUMENTACIÓN</div>
+            <div class="tag">SCI</div>
 
-            <!-- EJEMPLOS, AJUSTA -->
             <div class="dlRow">
               <div class="dlRow__l">
                 <div class="dlRow__k">
-                  Checklist básica — Documentación DC-3 (control y expediente)
+                  Checklist básica — Sistema de Comando de Incidentes
                 </div>
-                <div class="dlRow__m">PDF · Control documental</div>
+                <div class="dlRow__m">PDF · Checklist base</div>
               </div>
               <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./checklist-documentacion-dc3.pdf"
+                <a class="link" target="_blank" rel="noopener"
+                  href="./Checklist-Basica-de-Sistema-de-Comando-de-Incidentes.pdf"
                   >Descargar →</a
                 >
               </div>
