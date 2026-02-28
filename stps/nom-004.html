@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GGRX2Q2LLB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-GGRX2Q2LLB");
+    </script>
+
+    <title>
+      NOM-004-STPS: Sistemas de protección y dispositivos de seguridad en maquinaria
+      y equipo (DC-3) | Servicios Industriales Boxfox1
+    </title>
+    <meta
+      name="description"
+      content="Curso NOM-004-STPS (DC-3): sistemas de protección y dispositivos de seguridad en maquinaria y equipo. Qué es, para quién, fallas típicas, temario, modalidad, evidencia para auditoría y descargable."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0b1220" />
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://servicios.boxfox1.com/stps/nom-004-stps.html"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="NOM-004-STPS (DC-3) | Protección y dispositivos de seguridad en maquinaria"
+    />
+    <meta
+      property="og:description"
+      content="Capacitación aplicada NOM-004-STPS: riesgos mecánicos, guardas y dispositivos, paros de emergencia, procedimientos seguros (LOTO cuando aplica) y evidencia documental para inspección/auditoría."
+    />
+    <meta
+      property="og:url"
+      content="https://servicios.boxfox1.com/stps/nom-004-stps.html"
+    />
+    <meta property="og:site_name" content="Boxfox1" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="NOM-004-STPS (DC-3) | Seguridad en maquinaria y equipo"
+    />
+    <meta
+      name="twitter:description"
+      content="Guardas, dispositivos de seguridad, paros de emergencia, procedimientos seguros y evidencia para auditoría. Incluye descargable base."
+    />
+
+    <link rel="icon" href="../assets/img/favicon.ico" />
+
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+
+  <body>
+    <a class="skip" href="#principal">Saltar al contenido</a>
+
+    <!-- Tira superior -->
+    <div class="tira" role="note" aria-label="Identidad y alcance">
+      <div class="wrap tira__inner">
+        <span class="chip">Industry Standard</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">NOM-STPS</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">Maquinaria + Control</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">Capacitación (DC-3)</span>
+
+        <!-- CTA derecha -->
+        <a
+          class="nav__link nav__link--soft tira__cta"
+          href="../stps/diagnostico-industrial.html"
+        >
+          Diagnóstico
+        </a>
+      </div>
+    </div>
+
+    <!-- Cabecera -->
+    <header class="cabecera" data-cabecera>
+      <div class="wrap cabecera__inner">
+        <a class="marca" href="../index.html#inicio" aria-label="Ir al inicio">
+          <img
+            class="marca__logo"
+            src="../assets/img/boxfox1.logo.white.svg"
+            alt="Boxfox1"
+            width="170"
+            height="40"
+            loading="eager"
+            decoding="async"
+          />
+          <span class="marca__tag">Servicios Industriales</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav__link" href="../index.html#inicio">Inicio</a>
+          <a class="nav__link" href="../stps/cursos-para-la-industria.html"
+            >Cursos para la industria</a
+          >
+          <a class="nav__link is-active" href="../stps/cursos-noms.html"
+            >Cursos de NOMs</a
+          >
+          <a
+            class="nav__link"
+            href="https://corporativo.boxfox1.com"
+            target="_blank"
+            rel="noopener"
+            >Corporativo</a
+          >
+          <a class="nav__link" href="#contacto">Contacto</a>
+        </nav>
+
+        <button
+          class="navbtn"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          data-navbtn
+        >
+          <span class="navbtn__line" aria-hidden="true"></span>
+          <span class="navbtn__line" aria-hidden="true"></span>
+          <span class="navbtn__line" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Panel móvil -->
+      <div class="panel" data-panel aria-hidden="true">
+        <div class="wrap panel__inner">
+          <a class="panel__link" href="../index.html#inicio">Inicio</a>
+          <a class="panel__link" href="../stps/cursos-para-la-industria.html"
+            >Cursos para la industria</a
+          >
+          <a class="panel__link" href="../stps/cursos-noms.html"
+            >Cursos de NOMs</a
+          >
+          <a
+            class="panel__link"
+            href="https://corporativo.boxfox1.com"
+            target="_blank"
+            rel="noopener"
+            >Corporativo</a
+          >
+          <a class="panel__link panel__link--cta" href="#contacto">Contacto</a>
+
+          <div class="panel__meta">
+            <div class="panel__metaTitle">Contacto directo</div>
+            <a
+              class="panel__metaLink"
+              href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20NOM-004-STPS%20(DC-3)&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20del%20curso%20NOM-004-STPS%20(DC-3).%0A%0AEmpresa%3A%0ACiudad%2FPlanta%3A%0AN%C3%BAmero%20de%20participantes%3A%0ATipos%20de%20maquinaria%2F%C3%A1reas%20cr%C3%ADticas%3A%0AFechas%20tentativas%3A%0A"
+              >info@boxfox1.com</a
+            >
+            <a
+              class="panel__metaLink"
+              target="_blank"
+              rel="noopener"
+              href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20del%20curso%20NOM-004-STPS%20(DC-3).%0A%0AEmpresa%3A%20%0ACiudad%2FPlanta%3A%20%0AN%C3%BAmero%20de%20participantes%3A%20%0ATipos%20de%20maquinaria%2F%C3%A1reas%20cr%C3%ADticas%3A%20%0AFechas%20tentativas%3A%20"
+              >WhatsApp 444 498 9198</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="principal">
+      <!-- HERO V3 (oscuro, sin banda azul) -->
+      <section
+        id="inicio"
+        class="hero hero--compact hero--dark"
+        aria-label="Entrada principal"
+      >
+        <div class="wrap">
+          <div class="heroLine">
+            <div class="heroLine__k">SISTEMA BOXFOX1 · NOM-004-STPS · DC-3</div>
+
+            <h1 class="h1 heroLine__flow">
+              Sistemas de protección y dispositivos de seguridad en maquinaria y equipo
+            </h1>
+
+            <p class="lead heroLine__sub">
+              Capacitación aplicada para reducir accidentes graves por riesgos mecánicos
+              (atrapamiento, aplastamiento, corte, proyección) y sostener cumplimiento con
+              evidencia organizada. Enfoque práctico: guardas, dispositivos, paro de emergencia,
+              procedimientos seguros y control documental para inspección/auditoría.
+            </p>
+
+            <div class="hero__actions" style="margin-top: 12px">
+              <a class="btn btn--primario" href="#temario">Ver temario</a>
+              <a class="btn btn--primario" href="#fallas">Fallas típicas</a>
+              <a class="btn btn--cta" href="../stps/diagnostico-industrial.html"
+                >Solicitar diagnóstico</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENIDO -->
+      <section class="seccion" aria-label="Contenido NOM-004">
+        <div class="wrap">
+          <!-- Qué es -->
+          <header class="seccion__head" style="margin-bottom: 12px">
+            <div class="label">QUÉ ES</div>
+            <h2 class="h2">¿Qué es la NOM-004-STPS y por qué importa?</h2>
+            <p class="p">
+              La NOM-004-STPS establece condiciones de seguridad que deben cumplir
+              la <strong>maquinaria y el equipo</strong> en los centros de trabajo,
+              incluyendo <strong>sistemas de protección</strong> y <strong>dispositivos de seguridad</strong>
+              para prevenir accidentes. En auditoría se evalúa la condición física (guardas y dispositivos),
+              el control operativo (procedimientos, mantenimiento, capacitación) y la evidencia documental.
+            </p>
+          </header>
+
+          <div class="cta2">
+            <article class="card">
+              <h3 class="h3">Lo que normalmente se verifica en planta</h3>
+              <ul class="list list--tight">
+                <li>Identificación de riesgos mecánicos por máquina/proceso.</li>
+                <li>Guardas, protecciones y dispositivos (integridad y uso real).</li>
+                <li>Paro de emergencia (accesibilidad, funcionamiento, control).</li>
+                <li>Condiciones de operación, ajuste y mantenimiento.</li>
+                <li>Procedimientos de trabajo seguro (antes/durante/después).</li>
+                <li>Capacitación de operadores y mantenimiento (evidencia).</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">Resultado esperado del curso</h3>
+              <ul class="list list--tight">
+                <li>Criterio de campo para detectar brechas críticas por máquina.</li>
+                <li>Priorización por riesgo (qué corregir primero y por qué).</li>
+                <li>Buenas prácticas de guardas/dispositivos y verificación.</li>
+                <li>Control documental: bitácoras, checklists y cierre verificable.</li>
+                <li>Constancia DC-3 + evaluación (según alcance acordado).</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Para quién -->
+          <header
+            class="seccion__head"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">PARA QUIÉN ES</div>
+            <h2 class="h2">¿A quién va dirigido este curso?</h2>
+            <p class="p">
+              Roles que operan, supervisan, mantienen o auditan maquinaria y controles de seguridad.
+            </p>
+          </header>
+
+          <article class="card">
+            <ul class="list list--tight">
+              <li>
+                <strong>Seguridad e Higiene / EHS / HSE</strong> (cumplimiento, inspecciones internas, evidencias).
+              </li>
+              <li>
+                <strong>Supervisores y jefaturas de área</strong> (control operativo y correcciones).
+              </li>
+              <li>
+                <strong>Operadores de maquinaria</strong> (operación segura y disciplina de protecciones).
+              </li>
+              <li>
+                <strong>Mantenimiento mecánico/eléctrico</strong> (ajuste, condición, intervención segura).
+              </li>
+              <li>
+                <strong>RH / Capacitación</strong> (programa anual, DC-3, listas y evaluación).
+              </li>
+              <li>
+                <strong>Contratistas</strong> (cuando operan dentro de planta y se requiere alineación).
+              </li>
+            </ul>
+          </article>
+
+          <!-- Fallas típicas -->
+          <header
+            class="seccion__head"
+            id="fallas"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">FALLAS TÍPICAS</div>
+            <h2 class="h2">Brechas comunes que detonan hallazgos</h2>
+            <p class="p">
+              Patrones frecuentes en piso: aumentan riesgo y en auditoría aparecen como hallazgos directos.
+            </p>
+          </header>
+
+          <div class="cta2">
+            <article class="card">
+              <h3 class="h3">Protecciones y condición de la máquina</h3>
+              <ul class="list list--tight">
+                <li>Guardas inexistentes, dañadas o removidas “para producir más rápido”.</li>
+                <li>Dispositivos anulados (puentes, sensores bloqueados, bypass).</li>
+                <li>Paros de emergencia inaccesibles o sin pruebas periódicas.</li>
+                <li>Zonas de atrapamiento sin delimitación/controles efectivos.</li>
+                <li>Señalización o instructivos confusos/incompletos en puntos críticos.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">Control operativo y evidencia (auditoría)</h3>
+              <ul class="list list--tight">
+                <li>Procedimientos sin uso real (no hay rutina de verificación).</li>
+                <li>Capacitación sin trazabilidad (lista/temario/evaluación incompleta).</li>
+                <li>Mantenimiento reactivo sin bitácora y sin cierre verificable.</li>
+                <li>Acciones correctivas sin responsable/fecha/evidencia de cierre.</li>
+                <li>Evidencia dispersa (fotos/correos/WhatsApp) sin carpeta central.</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Temario -->
+          <header
+            class="seccion__head"
+            id="temario"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">TEMARIO</div>
+            <h2 class="h2">Módulos del curso NOM-004-STPS (DC-3)</h2>
+            <p class="p">Temario modular: criterio, control, operación segura y evidencia.</p>
+          </header>
+
+          <details class="acc">
+            <summary>
+              <div>
+                1) Alcance NOM-004 y enfoque de inspección/auditoría
+                <div class="acc__meta">qué exige + cómo lo revisan</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Alcance, responsabilidades por rol y tipos de equipos.</li>
+                <li>Riesgos mecánicos: criterios para identificarlos en campo.</li>
+                <li>Cómo convertir requisito en control verificable + evidencia.</li>
+              </ul>
+              <div class="acc__benef">
+                Resultado: mapa rápido de puntos críticos por máquina/área.
+              </div>
+            </div>
+          </details>
+
+          <details class="acc">
+            <summary>
+              <div>
+                2) Identificación de riesgos mecánicos
+                <div class="acc__meta">atrapamiento + corte + proyección + aplastamiento</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Zonas peligrosas y escenarios típicos por proceso.</li>
+                <li>Factores humanos: prácticas que elevan el riesgo.</li>
+                <li>Priorización por criticidad (qué atender primero).</li>
+              </ul>
+              <div class="acc__benef">
+                Resultado: criterio práctico para priorizar controles por riesgo.
+              </div>
+            </div>
+          </details>
+
+          <details class="acc">
+            <summary>
+              <div>
+                3) Sistemas de protección y guardas de seguridad
+                <div class="acc__meta">diseño + condición + uso real</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Tipos de guardas y protección (principios generales).</li>
+                <li>Buenas prácticas: no anular, no remover, cómo verificar.</li>
+                <li>Rutina de inspección por máquina/turno (evidencia mínima).</li>
+              </ul>
+              <div class="acc__benef">
+                Resultado: checklist operativo para guardas/protecciones.
+              </div>
+            </div>
+          </details>
+
+          <details class="acc">
+            <summary>
+              <div>
+                4) Dispositivos de paro y control
+                <div class="acc__meta">paro de emergencia + dispositivos + pruebas</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Paro de emergencia: accesibilidad, pruebas y control.</li>
+                <li>Interlocks/sensores: fallas típicas y cómo se detectan.</li>
+                <li>Disciplina de operación: controles que sí se sostienen.</li>
+              </ul>
+              <div class="acc__benef">
+                Resultado: guía de verificación + evidencia simple y trazable.
+              </div>
+            </div>
+          </details>
+
+          <details class="acc">
+            <summary>
+              <div>
+                5) Procedimientos, operación segura y evidencia documental
+                <div class="acc__meta">procedimientos + mantenimiento + cierre verificable</div>
+              </div>
+              <div class="acc__caret" aria-hidden="true">⌄</div>
+            </summary>
+            <div class="acc__body">
+              <ul class="list list--tight">
+                <li>Procedimientos de trabajo seguro: estructura mínima útil.</li>
+                <li>Mantenimiento: bitácora, hallazgos, acciones y verificación.</li>
+                <li>Bloqueo/etiquetado (LOTO) cuando aplica: control y evidencia.</li>
+                <li>Carpeta de auditoría por área/máquina: trazabilidad y cierre.</li>
+              </ul>
+              <div class="acc__benef">
+                Resultado: base documental “lista para auditoría” por máquina/área.
+              </div>
+            </div>
+          </details>
+
+          <!-- Cómo se imparte -->
+          <header
+            class="seccion__head"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">CÓMO SE IMPARTE</div>
+            <h2 class="h2">Modalidad y ejecución</h2>
+            <p class="p">
+              Adaptado a tipos de maquinaria, riesgo, layout y condiciones reales de operación.
+            </p>
+          </header>
+
+          <div class="cta2">
+            <article class="card">
+              <h3 class="h3">Presencial (recomendado)</h3>
+              <ul class="list list--tight">
+                <li>En planta o aula con ejemplos por máquina/área.</li>
+                <li>Verificación guiada de puntos críticos y protecciones.</li>
+                <li>Priorización y plan rápido de acciones correctivas sugeridas.</li>
+                <li>Evidencia: qué capturar, cómo cerrar y cómo verificar.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">En línea (teórico)</h3>
+              <ul class="list list--tight">
+                <li>Conceptos, criterios de campo y evidencia documental.</li>
+                <li>Checklist base por tipo de riesgo/área (para aplicar internamente).</li>
+                <li>Recomendaciones como base, con validación posterior en planta.</li>
+              </ul>
+
+              <div style="margin-top: 12px">
+                <h3 class="h3">Datos rápidos</h3>
+                <ul class="list list--tight">
+                  <li><strong>Duración sugerida:</strong> 4 a 6 horas</li>
+                  <li><strong>Nivel:</strong> Básico / Intermedio</li>
+                  <li><strong>Constancia:</strong> Lista de asistencia + evaluación</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- Descargable -->
+          <header
+            class="seccion__head"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">DESCARGABLE</div>
+            <h2 class="h2">Checklist base NOM-004 (PDF)</h2>
+            <p class="p">
+              Guía práctica de referencia para autoevaluación preliminar y control inicial.
+            </p>
+          </header>
+
+          <article class="card">
+            <!-- TODO: reemplaza href por tu ruta real -->
+            <a
+              class="link"
+              href="../stps/checklists/Checklist-Basica-de-Inspeccion-NOM-004-STPS.pdf"
+              aria-label="Descargar checklist base NOM-004 (PDF)"
+              >📎 Descargar checklist base NOM-004 (PDF)</a
+            >
+            <p class="p" style="margin-top: 10px">
+              <strong>Nota:</strong> Este descargable es guía base. No sustituye una evaluación técnica
+              ni un diagnóstico específico del centro de trabajo. El cumplimiento real depende de tipo de
+              maquinaria, procesos, condiciones de operación y controles implementados.
+            </p>
+          </article>
+
+          <!-- Referencia normativa -->
+          <header
+            class="seccion__head"
+            style="margin-top: 28px; margin-bottom: 12px"
+          >
+            <div class="label">REFERENCIA NORMATIVA</div>
+            <h2 class="h2">Documento oficial</h2>
+            <p class="p">
+              Publicación en el Diario Oficial de la Federación (DOF). (Liga de referencia).
+            </p>
+          </header>
+
+          <article class="card">
+            <ul class="list list--tight">
+              <li>
+                <strong>NOM-004-STPS</strong> — Sistemas de protección y dispositivos de seguridad en maquinaria y equipo.
+              </li>
+              <li>
+                <a class="link" href="https://dof.gob.mx/" target="_blank" rel="noopener">
+                  Consultar en DOF (búsqueda)
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <!-- CTA: ¿No sabes si tu empresa cumple? -->
+          <div class="ctaInline" style="margin-top: 16px">
+            <div>
+              <div class="ctaInline__k">¿No sabes si tu empresa cumple con NOM-004?</div>
+              <div class="ctaInline__v">
+                Diagnóstico rápido (sin costo). Identificamos brechas por máquina/área,
+                controles críticos y una ruta 30/60/90 para cerrar riesgos y sostener evidencia.
+              </div>
+            </div>
+            <a class="btn btn--cta" href="../stps/diagnostico-industrial.html"
+              >Solicitar diagnóstico industrial</a
+            >
+          </div>
+
+          <!-- CTA: ¿Quieres cotización o fechas? -->
+          <div class="ctaInline">
+            <div>
+              <div class="ctaInline__k">¿Quieres cotización o fechas?</div>
+              <div class="ctaInline__v">
+                Envíanos: número de participantes, sede/planta, turnos, tipos de maquinaria/áreas críticas y fechas tentativas.
+                Te respondemos con propuesta clara.
+              </div>
+            </div>
+            <a class="btn btn--primario" href="#contacto">Contactar ahora</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO + FOOTER (ESTÁNDAR) -->
+      <section
+        id="contacto"
+        class="seccion seccion--mando seccion--bottom"
+        aria-label="Contacto y pie"
+      >
+        <div class="wrap">
+          <header class="seccion__head">
+            <div class="label">CONTACTO</div>
+            <h2 class="h2">Solicitar diagnóstico</h2>
+            <p class="p">
+              Respondemos por correo o WhatsApp. (Incluye origen: servicios.boxfox1.com)
+            </p>
+          </header>
+
+          <div class="contact">
+            <div class="contactCard">
+              <div class="contactCard__title">Contacto directo</div>
+
+              <a
+                class="contactRow"
+                href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20NOM-004-STPS%20(DC-3)&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20del%20curso%20NOM-004-STPS%20(DC-3).%0A%0AEmpresa%3A%0ACiudad%2FPlanta%3A%0AN%C3%BAmero%20de%20participantes%3A%0ATipos%20de%20maquinaria%2F%C3%A1reas%20cr%C3%ADticas%3A%0AFechas%20tentativas%3A%0A"
+              >
+                <span class="contactRow__k">Enviar mensaje por correo →</span>
+                <span class="contactRow__v">info@boxfox1.com</span>
+              </a>
+
+              <a
+                class="contactRow"
+                target="_blank"
+                rel="noopener"
+                href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20del%20curso%20NOM-004-STPS%20(DC-3).%0A%0AEmpresa%3A%20%0ACiudad%2FPlanta%3A%20%0AN%C3%BAmero%20de%20participantes%3A%20%0ATipos%20de%20maquinaria%2F%C3%A1reas%20cr%C3%ADticas%3A%20%0AFechas%20tentativas%3A%20"
+              >
+                <span class="contactRow__k">Enviar mensaje por WhatsApp →</span>
+                <span class="contactRow__v">+52 444 498 9198</span>
+              </a>
+            </div>
+
+            <div class="contactCard contactCard--soft">
+              <div class="contactGrid">
+                <div>
+                  <div class="contactCard__title">Qué incluye</div>
+                  <ul class="list list--tight">
+                    <li>Brechas por máquina/área y criticidad</li>
+                    <li>Mapa de riesgos mecánicos</li>
+                    <li>Checklist y control documental</li>
+                    <li>Ruta de implementación</li>
+                    <li>Plan de capacitación por rol</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div class="contactCard__title">Resultado esperado</div>
+                  <ul class="list list--tight">
+                    <li>Diagnóstico claro y accionable</li>
+                    <li>Prioridades definidas por riesgo</li>
+                    <li>Evidencia organizada para auditoría</li>
+                    <li>Base lista para implementación inmediata</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER V3 -->
+        <footer class="footer" aria-label="Pie de página">
+          <div class="wrap footer__inner">
+            <div class="footer__col">
+              <div class="footer__legal">
+                Corporativo Boxfox1 © 2026 &nbsp; | &nbsp;
+                <a
+                  class="footer__link footer__link--legal"
+                  href="#"
+                  data-open-privacy
+                >
+                  Aviso de privacidad
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__col footer__col--right">
+              <div class="footer__icons" aria-label="Redes sociales Boxfox1">
+                <a
+                  class="iconlink"
+                  href="https://blog.boxfox1.com/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Blog Boxfox1"
+                >
+                  <img src="../assets/img/icons/blog.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.linkedin.com/company/boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                >
+                  <img src="../assets/img/icons/linkedin.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.facebook.com/boxfox1industria/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                >
+                  <img src="../assets/img/icons/facebook.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://x.com/Boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="X"
+                >
+                  <img src="../assets/img/icons/x.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.instagram.com/boxfox1.industry/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <img src="../assets/img/icons/instagram.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://open.spotify.com/show/6O8W2euH2owYs06F3bGgIo"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Spotify"
+                >
+                  <img src="../assets/img/icons/spotify.svg" alt="" aria-hidden="true" />
+                </a>
+
+                <a
+                  class="iconlink"
+                  href="https://www.youtube.com/@Boxfox1industry"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="YouTube"
+                >
+                  <img src="../assets/img/icons/youtube.svg" alt="" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+      <!-- Botón flotante: WhatsApp -->
+      <a
+        class="wafab"
+        target="_blank"
+        rel="noopener"
+        href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20del%20curso%20NOM-004-STPS%20(DC-3)."
+        aria-label="Contactar por WhatsApp"
+      >
+        <img src="../assets/img/icons/whatsapp.svg" alt="WhatsApp" aria-hidden="true" />
+      </a>
+
+      <!-- PRIVACIDAD MODAL (V3) -->
+      <div
+        class="modal"
+        id="privacyModal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="privacyTitle"
+        aria-describedby="privacyDesc"
+      >
+        <div class="modal__backdrop" data-modal-close></div>
+
+        <div class="modal__panel" role="document">
+          <div class="modal__top">
+            <div class="modal__kicker">
+              <span class="kicker__dot" aria-hidden="true"></span>
+              AVISO DE PRIVACIDAD
+            </div>
+
+            <button class="modal__x" type="button" aria-label="Cerrar" data-modal-close>
+              ×
+            </button>
+          </div>
+
+          <h2 class="h2" id="privacyTitle" style="margin-top: 8px">
+            Tratamiento de datos personales
+          </h2>
+
+          <p class="p" id="privacyDesc" style="margin-top: 6px">
+            Al proporcionar tus datos (nombre, empresa, correo y/o teléfono),
+            autorizas a Boxfox1 a utilizarlos únicamente para contactarte, dar
+            seguimiento a tu solicitud y enviarte información relacionada con
+            nuestros servicios. No vendemos ni compartimos tus datos con
+            terceros, salvo cuando sea necesario para cumplir obligaciones
+            legales. Puedes solicitar acceso, rectificación o eliminación de tus
+            datos escribiendo a
+            <a
+              class="link"
+              href="mailto:info@boxfox1.com?subject=Privacidad%20|%20Solicitud%20ARCO&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20ejercer%20mis%20derechos%20ARCO.%0A%0ANombre%3A%0ACorreo%3A%0ASolicitud%3A%0A"
+              >info@boxfox1.com</a
+            >.
+          </p>
+
+          <div class="modal__actions">
+            <button class="btn btn--primario" type="button" data-modal-close>
+              Aceptar
+            </button>
+          </div>
+
+          <p class="muted" style="font-size: 12px; margin-top: 10px">
+            Origen: servicios.boxfox1.com
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
