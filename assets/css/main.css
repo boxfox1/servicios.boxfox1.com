@@ -2065,3 +2065,16 @@ a.link:hover {
   margin-bottom: 8px;
   border-bottom: 1px solid rgba(15, 23, 42, 0.1);
 }
+.tag {
+  border-radius: 999px;
+  background: rgba(26, 120, 255, 0.06);
+}
+.diagQ label {
+  cursor: pointer;
+}
+.diagQ input {
+  accent-color: #1a78ff;
+}
+.diagQ {
+  border-top: 2px solid rgba(26, 120, 255, 0.55);
+}

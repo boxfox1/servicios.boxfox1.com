@@ -15,21 +15,24 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-GGRX2Q2LLB");
     </script>
 
     <title>Diagnóstico | Sistema Boxfox1</title>
+    <meta
+      name="description"
+      content="Diagnóstico frontend Boxfox1: NOM-STPS + Brigadas, score, urgencia y acciones recomendadas."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0b1220" />
 
     <link rel="icon" href="../assets/img/favicon.ico" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="../assets/css/main.css" />
 
     <style>
@@ -57,6 +60,251 @@
         font-weight: 800;
         font-size: 12px;
         margin: 4px;
+        background: #fff;
+      }
+      .row2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      @media (max-width: 620px) {
+        .row2 {
+          grid-template-columns: 1fr;
+        }
+      }
+      .fieldLabel {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(15, 23, 42, 0.62);
+        font-weight: 900;
+        margin-top: 10px;
+      }
+      .input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1.5px solid rgba(15, 23, 42, 0.18);
+        padding: 10px 12px;
+        font: inherit;
+      }
+      textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+      .btnRow {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .btnMini {
+        padding: 10px 12px;
+        border: 1px solid rgba(15, 23, 42, 0.18);
+        background: #fff;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .btnMini--prim {
+        background: rgba(26, 120, 255, 0.12);
+        border-color: rgba(26, 120, 255, 0.28);
+      }
+      .btnMini--ok {
+        background: rgba(16, 185, 129, 0.14);
+        border-color: rgba(16, 185, 129, 0.35);
+      }
+      .noteSmall {
+        font-size: 12px;
+        color: rgba(15, 23, 42, 0.62);
+        margin-top: 8px;
+      }
+      .softHr {
+        border: 0;
+        border-top: 1px solid rgba(15, 23, 42, 0.12);
+        margin: 16px 0;
+      }
+
+      /* Progreso */
+      .diagStatus__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .diagPct {
+        font-weight: 900;
+        letter-spacing: -0.01em;
+      }
+      .diagBar {
+        height: 10px;
+        border: 1px solid rgba(15, 23, 42, 0.14);
+        background: #f3f5f8;
+        position: relative;
+        overflow: hidden;
+      }
+      .diagBar__fill {
+        height: 100%;
+        background: rgba(26, 120, 255, 0.95);
+        transition: width 0.18s ease;
+      }
+
+      /* Acordeón */
+      .diagAcc {
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        background: #fff;
+        box-shadow: var(--sombra2);
+        border-top: 2px solid rgba(26, 120, 255, 0.55);
+      }
+      .diagAcc + .diagAcc {
+        margin-top: 10px;
+      }
+      .diagAcc > summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 12px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        user-select: none;
+      }
+      .diagAcc > summary::-webkit-details-marker {
+        display: none;
+      }
+      .acc__mini {
+        margin-top: 6px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 12px;
+        color: rgba(15, 23, 42, 0.65);
+        font-weight: 900;
+      }
+      .acc__count,
+      .acc__pct {
+        padding: 4px 8px;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        background: #f3f5f8;
+      }
+      .acc__caret {
+        width: 36px;
+        height: 36px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        background: rgba(15, 23, 42, 0.02);
+        font-weight: 900;
+        position: relative;
+        color: transparent;
+      }
+      .acc__caret::before {
+        content: "+";
+        color: rgba(15, 23, 42, 0.82);
+      }
+      .diagAcc[open] .acc__caret {
+        background: rgba(26, 120, 255, 0.08);
+        border-color: rgba(26, 120, 255, 0.2);
+      }
+      .diagAcc[open] .acc__caret::before {
+        content: "−";
+      }
+      .acc__body {
+        border-top: 1px solid rgba(15, 23, 42, 0.12);
+        padding: 12px 14px 14px;
+      }
+
+      .diagQ {
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        background: #fff;
+        padding: 12px;
+      }
+      .diagQ + .diagQ {
+        margin-top: 10px;
+      }
+      .diagQ__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .diagQ__q {
+        font-weight: 900;
+      }
+      .diagQ__opts {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .opt {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        padding: 8px 10px;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        background: #f3f5f8;
+        font-weight: 900;
+        cursor: pointer;
+      }
+      .opt input {
+        accent-color: #1a78ff;
+      }
+
+      /* Semáforo / tarjetas salida */
+      #outCard {
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          border-color 0.18s ease;
+      }
+      #outCard.is-ready {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(2, 6, 23, 0.12);
+        border-top-color: rgba(16, 185, 129, 0.9);
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        font-weight: 900;
+        font-size: 12px;
+        background: #fff;
+      }
+      .pill--g {
+        border-color: rgba(16, 185, 129, 0.35);
+        background: rgba(16, 185, 129, 0.12);
+      }
+      .pill--y {
+        border-color: rgba(245, 158, 11, 0.35);
+        background: rgba(245, 158, 11, 0.12);
+      }
+      .pill--r {
+        border-color: rgba(239, 68, 68, 0.35);
+        background: rgba(239, 68, 68, 0.12);
+      }
+      .outBox {
+        margin-top: 12px;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        background: #fff;
+        padding: 12px;
+      }
+      .outTitle {
+        font-weight: 900;
+        margin: 0 0 8px;
+      }
+      .listT {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+      .listT li {
+        margin: 6px 0;
+      }
+      .small {
+        font-size: 12px;
+        color: rgba(15, 23, 42, 0.62);
+        font-weight: 700;
       }
     </style>
   </head>
@@ -76,10 +324,12 @@
         <span class="muted">Implementación + Capacitación</span>
 
         <a
-          class="nav__link nav__link--soft tira__cta is-active"
-          href="../sistema/diagnostico.html"
+          class="nav__link nav__link--soft tira__cta"
+          target="_blank"
+          rel="noopener"
+          href="https://clientes.boxfox1.com"
         >
-          Diagnóstico
+          Clientes
         </a>
       </div>
     </div>
@@ -104,15 +354,15 @@
             >Capacitación</a
           >
           <a class="nav__link" href="../stps/cursos-noms.html">Cursos NOMs</a>
-          <a class="nav__link" href="../stps/reporte-de-incidentes.html">Reporte de Incidentes</a>
-        </nav>
+          <a class="nav__link" href="../stps/reporte-de-incidentes.html"
+            >Reporte de Incidentes</a
+          >
           <a class="nav__link" href="../index.html#contacto">Contacto</a>
         </nav>
 
         <button class="navbtn" type="button" data-navbtn>
-          <span class="navbtn__line"></span>
-          <span class="navbtn__line"></span>
-          <span class="navbtn__line"></span>
+          <span class="navbtn__line"></span><span class="navbtn__line"></span
+          ><span class="navbtn__line"></span>
         </button>
       </div>
 
@@ -144,8 +394,8 @@
             <div class="heroLine__k">Sistema Boxfox1</div>
             <div class="h1 heroLine__flow">Diagnóstico NOM-STPS + Brigadas</div>
             <p class="lead">
-              Selecciona el giro y el sistema activa automáticamente normas y
-              brigadas recomendadas.
+              Selecciona giro + personal por turno. Contesta checklist y el
+              sistema genera score, urgencia y acciones recomendadas.
             </p>
           </div>
         </div>
@@ -155,32 +405,139 @@
       <section class="seccion">
         <div class="wrap">
           <div class="diagGrid">
+            <!-- IZQ -->
             <article class="diagCard">
-              <h2 class="h2">Giro / Sector</h2>
+              <h2 class="h2" style="margin-top: 0">
+                Diagnóstico Industrial (Frontend)
+              </h2>
+              <p class="p">
+                Selecciona giro + personal simultáneo por turno. Luego contesta
+                checklist.
+              </p>
 
-              <select
-                id="giro"
-                style="width: 100%; padding: 10px; margin-top: 8px"
-              >
+              <div class="fieldLabel">Giro / Sector</div>
+              <select id="giro" class="input">
                 <option value="">Selecciona</option>
                 <option value="manufactura">Manufactura</option>
+                <option value="logistica">Logística</option>
                 <option value="hospital">Hospitales</option>
                 <option value="consultorio">Consultorios / Dentales</option>
                 <option value="hotel">Hoteles</option>
                 <option value="comercio">Comercio / Plazas</option>
                 <option value="escuela">Colegios / Escuelas</option>
-                <option value="logistica">Logística</option>
               </select>
 
-              <div style="margin-top: 16px">
-                <strong>Brigadas sugeridas:</strong>
-                <div id="brigadas"></div>
+              <div class="row2">
+                <div>
+                  <div class="fieldLabel">Personal simultáneo por turno</div>
+                  <select id="turnoCount" class="input">
+                    <option value="">Selecciona</option>
+                    <option value="1-25">1–25</option>
+                    <option value="26-50">26–50</option>
+                    <option value="51-100">51–100</option>
+                    <option value="101-250">101–250</option>
+                    <option value="251-600">251–600</option>
+                    <option value="601-1200">601–1200</option>
+                    <option value="1201+">1201+</option>
+                  </select>
+                </div>
+
+                <div>
+                  <div class="fieldLabel">Turnos</div>
+                  <select id="turnos" class="input">
+                    <option value="">Selecciona</option>
+                    <option value="1">1 turno</option>
+                    <option value="2">2 turnos</option>
+                    <option value="3">3 turnos</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="fieldLabel">
+                Datos del contacto (para seguimiento)
+              </div>
+              <div class="row2">
+                <input id="name" class="input" placeholder="Nombre" />
+                <input id="company" class="input" placeholder="Empresa" />
+              </div>
+              <div class="row2" style="margin-top: 10px">
+                <input
+                  id="phone"
+                  class="input"
+                  placeholder="WhatsApp (10 digitos)"
+                />
+                <input
+                  id="email"
+                  class="input"
+                  placeholder="Email (opcional)"
+                />
+              </div>
+
+              <div class="fieldLabel">Nota (opcional)</div>
+              <textarea
+                id="nota"
+                placeholder="Ej. inspección próxima, auditoría interna, cambios de layout, etc."
+              ></textarea>
+
+              <div class="softHr"></div>
+
+              <div id="checklist" style="margin-top: 12px"></div>
+
+              <div class="btnRow">
+                <button id="btnCalc" class="btnMini btnMini--ok" type="button">
+                  Generar resultado operativo
+                </button>
+                <button
+                  id="btnSave"
+                  class="btnMini btnMini--prim"
+                  type="button"
+                >
+                  Guardar
+                </button>
+                <button id="btnReset" class="btnMini" type="button">
+                  Reiniciar
+                </button>
               </div>
             </article>
 
-            <aside class="diagCard">
-              <h2 class="h2">NOM sugeridas</h2>
-              <div id="noms"></div>
+            <!-- DER -->
+            <aside class="diagCard" id="outCard">
+              <h2 class="h2" style="margin-top: 0">Salida del sistema</h2>
+
+              <div class="outBox">
+                <div class="outTitle">Brigadas sugeridas</div>
+                <div id="brigadas"></div>
+              </div>
+
+              <div class="outBox">
+                <div class="outTitle">NOM sugeridas</div>
+                <div id="noms"></div>
+              </div>
+
+              <div class="diagStatus" style="margin-top: 14px">
+                <div class="diagStatus__top">
+                  <div class="label">ESTADO DEL SISTEMA</div>
+                  <div id="pctTxt" class="diagPct">0%</div>
+                </div>
+                <div class="diagBar" aria-label="Progreso del checklist">
+                  <div
+                    id="pctBar"
+                    class="diagBar__fill"
+                    style="width: 0%"
+                  ></div>
+                </div>
+                <div id="statusTxt" class="p" style="margin-top: 8px">
+                  Preparando análisis… selecciona giro + personal por turno.
+                </div>
+              </div>
+
+              <div id="resultado" class="outBox" style="margin-top: 14px">
+                <div class="outTitle">Resultado (resumen)</div>
+                <div class="small">
+                  Completa el checklist y presiona “Generar resultado
+                  operativo”.
+                </div>
+              </div>
             </aside>
           </div>
         </div>
@@ -197,21 +554,19 @@
                   class="footer__link footer__link--legal"
                   href="#"
                   data-open-privacy
+                  >Aviso de privacidad</a
                 >
-                  Aviso de privacidad
-                </a>
               </div>
             </div>
 
             <div class="footer__col footer__col--right">
               <div class="footer__icons" aria-label="Redes sociales Boxfox1">
-                <!-- Blog -->
                 <a
                   class="iconlink"
                   href="https://blog.boxfox1.com/"
                   target="_blank"
                   rel="noopener"
-                  aria-label="Blog Boxfox1"
+                  aria-label="Blog"
                 >
                   <img
                     src="../assets/img/icons/blog.svg"
@@ -219,8 +574,6 @@
                     aria-hidden="true"
                   />
                 </a>
-
-                <!-- LinkedIn -->
                 <a
                   class="iconlink"
                   href="https://www.linkedin.com/company/boxfox1industry"
@@ -234,8 +587,6 @@
                     aria-hidden="true"
                   />
                 </a>
-
-                <!-- Facebook -->
                 <a
                   class="iconlink"
                   href="https://www.facebook.com/boxfox1industria/"
@@ -249,8 +600,6 @@
                     aria-hidden="true"
                   />
                 </a>
-
-                <!-- X -->
                 <a
                   class="iconlink"
                   href="https://x.com/Boxfox1industry"
@@ -264,8 +613,6 @@
                     aria-hidden="true"
                   />
                 </a>
-
-                <!-- Instagram -->
                 <a
                   class="iconlink"
                   href="https://www.instagram.com/boxfox1.industry/"
@@ -279,8 +626,6 @@
                     aria-hidden="true"
                   />
                 </a>
-
-                <!-- Spotify -->
                 <a
                   class="iconlink"
                   href="https://open.spotify.com/show/6O8W2euH2owYs06F3bGgIo"
@@ -294,8 +639,6 @@
                     aria-hidden="true"
                   />
                 </a>
-
-                <!-- YouTube -->
                 <a
                   class="iconlink"
                   href="https://www.youtube.com/@Boxfox1industry"
@@ -316,64 +659,17 @@
       </section>
     </main>
 
-    <!-- WHATSAPP FAB -->
-    <a class="wafab" target="_blank" href="https://wa.me/524444989198">
+    <!-- WhatsApp FAB -->
+    <a
+      class="wafab"
+      target="_blank"
+      rel="noopener"
+      href="https://wa.me/524444989198"
+    >
       <img src="../assets/img/icons/whatsapp.svg" alt="" />
     </a>
 
     <script src="../assets/js/main.js" defer></script>
-
-    <!-- MOTOR -->
-    <script>
-      const MAP = {
-        manufactura: {
-          noms: ["NOM-004", "NOM-017", "NOM-002", "NOM-030"],
-          brigadas: ["Incendio", "Evacuación", "Primeros auxilios"],
-        },
-        hospital: {
-          noms: ["NOM-005", "NOM-010", "NOM-017", "NOM-035"],
-          brigadas: ["Evacuación", "Primeros auxilios", "Bioseguridad"],
-        },
-        consultorio: {
-          noms: ["NOM-005", "NOM-017", "NOM-030"],
-          brigadas: ["Primeros auxilios", "Evacuación"],
-        },
-        hotel: {
-          noms: ["NOM-002", "NOM-019", "NOM-030"],
-          brigadas: ["Evacuación", "Incendio", "Primeros auxilios"],
-        },
-        comercio: {
-          noms: ["NOM-002", "NOM-026", "NOM-030"],
-          brigadas: ["Evacuación", "Incendio"],
-        },
-        escuela: {
-          noms: ["NOM-002", "NOM-019", "NOM-030", "NOM-035"],
-          brigadas: ["Evacuación", "Primeros auxilios", "Incendio"],
-        },
-        logistica: {
-          noms: ["NOM-006", "NOM-017", "NOM-002"],
-          brigadas: ["Evacuación", "Incendio"],
-        },
-      };
-
-      const giro = document.getElementById("giro");
-      const noms = document.getElementById("noms");
-      const brig = document.getElementById("brigadas");
-
-      giro.addEventListener("change", () => {
-        const v = MAP[giro.value];
-        if (!v) {
-          noms.innerHTML = "";
-          brig.innerHTML = "";
-          return;
-        }
-        noms.innerHTML = v.noms
-          .map((n) => `<span class="tag">${n}</span>`)
-          .join("");
-        brig.innerHTML = v.brigadas
-          .map((b) => `<span class="tag">${b}</span>`)
-          .join("");
-      });
-    </script>
+    <script src="../assets/js/diag-engine.js" defer></script>
   </body>
 </html>
