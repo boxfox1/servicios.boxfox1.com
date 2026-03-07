@@ -21,25 +21,78 @@
     <title>Checklists STPS | Servicios Industriales Boxfox1</title>
     <meta
       name="description"
-      content="Biblioteca técnica de checklists STPS Boxfox1: recursos PDF para autoevaluación preliminar de brigadas, inspección NOM-STPS y control documental."
+      content="Biblioteca técnica de checklists STPS Boxfox1: recursos PDF para autoevaluación preliminar de brigadas, inspección NOM-STPS y control documental en entornos industriales."
     />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#0b1220" />
+    <meta name="author" content="Boxfox1" />
+    <meta name="copyright" content="Boxfox1" />
+
+    <link
+      rel="canonical"
+      href="https://servicios.boxfox1.com/stps/checklists/"
+    />
+    <link
+      rel="alternate"
+      hreflang="es-MX"
+      href="https://servicios.boxfox1.com/stps/checklists/"
+    />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Checklists STPS | Boxfox1" />
+    <meta
+      property="og:title"
+      content="Checklists STPS | Servicios Industriales Boxfox1"
+    />
     <meta
       property="og:description"
-      content="Biblioteca técnica: checklists PDF para autoevaluación preliminar (brigadas, NOMs y cumplimiento) con enfoque industrial."
+      content="Biblioteca técnica con checklists PDF para autoevaluación preliminar, brigadas, NOM-STPS y preparación documental en industria."
     />
     <meta
       property="og:url"
       content="https://servicios.boxfox1.com/stps/checklists/"
     />
-    <meta property="og:site_name" content="Boxfox1" />
+    <meta property="og:site_name" content="Boxfox1 Servicios Industriales" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta
+      property="og:image"
+      content="https://servicios.boxfox1.com/assets/img/og-image.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://servicios.boxfox1.com/assets/img/og-image.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Checklists STPS | Servicios Industriales Boxfox1"
+    />
 
-    <link rel="icon" href="../../assets/img/favicon.ico" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Boxfox1industry" />
+    <meta
+      name="twitter:title"
+      content="Checklists STPS | Servicios Industriales Boxfox1"
+    />
+    <meta
+      name="twitter:description"
+      content="Biblioteca técnica con checklists PDF para autoevaluación preliminar, brigadas, NOM-STPS y preparación documental en industria."
+    />
+    <meta
+      name="twitter:image"
+      content="https://servicios.boxfox1.com/assets/img/og-image.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Checklists STPS | Servicios Industriales Boxfox1"
+    />
+
+    <link rel="icon" href="/assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
 
     <!-- Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,135 +102,69 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
 
-    <!-- Ajustes LOCALES (solo esta página) -->
-    <style>
-      /* Lista técnica tipo “biblioteca” */
-      .dl {
-        border: 1px solid rgba(15, 23, 42, 0.12);
-        background: #fff;
-        padding: 16px;
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Checklists STPS",
+        "url": "https://servicios.boxfox1.com/stps/checklists/",
+        "description": "Biblioteca técnica con checklists base en PDF para autoevaluación preliminar, brigadas industriales, NOM-STPS y sistema de comando de incidentes.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Boxfox1 Servicios Industriales",
+          "url": "https://servicios.boxfox1.com/"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Cumplimiento NOM-STPS y brigadas industriales"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Boxfox1 Servicios Industriales",
+          "url": "https://servicios.boxfox1.com/"
+        }
       }
-      .dl + .dl {
-        margin-top: 12px;
-      }
-
-      .dlRow {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 12px 0;
-        border-bottom: 1px dashed rgba(15, 23, 42, 0.12);
-      }
-      .dlRow:last-child {
-        border-bottom: none;
-      }
-
-      .dlRow__l {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        min-width: 0;
-      }
-
-      .dlRow__k {
-        font-weight: 900;
-        letter-spacing: -0.01em;
-        color: rgba(15, 23, 42, 0.9);
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 70ch;
-      }
-
-      .dlRow__m {
-        font-size: 12px;
-        color: rgba(15, 23, 42, 0.62);
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .dlRow__a {
-        flex: 0 0 auto;
-      }
-
-      .noteBox {
-        margin-top: 14px;
-        padding: 14px 16px;
-        border: 1px solid rgba(255, 159, 26, 0.22);
-        background: rgba(255, 159, 26, 0.08);
-      }
-      .noteBox__k {
-        font-weight: 900;
-        margin-bottom: 6px;
-      }
-      .noteBox__v {
-        color: rgba(15, 23, 42, 0.78);
-        font-size: 13px;
-        line-height: 1.55;
-      }
-
-      .tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 6px 10px;
-        border: 1px solid rgba(15, 23, 42, 0.12);
-        background: rgba(26, 120, 255, 0.06);
-        font-weight: 800;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        font-size: 11px;
-        color: rgba(15, 23, 42, 0.74);
-        margin-bottom: 10px;
-      }
-
-      .quick {
-        margin-top: 14px;
-        padding-top: 12px;
-        border-top: 1px solid rgba(15, 23, 42, 0.1);
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-    </style>
+    </script>
   </head>
 
   <body>
-    <a class="skip" href="#principal">Saltar al contenido</a>
+    <a class="skip" href="#principal">Saltar al contenido principal</a>
 
     <!-- Tira superior -->
     <div class="tira" role="note" aria-label="Identidad y alcance">
       <div class="wrap tira__inner">
         <span class="chip">Industry Standard</span>
         <span class="sep" aria-hidden="true">·</span>
-        <span class="muted">NOM-STPS</span>
+        <span class="muted">Evaluar</span>
         <span class="sep" aria-hidden="true">·</span>
-        <span class="muted">Checklists técnicas</span>
+        <span class="muted">Ordenar</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">Implementar</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="muted">Mantener</span>
 
-        <a
-          class="nav__link nav__link--soft tira__cta"
-          href="../diagnostico-industrial.html"
-        >
-          Diagnóstico
-        </a>
+        <div class="tira__right">
+          <a class="nav__link nav__link--soft" href="/maquinados/"
+            >Maquinados</a
+          >
+          <a class="nav__link nav__link--soft" href="/imprenta/">Imprenta</a>
+          <a class="nav__link nav__link--soft" href="/contacto.html"
+            >Contacto</a
+          >
+          <a class="nav__link nav__link--soft" href="/clientes/">Clientes</a>
+        </div>
       </div>
     </div>
 
     <!-- Cabecera -->
     <header class="cabecera" data-cabecera>
       <div class="wrap cabecera__inner">
-        <a
-          class="marca"
-          href="../../index.html#inicio"
-          aria-label="Ir al inicio"
-        >
+        <a class="marca" href="/" aria-label="Ir al inicio">
           <img
             class="marca__logo"
-            src="../../assets/img/boxfox1.logo.white.svg"
+            src="/assets/img/boxfox1.logo.white.svg"
             alt="Boxfox1"
             width="170"
             height="40"
@@ -188,22 +175,23 @@
         </a>
 
         <nav class="nav" aria-label="Navegación principal">
-          <a class="nav__link" href="../../index.html#inicio">Inicio</a>
-          <a class="nav__link" href="../index.html">Sistema STPS</a>
-          <a class="nav__link" href="../cursos-para-la-industria.html"
-            >Capacitación</a
+          <a class="nav__link" href="/">Inicio</a>
+          <a class="nav__link is-active" href="/stps/">Industrial</a>
+          <a class="nav__link" href="/comercial/">Comercial</a>
+          <a class="nav__link" href="/recursos/">Recursos</a>
+          <a class="nav__link" href="/stps/diagnostico-industrial.html"
+            >Diagnóstico</a
           >
-          <a class="nav__link" href="../cursos-noms.html">Cursos de NOMs</a>
-          <a class="nav__link" href="../stps/reporte-de-incidentes.html"
-            >Reporte de Incidentes</a
+          <a class="nav__link" href="/capacitacion/">Capacitación</a>
+          <a class="nav__link" href="/stps/reportes/incidentes.html"
+            >Incidentes</a
           >
-          <a class="nav__link" href="../contacto.html">Contacto</a>
         </nav>
 
         <button
           class="navbtn"
           type="button"
-          aria-label="Abrir menú"
+          aria-label="Abrir menú de navegación"
           aria-expanded="false"
           data-navbtn
         >
@@ -216,31 +204,31 @@
       <!-- Panel móvil -->
       <div class="panel" data-panel aria-hidden="true">
         <div class="wrap panel__inner">
-          <a class="panel__link" href="../../index.html#inicio">Inicio</a>
-          <a class="panel__link" href="../index.html">Sistema STPS</a>
-          <a class="panel__link" href="../cursos-para-la-industria.html"
-            >Capacitación</a
+          <a class="panel__link" href="/">Inicio</a>
+          <a class="panel__link is-active" href="/stps/">Industrial</a>
+          <a class="panel__link" href="/comercial/">Comercial</a>
+          <a class="panel__link" href="/recursos/">Recursos</a>
+          <a class="panel__link" href="/stps/diagnostico-industrial.html"
+            >Diagnóstico</a
           >
-          <a class="panel__link" href="../cursos-noms.html">Cursos de NOMs</a>
-          <a class="panel__link" href="../stps/reporte-de-incidentes.html"
-            >Reporte de Incidentes</a
+          <a class="panel__link" href="/capacitacion/">Capacitación</a>
+          <a class="panel__link" href="/stps/reportes/incidentes.html"
+            >Incidentes</a
           >
-          <a class="panel__link panel__link--cta" href="../contacto.html"
-            >Contacto</a
-          >
+          <a class="panel__link" href="/contacto.html">Contacto</a>
 
           <div class="panel__meta">
             <div class="panel__metaTitle">Contacto directo</div>
             <a
               class="panel__metaLink"
-              href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20Checklists%20STPS&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20sobre%20checklists%20y%20paquetes%20completos%20para%20cumplimiento%20STPS.%0A%0AEmpresa%3A%0ACiudad%2FPlanta%3A%0A"
+              href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20Checklists%20STPS&body=Origen%3A%20servicios.boxfox1.com%2Fstps%2Fchecklists%2F%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20sobre%20checklists%20STPS%20y%20paquetes%20de%20cumplimiento.%0A%0AEmpresa%3A%0ACiudad%2FPlanta%3A%0ANecesidad%3A%0A"
               >info@boxfox1.com</a
             >
             <a
               class="panel__metaLink"
               target="_blank"
               rel="noopener"
-              href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20sobre%20checklists%20y%20paquetes%20completos%20STPS.%0A%0AEmpresa%3A%20%0ACiudad%2FPlanta%3A%20"
+              href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%2Fstps%2Fchecklists%2F%20y%20quiero%20informaci%C3%B3n%20sobre%20checklists%20STPS%20y%20paquetes%20de%20cumplimiento.%0A%0AEmpresa%3A%20%0ACiudad%2FPlanta%3A%20%0ANecesidad%3A%20"
               >WhatsApp 444 498 9198</a
             >
           </div>
@@ -249,33 +237,40 @@
     </header>
 
     <main id="principal">
-      <!-- HERO V3 -->
-      <section
-        class="hero hero--compact hero--dark"
-        aria-label="Entrada principal"
-      >
+      <!-- HERO -->
+      <section class="hero" aria-label="Entrada principal">
         <div class="wrap">
           <div class="heroLine">
-            <div class="heroLine__k">SISTEMA BOXFOX1</div>
+            <div class="heroLine__k">SISTEMA BOXFOX1 · INDUSTRIAL</div>
+
             <div class="h1 heroLine__flow">Checklists STPS</div>
 
             <p class="lead heroLine__sub">
               Biblioteca técnica con recursos PDF para
-              <strong>autoevaluación preliminar</strong>, control inicial y
-              preparación documental. Útiles para brigadas, cumplimiento
-              NOM-STPS y auditoría industrial.
+              <strong>autoevaluación preliminar</strong>, preparación
+              documental, brigadas industriales y verificación inicial de
+              cumplimiento NOM-STPS.
             </p>
 
-            <div class="hero__actions" style="margin-top: 12px">
-              <a class="btn btn--tab" href="../index.html">Sistema STPS</a>
-              <a class="btn btn--tab" href="../cursos-noms.html">Ver NOMs</a>
-              <a class="btn btn--cta" href="../diagnostico-industrial.html"
+            <div class="hero__actions hero__actions--compact">
+              <a class="btn btn--tab" href="#brigadas">Brigadas</a>
+              <a class="btn btn--tab" href="#noms">NOM-STPS</a>
+              <a class="btn btn--tab" href="#sci">SCI</a>
+              <a class="btn btn--cta" href="/stps/diagnostico-industrial.html"
                 >Solicitar diagnóstico</a
               >
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Breadcrumb debajo del hero -->
+      <nav
+        id="breadcrumbs"
+        class="breadcrumbs"
+        aria-label="Ruta de navegación"
+      ></nav>
+      <script id="breadcrumbs-schema" type="application/ld+json"></script>
 
       <!-- CONTENIDO -->
       <section class="seccion" aria-label="Biblioteca de checklists">
@@ -284,501 +279,483 @@
             <div class="label">RECURSOS</div>
             <h2 class="h2">Centro de descargas</h2>
             <p class="p">
-              Checklists base para control interno. Si requieres la versión
-              completa por giro/área, te la integramos en paquete (Hub) con
-              evidencia y formatos.
+              Checklists base para control interno y revisión preliminar. Si
+              requieres la versión integrada por giro, área, evidencia o
+              programa anual, la desarrollamos como parte del diagnóstico y plan
+              de implementación.
             </p>
           </header>
 
-          <div class="noteBox">
-            <div class="noteBox__k">Nota</div>
-            <div class="noteBox__v">
+          <article class="card">
+            <h3 class="h3">Nota importante</h3>
+            <p class="p">
               Estas checklists son guías de referencia para autoevaluación
               preliminar. No sustituyen capacitación formal, procedimientos
-              internos ni diagnóstico específico del centro de trabajo.
-            </div>
-          </div>
+              internos, análisis de riesgo ni diagnóstico específico del centro
+              de trabajo.
+            </p>
+          </article>
 
-          <div class="quick">
-            <a class="btn btn--primario" href="#brigadas">Brigadas</a>
-            <a class="btn btn--primario" href="#noms">NOMs</a>
-            <a class="btn btn--primario" href="#sci">Sistema de Comando</a>
-          </div>
-
-          <!-- BRIGADAS -->
-          <header class="seccion__head" id="brigadas" style="margin-top: 26px">
+          <header class="seccion__head sectionHead--spaced" id="brigadas">
             <div class="label">CATEGORÍA</div>
             <h2 class="h2">Brigadas industriales</h2>
             <p class="p">
-              Descargas base para implementación inicial, roles y simulacros.
+              Recursos base para roles, organización, simulacros y respuesta
+              interna.
             </p>
           </header>
 
-          <div class="dl">
-            <div class="tag">BRIGADAS</div>
-
+          <article class="dl">
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">Brigada Contra Incendio</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
+                <div class="dlRow__k">Checklist básica — Brigada Contra Incendio</div>
+                <div class="dlRow__m">PDF · Brigadas</div>
               </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Brigada-Contra-Incendio.pdf"
-                  >Descargar →</a
-                >
-              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Brigada-Contra-Incendio.pdf"
+                >Descargar</a
+              >
             </div>
 
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">Brigada de Búsqueda y Rescate</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
+                <div class="dlRow__k">
+                  Checklist básica — Brigada de Búsqueda y Rescate
+                </div>
+                <div class="dlRow__m">PDF · Brigadas</div>
               </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Brigada-de-Busqueda-y-Rescate.pdf"
-                  >Descargar →</a
-                >
-              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Brigada-de-Busqueda-y-Rescate.pdf"
+                >Descargar</a
+              >
             </div>
 
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">Brigada de Comunicación</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
+                <div class="dlRow__k">Checklist básica — Brigada de Comunicación</div>
+                <div class="dlRow__m">PDF · Brigadas</div>
               </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Brigada-de-Comunicacion.pdf"
-                  >Descargar →</a
-                >
-              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Brigada-de-Comunicacion.pdf"
+                >Descargar</a
+              >
             </div>
 
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">Brigada de Evacuación</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
+                <div class="dlRow__k">Checklist básica — Brigada de Evacuación</div>
+                <div class="dlRow__m">PDF · Brigadas</div>
               </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Brigada-de-Evacuacion.pdf"
-                  >Descargar →</a
-                >
-              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Brigada-de-Evacuacion.pdf"
+                >Descargar</a
+              >
             </div>
 
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">Brigada de Materiales Peligrosos</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
+                <div class="dlRow__k">
+                  Checklist básica — Brigada de Materiales Peligrosos
+                </div>
+                <div class="dlRow__m">PDF · Brigadas</div>
               </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Brigada-de-materiales-peligrosos.pdf"
-                  >Descargar →</a
-                >
-              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Brigada-de-materiales-peligrosos.pdf"
+                >Descargar</a
+              >
             </div>
 
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">Brigada de Primeros Auxilios</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
+                <div class="dlRow__k">
+                  Checklist básica — Brigada de Primeros Auxilios
+                </div>
+                <div class="dlRow__m">PDF · Brigadas</div>
               </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Brigada-de-Primeros-Auxilios.pdf"
-                  >Descargar →</a
-                >
-              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Brigada-de-Primeros-Auxilios.pdf"
+                >Descargar</a
+              >
             </div>
 
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">Brigada de Rescate Especializado</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
+                <div class="dlRow__k">
+                  Checklist básica — Brigada de Rescate Especializado
+                </div>
+                <div class="dlRow__m">PDF · Brigadas</div>
               </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Brigada-de-Rescate-Especializado.pdf"
-                  >Descargar →</a
-                >
-              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Brigada-de-Rescate-Especializado.pdf"
+                >Descargar</a
+              >
             </div>
 
             <div class="dlRow">
               <div class="dlRow__l">
-                <div class="dlRow__k">Brigada Técnica</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
+                <div class="dlRow__k">Checklist básica — Brigada Técnica</div>
+                <div class="dlRow__m">PDF · Brigadas</div>
               </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Brigada-Tecnica.pdf"
-                  >Descargar →</a
-                >
-              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Brigada-Tecnica.pdf"
+                >Descargar</a
+              >
             </div>
-          </div>
+          </article>
 
-          <!-- NOMS -->
-          <header class="seccion__head" id="noms" style="margin-top: 26px">
+          <header class="seccion__head sectionHead--spaced" id="noms">
             <div class="label">CATEGORÍA</div>
             <h2 class="h2">Checklists de inspección NOM-STPS</h2>
             <p class="p">
-              Descargas base por norma para autoevaluación preliminar y control
+              Descargas base por norma para revisión preliminar, preparación
+              documental y control inicial.
+            </p>
+          </header>
+
+          <article class="dl">
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-001-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-001-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-002-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-002-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-004-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-004-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-005-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-005-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-006-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-006-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-009-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-009-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-010-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-010-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-017-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-017-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-018-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-018-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-019-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-019-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-020-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-020-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-026-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-026-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-030-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-030-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-033-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-033-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-035-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-035-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+
+            <div class="dlRow">
+              <div class="dlRow__l">
+                <div class="dlRow__k">
+                  Checklist básica — Inspección NOM-036-1-STPS
+                </div>
+                <div class="dlRow__m">PDF · NOM-STPS</div>
+              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Inspeccion-NOM-036-1-STPS.pdf"
+                >Descargar</a
+              >
+            </div>
+          </article>
+
+          <header class="seccion__head sectionHead--spaced" id="sci">
+            <div class="label">CATEGORÍA</div>
+            <h2 class="h2">Sistema de Comando de Incidentes</h2>
+            <p class="p">
+              Recurso base para estructura, funciones, roles y control operativo
               inicial.
             </p>
           </header>
 
-          <div class="dl">
-            <div class="tag">NOM-STPS</div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-001-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-001-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-002-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-002-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-004-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-004-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-005-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-005-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-006-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-006-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-009-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-009-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-010-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-010-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-017-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-017-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-018-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-018-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-019-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-019-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-020-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-020-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-026-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-026-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-030-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-030-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-033-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-033-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-035-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-035-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-
-            <div class="dlRow">
-              <div class="dlRow__l">
-                <div class="dlRow__k">Inspección NOM-036-1-STPS</div>
-                <div class="dlRow__m">PDF · Checklist base</div>
-              </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Inspeccion-NOM-036-1-STPS.pdf"
-                  >Descargar →</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- SCI -->
-          <header class="seccion__head" id="sci" style="margin-top: 26px">
-            <div class="label">CATEGORÍA</div>
-            <h2 class="h2">Sistema de Comando de Incidentes</h2>
-            <p class="p">
-              Checklist base para estructura, roles y control operativo.
-            </p>
-          </header>
-
-          <div class="dl">
-            <div class="tag">SCI</div>
-
+          <article class="dl">
             <div class="dlRow">
               <div class="dlRow__l">
                 <div class="dlRow__k">
                   Checklist básica — Sistema de Comando de Incidentes
                 </div>
-                <div class="dlRow__m">PDF · Checklist base</div>
+                <div class="dlRow__m">PDF · SCI</div>
               </div>
-              <div class="dlRow__a">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  href="./Checklist-Basica-de-Sistema-de-Comando-de-Incidentes.pdf"
-                  >Descargar →</a
-                >
-              </div>
+              <a
+                class="btn btn--primario dlRow__a"
+                target="_blank"
+                rel="noopener"
+                href="./Checklist-Basica-de-Sistema-de-Comando-de-Incidentes.pdf"
+                >Descargar</a
+              >
+            </div>
+          </article>
+
+          <div class="noteBox">
+            <div class="noteBox__k">Uso recomendado</div>
+            <div class="noteBox__v">
+              Estas plantillas ayudan a visualizar brechas preliminares. Para
+              auditoría, implementación por áreas o integración documental
+              completa, Boxfox1 las adapta a tu operación y criticidad.
             </div>
           </div>
 
-          <!-- CTA diagnóstico -->
-          <div class="ctaInline" style="margin-top: 16px">
-            <div>
+          <div class="ctaInline">
+            <div class="ctaInline__copy">
               <div class="ctaInline__k">
-                ¿Quieres el paquete completo por giro/área?
+                ¿Quieres el paquete completo por giro o área?
               </div>
               <div class="ctaInline__v">
-                Integramos checklists completas, formatos, evidencias y ruta
-                30/60/90 días con diagnóstico.
+                Integramos checklists completas, formatos, evidencias y ruta de
+                implementación 30/60/90 días a partir del diagnóstico.
               </div>
             </div>
-            <a class="btn btn--cta" href="../diagnostico-industrial.html"
-              >Solicitar diagnóstico NOM-STPS</a
-            >
+            <div class="ctaInline__actions">
+              <a class="btn btn--cta" href="/stps/diagnostico-industrial.html"
+                >Solicitar diagnóstico NOM-STPS</a
+              >
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CONTACTO + FOOTER (ESTÁNDAR) -->
-      <section
-        id="contacto"
-        class="seccion seccion--mando seccion--bottom"
-        aria-label="Contacto y pie"
-      >
+      <!-- CONTACTO -->
+      <section id="contacto" class="seccion seccion--mando seccion--bottom">
         <div class="wrap">
           <header class="seccion__head">
-            <div class="label">04 · CONTACTO</div>
-            <h2 class="h2">Solicitar diagnóstico</h2>
-            <p class="p">
-              Respondemos por correo o WhatsApp. (Incluye origen:
-              servicios.boxfox1.com)
-            </p>
+            <div class="label">CONTACTO</div>
+            <h2 class="h2">Estamos para ayudarte</h2>
+            <p class="p">Horarios de 9:30 a 18:00 hr de lunes a viernes</p>
           </header>
 
           <div class="contact">
@@ -787,9 +764,9 @@
 
               <a
                 class="contactRow"
-                href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20Checklists%20STPS&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20sobre%20checklists%20y%20paquetes%20completos%20para%20cumplimiento%20STPS.%0A%0AEmpresa%3A%0ACiudad%2FPlanta%3A%0A"
+                href="mailto:info@boxfox1.com?subject=Servicios%20Boxfox1%20|%20Checklists%20STPS&body=Origen%3A%20servicios.boxfox1.com%2Fstps%2Fchecklists%2F%0A%0AHola%20Boxfox1%2C%20quiero%20informaci%C3%B3n%20sobre%20checklists%20STPS%20y%20paquetes%20de%20cumplimiento.%0A%0AEmpresa%3A%0ACiudad%3A%0AParticipantes%3A%0ANecesidad%3A%0A"
               >
-                <span class="contactRow__k">Enviar mensaje por correo →</span>
+                <span class="contactRow__k">Enviar mensaje por Correo →</span>
                 <span class="contactRow__v">info@boxfox1.com</span>
               </a>
 
@@ -797,10 +774,20 @@
                 class="contactRow"
                 target="_blank"
                 rel="noopener"
-                href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20sobre%20checklists%20y%20paquetes%20completos%20STPS.%0A%0AEmpresa%3A%20%0ACiudad%2FPlanta%3A%20"
+                href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%2Fstps%2Fchecklists%2F%20y%20quiero%20informaci%C3%B3n%20sobre%20checklists%20STPS%20y%20paquetes%20de%20cumplimiento.%0A%0AEmpresa%3A%20%0ACiudad%3A%20%0AParticipantes%3A%20%0ANecesidad%3A%20"
               >
                 <span class="contactRow__k">Enviar mensaje por WhatsApp →</span>
                 <span class="contactRow__v">+52 444 498 9198</span>
+              </a>
+
+              <a
+                class="contactRow"
+                target="_blank"
+                rel="noopener"
+                href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%2Fstps%2Fchecklists%2F%20y%20quiero%20agendar%20una%20videollamada%20para%20revisar%20cumplimiento%20STPS.%0A%0AEmpresa%3A%20%0ASector%3A%20%0ACiudad%3A%20%0AFechas%20disponibles%3A%20"
+              >
+                <span class="contactRow__k">Video llamada TEAMS/ZOOM →</span>
+                <span class="contactRow__v">Por agenda</span>
               </a>
             </div>
 
@@ -831,12 +818,20 @@
           </div>
         </div>
 
-        <!-- FOOTER V3 -->
+        <!-- FOOTER -->
         <footer class="footer" aria-label="Pie de página">
           <div class="wrap footer__inner">
             <div class="footer__col">
               <div class="footer__legal">
-                Corporativo Boxfox1 © 2026 &nbsp; | &nbsp;
+                <a
+                  class="footer__link footer__link--legal"
+                  href="https://corporativo.boxfox1.com"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Corporativo Boxfox1
+                </a>
+                © 2026 México &nbsp; | &nbsp;
                 <a
                   class="footer__link footer__link--legal"
                   href="#"
@@ -857,7 +852,7 @@
                   aria-label="Blog Boxfox1"
                 >
                   <img
-                    src="../../assets/img/icons/blog.svg"
+                    src="/assets/img/icons/blog.svg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -871,7 +866,7 @@
                   aria-label="LinkedIn"
                 >
                   <img
-                    src="../../assets/img/icons/linkedin.svg"
+                    src="/assets/img/icons/linkedin.svg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -885,7 +880,7 @@
                   aria-label="Facebook"
                 >
                   <img
-                    src="../../assets/img/icons/facebook.svg"
+                    src="/assets/img/icons/facebook.svg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -899,7 +894,7 @@
                   aria-label="X"
                 >
                   <img
-                    src="../../assets/img/icons/x.svg"
+                    src="/assets/img/icons/x.svg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -913,7 +908,7 @@
                   aria-label="Instagram"
                 >
                   <img
-                    src="../../assets/img/icons/instagram.svg"
+                    src="/assets/img/icons/instagram.svg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -927,7 +922,7 @@
                   aria-label="Spotify"
                 >
                   <img
-                    src="../../assets/img/icons/spotify.svg"
+                    src="/assets/img/icons/spotify.svg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -941,7 +936,7 @@
                   aria-label="YouTube"
                 >
                   <img
-                    src="../../assets/img/icons/youtube.svg"
+                    src="/assets/img/icons/youtube.svg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -951,83 +946,79 @@
           </div>
         </footer>
       </section>
-
-      <!-- Botón flotante: WhatsApp -->
-      <a
-        class="wafab"
-        target="_blank"
-        rel="noopener"
-        href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%20y%20quiero%20informaci%C3%B3n%20sobre%20checklists%20STPS."
-        aria-label="Contactar por WhatsApp"
-      >
-        <img
-          src="../../assets/img/icons/whatsapp.svg"
-          alt="WhatsApp"
-          aria-hidden="true"
-        />
-      </a>
-
-      <!-- PRIVACIDAD MODAL (V3) -->
-      <div
-        class="modal"
-        id="privacyModal"
-        role="dialog"
-        aria-modal="true"
-        aria-hidden="true"
-        aria-labelledby="privacyTitle"
-        aria-describedby="privacyDesc"
-      >
-        <div class="modal__backdrop" data-modal-close></div>
-
-        <div class="modal__panel" role="document">
-          <div class="modal__top">
-            <div class="modal__kicker">
-              <span class="kicker__dot" aria-hidden="true"></span>
-              AVISO DE PRIVACIDAD
-            </div>
-
-            <button
-              class="modal__x"
-              type="button"
-              aria-label="Cerrar"
-              data-modal-close
-            >
-              ×
-            </button>
-          </div>
-
-          <h2 class="h2" id="privacyTitle" style="margin-top: 8px">
-            Tratamiento de datos personales
-          </h2>
-
-          <p class="p" id="privacyDesc" style="margin-top: 6px">
-            Al proporcionar tus datos (nombre, empresa, correo y/o teléfono),
-            autorizas a Boxfox1 a utilizarlos únicamente para contactarte, dar
-            seguimiento a tu solicitud y enviarte información relacionada con
-            nuestros servicios. No vendemos ni compartimos tus datos con
-            terceros, salvo cuando sea necesario para cumplir obligaciones
-            legales. Puedes solicitar acceso, rectificación o eliminación de tus
-            datos escribiendo a
-            <a
-              class="link"
-              href="mailto:info@boxfox1.com?subject=Privacidad%20|%20Solicitud%20ARCO&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20ejercer%20mis%20derechos%20ARCO.%0A%0ANombre%3A%0ACorreo%3A%0ASolicitud%3A%0A"
-              >info@boxfox1.com</a
-            >.
-          </p>
-
-          <div class="modal__actions">
-            <button class="btn btn--primario" type="button" data-modal-close>
-              Aceptar
-            </button>
-          </div>
-
-          <p class="muted" style="font-size: 12px; margin-top: 10px">
-            Origen: servicios.boxfox1.com
-          </p>
-        </div>
-      </div>
     </main>
 
-    <script src="../../assets/js/main.js" defer></script>
+    <!-- Botón flotante: WhatsApp -->
+    <a
+      class="wafab"
+      target="_blank"
+      rel="noopener"
+      href="https://wa.me/524444989198?text=Hola%20Boxfox1%2C%20vengo%20de%20servicios.boxfox1.com%2Fstps%2Fchecklists%2F%20y%20quiero%20informaci%C3%B3n%20sobre%20checklists%20STPS."
+      aria-label="Contactar por WhatsApp"
+    >
+      <img src="/assets/img/icons/whatsapp.svg" alt="" aria-hidden="true" />
+    </a>
+
+    <!-- MODAL PRIVACIDAD -->
+    <div
+      class="modal"
+      id="privacyModal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="privacyTitle"
+    >
+      <div class="modal__backdrop" data-modal-close></div>
+
+      <div class="modal__panel" role="document">
+        <div class="modal__top">
+          <div class="modal__kicker">
+            <span class="kicker__dot" aria-hidden="true"></span>
+            AVISO DE PRIVACIDAD
+          </div>
+
+          <button
+            class="modal__x"
+            type="button"
+            aria-label="Cerrar"
+            data-modal-close
+          >
+            ×
+          </button>
+        </div>
+
+        <h2 class="h2" id="privacyTitle">Tratamiento de datos personales</h2>
+
+        <p class="p" id="privacyDesc">
+          Al proporcionar tus datos (nombre, empresa, correo y/o teléfono),
+          autorizas a Boxfox1 a utilizarlos únicamente para contactarte, dar
+          seguimiento a tu solicitud y enviarte información relacionada con
+          nuestros servicios. No vendemos ni compartimos tus datos con terceros,
+          salvo cuando sea necesario para cumplir obligaciones legales. Puedes
+          solicitar acceso, rectificación o eliminación de tus datos escribiendo
+          a
+          <a
+            class="link"
+            href="mailto:info@boxfox1.com?subject=Privacidad%20|%20Solicitud%20ARCO&body=Origen%3A%20servicios.boxfox1.com%0A%0AHola%20Boxfox1%2C%20quiero%20ejercer%20mis%20derechos%20ARCO.%0A%0ANombre%3A%0ACorreo%3A%0ASolicitud%3A%0A"
+            >info@boxfox1.com</a
+          >.
+        </p>
+
+        <div class="modal__actions">
+          <button
+            class="btn btn--primario"
+            type="button"
+            id="privacyAccept"
+            data-modal-close
+          >
+            Aceptar
+          </button>
+        </div>
+
+        <p class="muted metaNote">Origen: servicios.boxfox1.com</p>
+      </div>
+    </div>
+
+    <script src="/assets/js/main.js" defer></script>
   </body>
 </html>

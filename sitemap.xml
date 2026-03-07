@@ -1,61 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
-  <!-- Raíz -->
-  <url><loc>https://servicios.boxfox1.com/</loc></url>
-  <url><loc>https://servicios.boxfox1.com/index.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/contacto.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/calendario.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Sistema -->
-  <url><loc>https://servicios.boxfox1.com/sistema/diagnostico.html</loc></url>
+<!-- HOME -->
+<url>
+<loc>https://servicios.boxfox1.com/</loc>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
 
-  <!-- STPS (hub) -->
-  <url><loc>https://servicios.boxfox1.com/stps/</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/index.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/cumplimiento.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/cursos-para-la-industria.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/cursos-noms.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/diagnostico-industrial.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/documentacion-para-dc3.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/catalogo-de-ocupaciones-especificas.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/que-brigada-me-corresponde.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/reporte-de-incidentes.html</loc></url>
+<url>
+<loc>https://servicios.boxfox1.com/contacto.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
 
-  <!-- Brigadas -->
-  <url><loc>https://servicios.boxfox1.com/stps/brigada-multifuncional.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/brigada-tecnica.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/brigada-contra-incendio.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-evacuacion.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-primeros-auxilios.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-comunicacion.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-busqueda-y-rescate.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-rescate-especializado.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/brigada-de-materiales-peligrosos.html</loc></url>
+<!-- CAPACITACION -->
+<url>
+<loc>https://servicios.boxfox1.com/capacitacion/</loc>
+</url>
 
-  <!-- Sistema de Comando -->
-  <url><loc>https://servicios.boxfox1.com/stps/sistema-de-comando-de-incidentes.html</loc></url>
+<url>
+<loc>https://servicios.boxfox1.com/capacitacion/calendario.html</loc>
+</url>
 
-  <!-- NOMs -->
-  <url><loc>https://servicios.boxfox1.com/stps/nom-001.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-002.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-004.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-005.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-006.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-009.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-010.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-017.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-018.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-019.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-020.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-026.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-030.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-033.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-035.html</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/nom-036.html</loc></url>
+<!-- CLIENTES -->
+<url>
+<loc>https://servicios.boxfox1.com/clientes/</loc>
+</url>
 
-  <!-- Directorios con index -->
-  <url><loc>https://servicios.boxfox1.com/stps/checklists/</loc></url>
-  <url><loc>https://servicios.boxfox1.com/stps/documentacion-nom/</loc></url>
+<!-- COMERCIAL -->
+<url>
+<loc>https://servicios.boxfox1.com/comercial/</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/comercial/lista-de-cursos.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/comercial/paquetes.html</loc>
+</url>
+
+<!-- SECTORES -->
+<url>
+<loc>https://servicios.boxfox1.com/comercial/sectores/</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/comercial/sectores/colegios-y-escuelas.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/comercial/sectores/comercios-y-servicios.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/comercial/sectores/hospitales-y-clinicas.html</loc>
+</url>
+
+<!-- IMPRENTA -->
+<url>
+<loc>https://servicios.boxfox1.com/imprenta/</loc>
+</url>
+
+<!-- MAQUINADOS -->
+<url>
+<loc>https://servicios.boxfox1.com/maquinados/</loc>
+</url>
+
+<!-- RECURSOS -->
+<url>
+<loc>https://servicios.boxfox1.com/recursos/</loc>
+</url>
+
+<!-- STPS -->
+<url>
+<loc>https://servicios.boxfox1.com/stps/</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cumplimiento.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/diagnostico-industrial.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/normatividad-mexicana.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/ocupaciones-especificas.html</loc>
+</url>
+
+<!-- STPS REPORTES -->
+<url>
+<loc>https://servicios.boxfox1.com/stps/reportes/</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/reportes/incidentes.html</loc>
+</url>
+
+<!-- DIAGNOSTICO -->
+<url>
+<loc>https://servicios.boxfox1.com/stps/diagnostico/</loc>
+</url>
+
+<!-- DOCUMENTACION -->
+<url>
+<loc>https://servicios.boxfox1.com/stps/documentacion/</loc>
+</url>
+
+<!-- BRIGADAS -->
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/busqueda-y-rescate.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/comunicacion.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/contra-incendio.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/evacuacion.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/materiales-peligrosos.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/multifuncional.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/primeros-auxilios.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/rescate-especializado.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/sistema-comando-incidentes.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/brigadas/tecnica.html</loc>
+</url>
+
+<!-- CURSOS NOM -->
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-001.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-002.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-004.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-005.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-006.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-009.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-010.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-017.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-018.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-019.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-020.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-026.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-030.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-033.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-035.html</loc>
+</url>
+
+<url>
+<loc>https://servicios.boxfox1.com/stps/cursos/nom-036.html</loc>
+</url>
+
 </urlset>

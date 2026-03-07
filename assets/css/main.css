@@ -116,21 +116,42 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* La tira puede desplazarse horizontalmente */
 .tira__inner {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   padding: 9px 0;
   font-size: 12px;
+  flex-wrap: wrap;
 }
 
+/* Ocultar scrollbar (Chrome/Safari/Edge) */
+.tira__inner::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ocultar scrollbar (Firefox) */
+.tira__inner {
+  scrollbar-width: none;
+}
+.tira__right {
+  margin-left: auto; /* 👈 los manda a la derecha */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tira__inner span {
+  white-space: nowrap;
+}
 .muted {
   color: var(--muted);
 }
 
 .sep {
   color: rgba(15, 23, 42, 0.45);
+  opacity: 0.6;
+  margin: 0 4px;
 }
 
 .tira .muted,
@@ -202,15 +223,15 @@ a {
 .nav {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .nav__link {
-  padding: 10px 12px;
+  padding: 9px 10px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 450;
   letter-spacing: 0.01em;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.788); /* menos brillo */
   border: 1px solid transparent;
   position: relative;
   background: transparent;
@@ -378,7 +399,6 @@ a {
    ========================= */
 .hero {
   padding: 44px 0 28px; /* antes 42/26 y padding-bottom 90 */
-  padding-bottom: 44px; /* baja el “hueco” */
   border-bottom: 1px solid var(--linea2);
   position: relative;
   padding-bottom: 50px;
@@ -461,11 +481,11 @@ a {
 
 /* ===== Tarjeta derecha del hero ===== */
 .heroCard {
-  border: 1px solid var(--linea2);
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  border-top: 2px solid var(--azul);
   background: #fff;
   padding: 16px;
   box-shadow: var(--sombra);
-  border: 1px solid rgba(15, 23, 42, 0.2);
 }
 
 .heroCard__top {
@@ -572,14 +592,15 @@ a {
 
 .seccion__head {
   margin-bottom: 18px;
-  max-width: 78ch;
   padding-left: 14px;
   border-left: 4px solid var(--azul);
+  max-width: none;
 }
 
 .seccion--mando .seccion__head {
   border-left-color: var(--ambar);
 }
+
 
 /* =========================
    Grids
@@ -595,11 +616,20 @@ a {
 }
 
 .cards3 {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.cards4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
 .tiles {
-  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
 
 .flow {
@@ -635,24 +665,6 @@ a {
   box-shadow: var(--sombra2);
   font-weight: 400;
   border-top: 2px solid var(--azul);
-}
-
-.card::before,
-.tile::before,
-.step::before,
-.trust::before,
-.cta::before,
-.contactCard::before {
-  content: none !important;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 3px;
-  background: rgba(15, 23, 42, 0.18);
-  border: 1px solid rgba(15, 23, 42, 0.16); /* antes ~.10 */
-  border-top: 3px solid rgba(26, 120, 255, 0.85); /* antes 2px y .65 */
-  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.07); /* un toque más marcado */
 }
 
 .card::before {
@@ -1550,17 +1562,6 @@ body.is-modal-open {
   transform: translateY(-1px);
 }
 
-/* Solicitar diagnóstico (CTA principal) */
-.btn--diagnostico {
-  background: rgba(16, 185, 129, 0.18);
-  border-color: rgba(16, 185, 129, 0.45);
-  font-weight: 800;
-}
-
-.btn--diagnostico:hover {
-  background: rgba(16, 185, 129, 0.22);
-  transform: translateY(-1px);
-}
 /* Botones tipo “tabs” (navegación interna consistente) */
 .btn--tab {
   background: rgba(26, 120, 255, 0.1);
@@ -2077,4 +2078,663 @@ a.link:hover {
 }
 .diagQ {
   border-top: 2px solid rgba(26, 120, 255, 0.55);
+}
+/* Botones de divisiones en tira superior */
+.tira .nav__link {
+  color: rgba(255, 255, 255, 0.788); /* menos brillo */
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Hover un poco más visible */
+.tira .nav__link:hover {
+  color: rgba(255, 255, 255, 0.92);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+/* =========================================
+   TIRA SUPERIOR: links planos (sin cajas)
+   Maquinados / Imprenta / Contacto / Clientes
+   ========================================= */
+.tira .nav__link,
+.tira .nav__link--soft {
+  padding: 6px 8px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Hover: línea inferior sutil (sin “botón”) */
+.tira .nav__link:hover,
+.tira .nav__link--soft:hover {
+  color: #fff !important;
+}
+
+.tira .nav__link:hover::after,
+.tira .nav__link--soft:hover::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 2px;
+  height: 1px;
+  background: rgba(26, 120, 255, 0.85);
+  opacity: 0.9;
+}
+
+/* Activo (si lo usas en alguna página) */
+.tira .nav__link.is-active::after,
+.tira .nav__link--soft.is-active::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 2px;
+  height: 1px;
+  background: rgba(26, 120, 255, 0.85);
+  opacity: 0.6;
+}
+/* Tablet */
+@media (max-width: 1100px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móvil */
+@media (max-width: 640px) {
+  .tiles {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   FIX: Hamburguesa SOLO móvil
+   (pegar al FINAL del main.css)
+   ========================= */
+
+.navbtn {
+  display: none !important;
+}
+.nav {
+  display: flex;
+}
+
+@media (max-width: 980px) {
+  .navbtn {
+    display: inline-flex !important;
+  }
+  .nav {
+    display: none !important;
+  }
+}
+/* ===== Breadcrumbs ===== */
+.breadcrumbs{
+  background:#f1f0f0;
+  border-top: none;
+  border-bottom: none;
+  padding:8px 0;
+  font-size:12px;
+  
+}
+
+.breadcrumbs__link{
+  color:rgba(15,23,42,.55);
+  text-decoration:none;
+}
+
+.breadcrumbs__link:hover{
+  color:var(--azul);
+}
+
+.breadcrumbs__sep{
+  margin:0 6px;
+  opacity:.45;
+}
+
+.breadcrumbs__current{
+  color:rgba(15,23,42,.85);
+  font-weight:600;
+}
+/* =========================================================
+   Boxfox1 V3.5 — Interiores STPS / Brigadas / Cursos
+   Pegar al FINAL de main.css
+========================================================= */
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.infoGrid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.infoGrid--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.infoCard {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  min-height: 100%;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-top: 2px solid rgba(26, 120, 255, 0.55);
+  box-shadow: 0 8px 18px rgba(2, 6, 23, 0.04);
+}
+
+.infoCard__k {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--azul);
+}
+
+.note {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 159, 26, 0.25);
+  background: rgba(255, 159, 26, 0.08);
+}
+
+.note--warn {
+  border-color: rgba(255, 159, 26, 0.25);
+  background: rgba(255, 159, 26, 0.08);
+}
+
+.note__k {
+  margin: 0;
+  font-weight: 900;
+}
+
+.note__v {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.78);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.ctaInline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 16px;
+  border: 1px solid rgba(26, 120, 255, 0.2);
+  background: rgba(26, 120, 255, 0.06);
+}
+
+.ctaInline__copy {
+  display: grid;
+  gap: 4px;
+  flex: 1 1 280px;
+}
+
+.ctaInline__k {
+  font-weight: 900;
+}
+
+.ctaInline__v {
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 13px;
+}
+
+.ctaInline__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stackXs > * + * {
+  margin-top: 10px;
+}
+
+.stackMd > * + * {
+  margin-top: 12px;
+}
+
+.stackLg > * + * {
+  margin-top: 28px;
+}
+
+.metaNote {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .infoGrid,
+  .infoGrid--2,
+  .infoGrid--4 {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaInline {
+    align-items: stretch;
+  }
+
+  .ctaInline__copy,
+  .ctaInline__actions {
+    width: 100%;
+  }
+}
+/* =========================================================
+   COMPONENTES – INFO / BLOQUES DE CONTENIDO
+========================================================= */
+
+.infoGrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:10px;
+}
+
+@media (max-width:900px){
+.infoGrid{
+grid-template-columns:1fr;
+}
+}
+
+.infoCard{
+background:#fff;
+border:1px solid rgba(15,23,42,0.14);
+border-top:2px solid rgba(26,120,255,0.55);
+padding:18px;
+}
+
+.infoCard__k{
+font-weight:900;
+margin:0 0 8px;
+}
+
+
+/* =========================================================
+   NOTAS
+========================================================= */
+
+.note{
+margin-top:14px;
+padding:14px 16px;
+border:1px solid rgba(255,159,26,0.25);
+background:rgba(255,159,26,0.08);
+}
+
+.note__k{
+font-weight:900;
+margin-bottom:6px;
+}
+
+.note__v{
+color:rgba(15,23,42,0.78);
+font-size:13px;
+line-height:1.55;
+}
+
+
+/* =========================================================
+   CTA INLINE
+========================================================= */
+
+.ctaInline{
+margin-top:14px;
+padding:16px;
+border:1px solid rgba(26,120,255,0.2);
+background:rgba(26,120,255,0.06);
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.ctaInline__k{
+font-weight:900;
+}
+
+.ctaInline__v{
+color:rgba(15,23,42,0.72);
+font-size:13px;
+margin-top:4px;
+}
+
+
+/* =========================================================
+   LISTA DE DESCARGABLES
+========================================================= */
+
+.dlList{
+margin:0;
+padding-left:18px;
+}
+
+.dlList li{
+margin:6px 0;
+}
+/* =========================
+   Biblioteca / Checklists
+   ========================= */
+.hero__actions--compact {
+  margin-top: 12px;
+}
+
+.sectionHead--spaced {
+  margin-top: 26px;
+}
+
+.dl {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #fff;
+  padding: 16px;
+}
+
+.dl + .dl {
+  margin-top: 12px;
+}
+
+.dlRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.12);
+}
+
+.dlRow:last-child {
+  border-bottom: none;
+}
+
+.dlRow__l {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.dlRow__k {
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: rgba(15, 23, 42, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70ch;
+}
+
+.dlRow__m {
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.62);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dlRow__a {
+  flex: 0 0 auto;
+}
+
+.noteBox {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 159, 26, 0.22);
+  background: rgba(255, 159, 26, 0.08);
+}
+
+.noteBox__k {
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.noteBox__v {
+  color: rgba(15, 23, 42, 0.78);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.tag--library {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(26, 120, 255, 0.06);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(15, 23, 42, 0.74);
+  margin-bottom: 10px;
+}
+
+.quick {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.modal__origin {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .dlRow {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dlRow__k {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    max-width: none;
+  }
+}
+/* =========================================================
+   TABLA CURSOS COMERCIAL
+   ========================================================= */
+
+.heroSub{
+  margin-top:10px;
+  color:rgba(15,23,42,.78);
+  font-weight:700;
+  max-width:90ch;
+}
+
+/* Banda azul */
+.bandBlue{
+  background:#0796c9;
+  color:#0b1220;
+  padding:18px 0;
+  border-top:1px solid rgba(15,23,42,.08);
+  border-bottom:1px solid rgba(15,23,42,.12);
+}
+
+.bandBlue p{
+  margin:0;
+  color:rgba(0,0,0,.78);
+  font-weight:700;
+  font-size:13px;
+  line-height:1.55;
+}
+
+/* CONTROLES BUSQUEDA */
+
+.controls{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:10px;
+}
+
+.search{
+  flex:1 1 280px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  border:1px solid rgba(15,23,42,.14);
+  background:#fff;
+  padding:10px 12px;
+  box-shadow:0 6px 14px rgba(2,6,23,.05);
+}
+
+.search input{
+  width:100%;
+  border:0;
+  outline:none;
+  font:inherit;
+  color:inherit;
+  background:transparent;
+}
+
+.search .k{
+  font-weight:900;
+  font-size:12px;
+  color:rgba(15,23,42,.62);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.chips{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.chipbtn{
+  border:1px solid rgba(15,23,42,.14);
+  background:#fff;
+  padding:8px 10px;
+  font-weight:900;
+  font-size:12px;
+  color:rgba(15,23,42,.74);
+  cursor:pointer;
+}
+
+.chipbtn[aria-pressed="true"]{
+  border-color:rgba(26,120,255,.28);
+  background:rgba(26,120,255,.08);
+  color:rgba(15,23,42,.92);
+}
+
+/* TABLA */
+
+.tableCard{
+  border:1px solid rgba(15,23,42,.14);
+  background:#fff;
+  padding:12px;
+  box-shadow:0 10px 24px rgba(2,6,23,.08);
+}
+
+.tableWrap{
+  overflow:auto;
+  border:1px solid rgba(15,23,42,.1);
+}
+
+#coursesTable{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  min-width:980px;
+  font-size:13px;
+}
+
+#coursesTable thead th{
+  position:sticky;
+  top:0;
+  z-index:2;
+  background:linear-gradient(180deg,#0e1628,#0b1220);
+  color:rgba(255,255,255,.92);
+  text-align:left;
+  padding:12px;
+  font-weight:900;
+  letter-spacing:.02em;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  white-space:nowrap;
+}
+
+#coursesTable tbody td{
+  padding:12px;
+  border-bottom:1px solid rgba(15,23,42,.08);
+  vertical-align:top;
+  color:rgba(15,23,42,.82);
+}
+
+#coursesTable tbody tr:nth-child(even) td{
+  background:rgba(15,23,42,.02);
+}
+
+#coursesTable tbody tr:hover td{
+  background:rgba(26,120,255,.06);
+}
+
+.groupRow td{
+  background:#f3f5f8!important;
+  font-weight:900;
+  color:rgba(15,23,42,.82);
+  border-bottom:1px solid rgba(15,23,42,.12);
+}
+
+.tblpill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-weight:900;
+  font-size:11px;
+  padding:6px 10px;
+  border:1px solid rgba(15,23,42,.14);
+  background:#fff;
+  color:rgba(15,23,42,.72);
+  white-space:nowrap;
+  margin:2px 4px 2px 0;
+}
+
+.tblpill--blue{
+  border-color:rgba(26,120,255,.28);
+  background:rgba(26,120,255,.08);
+  color:rgba(15,23,42,.9);
+}
+
+.mut{
+  color:rgba(15,23,42,.68);
+}
+
+.footNote{
+  margin-top:12px;
+  font-size:12px;
+  color:rgba(15,23,42,.68);
+}
+
+.footNote b{
+  color:rgba(15,23,42,.86);
+}
+
+@media(max-width:980px){
+
+  .controls{
+    justify-content:flex-start;
+  }
+
+  .chips{
+    justify-content:flex-start;
+  }
+
 }

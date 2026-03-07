@@ -1,35 +1,9 @@
 User-agent: *
-
-# =========================
-# CONTENIDO PRINCIPAL
-# =========================
 Allow: /
-Allow: /stps/
-Allow: /sistema/
 
-# =========================
-# BLOQUEOS TÉCNICOS
-# =========================
-
-Disallow: /tmp/
-Disallow: /private/
-Disallow: /admin/
-
-# evitar parámetros duplicados
-Disallow: /*?*
-Disallow: /*&*
-
-# =========================
-# ASSETS
-# =========================
-
-# IMPORTANTE:
-# NO bloquear CSS ni JS (Google necesita renderizar)
-Allow: /assets/img/
-Allow: /assets/css/
-Allow: /assets/js/
-
-# =========================
-# SITEMAP
-# =========================
 Sitemap: https://servicios.boxfox1.com/sitemap.xml
+
+Disallow: /assets/
+Disallow: /*.xlsx$
+Disallow: /*.docx$
+Disallow: /*.pdf$
