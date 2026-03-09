@@ -131,10 +131,6 @@ a {
   display: none;
 }
 
-/* Ocultar scrollbar (Firefox) */
-.tira__inner {
-  scrollbar-width: none;
-}
 .tira__right {
   margin-left: auto; /* 👈 los manda a la derecha */
   display: flex;
@@ -258,27 +254,6 @@ a {
   bottom: 6px;
   height: 2px;
   background: rgba(26, 120, 255, 0.95);
-}
-
-/* CTA navbar — Diagnóstico */
-.nav__link--cta {
-  padding: 8px 14px;
-
-  border-radius: 8px;
-
-  background: rgba(255, 159, 26, 0.08);
-  color: rgba(255, 255, 255, 0.95);
-
-  font-weight: 700;
-  transition:
-    border-color 0.18s ease,
-    transform 0.18s ease;
-}
-
-.nav__link--cta:hover {
-  background: rgba(255, 159, 26, 0.14);
-  border-color: rgba(255, 159, 26, 0.45);
-  transform: translateY(-1px);
 }
 
 /* ===== Móvil ===== */
@@ -601,7 +576,6 @@ a {
   border-left-color: var(--ambar);
 }
 
-
 /* =========================
    Grids
    ========================= */
@@ -708,11 +682,6 @@ a {
   margin-top: 12px;
   padding-top: 10px;
   border-top: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-.microcta {
-  font-weight: 800;
-  color: rgba(26, 120, 255, 0.95);
 }
 
 .microcta:hover {
@@ -1299,28 +1268,11 @@ a {
   font-size: 14px;
 }
 
-/* Botones */
-.actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 14px;
-}
-
 /* Responsive */
 @media (max-width: 900px) {
   .form__grid {
     grid-template-columns: 1fr;
   }
-}
-
-.consent {
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 10px 12px;
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  background: rgba(255, 255, 255, 0.75);
 }
 .consent input {
   margin-top: 3px;
@@ -1478,15 +1430,14 @@ body.is-modal-open {
   margin-bottom: 6px;
 }
 
-.callout__v {
-  color: rgba(15, 23, 42, 0.75);
-  line-height: 1.5;
-}
-
 .microcta {
   font-weight: 700;
+  color: rgba(26, 120, 255, 0.95);
   text-decoration: none;
-  margin-left: 6px;
+}
+
+.microcta:hover {
+  text-decoration: underline;
 }
 .ctaBand {
   margin-top: 24px;
@@ -1524,6 +1475,10 @@ body.is-modal-open {
   margin: 50px 0;
 }
 .callout__v {
+  color: rgba(15, 23, 42, 0.75);
+  line-height: 1.5;
+}
+.callout__v--split {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1585,40 +1540,7 @@ body.is-modal-open {
   transform: translateY(-2px);
   filter: brightness(0.97);
 }
-.tira__inner {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 
-/* Diagnóstico en tira → jerarquía baja */
-.tira__cta {
-  background: transparent;
-  border: none;
-  padding: 0 2px;
-  color: rgba(255, 255, 255, 0.78);
-  font-weight: 600;
-  font-size: 13px;
-
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  margin-left: auto; /* ← esto lo manda completamente a la derecha */
-}
-/* línea inferior estilo nav */
-.tira__cta:hover::after {
-  content: "";
-  display: block;
-  height: 2px;
-  margin-top: 4px;
-  background: #1a78ff;
-}
-
-/* hover sutil */
-.tira__cta:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
 /* CTA suave: "Diagnóstico" */
 .nav__link--soft {
   background: transparent;
@@ -1629,131 +1551,6 @@ body.is-modal-open {
 .nav__link--soft:hover {
   background: rgba(26, 120, 255, 0.16);
   border-color: rgba(26, 120, 255, 0.3);
-}
-/* ========================================
-   Tira: Diagnóstico (solo borde + activo)
-   Se activa con .is-active en esas páginas
-   ======================================== */
-.tira__cta {
-  /* ya tienes margin-left:auto; bien */
-  display: inline-flex;
-  align-items: center;
-
-  /* QUE NO SE QUEDE “texto suelto” */
-  padding: 6px 10px; /* antes 0 2px */
-  border: 1px solid rgba(255, 255, 255, 0.22); /* borde visible */
-  border-radius: 6px;
-
-  background: transparent !important; /* conserva el fondo */
-  text-decoration: none;
-  position: relative; /* para ::after controlado */
-}
-
-/* Hover: mismo fondo (transparente) + borde un poco más fuerte */
-.tira__cta:hover {
-  background: transparent !important;
-  border-color: rgba(255, 255, 255, 0.38);
-  color: #fff;
-  text-decoration: none; /* evita underline + linea doble */
-}
-
-/* Línea inferior estilo "Contacto", pero bien controlada */
-.tira__cta:hover::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 4px;
-  height: 2px;
-  background: rgba(26, 120, 255, 0.95);
-  border-radius: 2px;
-}
-
-/* Activo: NO cambia fondo, solo refuerza borde + línea fija */
-.tira__cta.is-active {
-  background: transparent !important;
-  border-color: rgba(26, 120, 255, 0.55);
-  color: #fff;
-}
-
-/* Activo con línea (sin “cuadrito” raro) */
-.tira__cta.is-active::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 4px;
-  height: 2px;
-  background: rgba(26, 120, 255, 0.95);
-  border-radius: 2px;
-}
-/* Tira CTA Diagnóstico: barra inferior 1px */
-.tira__cta:hover::after,
-.tira__cta.is-active::after {
-  height: 1px !important;
-  bottom: 6px; /* ajusta 4–6 según se vea */
-  opacity: 0.85;
-}
-/* ===============================
-   Diagnóstico — tira superior
-   línea fina + hover correcto
-   =============================== */
-
-/* línea MUY fina (activo) */
-.tira__cta.is-active::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 5px;
-
-  height: 1px;
-  opacity: 0.25; /* ← se ve más delgada */
-  transform: scaleY(0.85); /* ← efecto <1px */
-  transform-origin: center;
-
-  background: rgba(26, 120, 255, 0.9);
-}
-
-/* hover visible (solo cuando pasas el mouse) */
-.tira__cta.is-active::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 5px;
-
-  height: 1px;
-  background: rgba(26, 120, 255, 0.55); /* ← más suave */
-}
-.page-brigadas hr.brig-hr {
-  border: 0 !important;
-  height: 1px;
-  background: rgba(15, 23, 42, 0.1);
-  margin: 26px 0;
-}
-.hero--banner {
-  background:
-    linear-gradient(180deg, rgba(11, 18, 32, 0.72), rgba(11, 18, 32, 0.35)),
-    url("../assets/img/hero/brigadas.webp");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-.hero--banner .heroLine__k {
-  color: rgba(255, 255, 255, 0.78);
-}
-.hero--banner .lead {
-  color: rgba(255, 255, 255, 0.86);
-}
-.hero--banner .kicker {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.14);
-  color: rgba(255, 255, 255, 0.88);
-}
-.hero--banner .kicker__dot {
-  background: rgba(255, 159, 26, 0.95);
 }
 
 /* Layout contenido */
@@ -1832,26 +1629,6 @@ details[open].acc > summary .acc__caret {
   font-size: 13px;
 }
 
-/* CTA final */
-.ctaInline {
-  margin-top: 14px;
-  padding: 16px;
-  border: 1px solid rgba(26, 120, 255, 0.2);
-  background: rgba(26, 120, 255, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-.ctaInline__k {
-  font-weight: 900;
-}
-.ctaInline__v {
-  color: rgba(15, 23, 42, 0.72);
-  font-size: 13px;
-  margin-top: 4px;
-}
 /* SOLO acordeones (forzado y visible) */
 details.acc,
 details.acc > summary,
@@ -2017,16 +1794,6 @@ a.link:hover {
   padding: 12px 16px;
 }
 
-/* 11) Banda azul del hero: que se lea como “panel” (no bloque plano) */
-.blueBand {
-  border-radius: 0px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.08);
-}
-.hero--banner .blueBand__p {
-  color: rgba(255, 255, 255, 0.86);
-}
-
 /* 12) Micro-separadores suaves entre bloques (sensación de ritmo) */
 .docSection + .docSection {
   position: relative;
@@ -2171,32 +1938,31 @@ a.link:hover {
   }
 }
 /* ===== Breadcrumbs ===== */
-.breadcrumbs{
-  background:#f1f0f0;
+.breadcrumbs {
+  background: #f1f0f0;
   border-top: none;
   border-bottom: none;
-  padding:8px 0;
-  font-size:12px;
-  
+  padding: 8px 0;
+  font-size: 12px;
 }
 
-.breadcrumbs__link{
-  color:rgba(15,23,42,.55);
-  text-decoration:none;
+.breadcrumbs__link {
+  color: rgba(15, 23, 42, 0.55);
+  text-decoration: none;
 }
 
-.breadcrumbs__link:hover{
-  color:var(--azul);
+.breadcrumbs__link:hover {
+  color: var(--azul);
 }
 
-.breadcrumbs__sep{
-  margin:0 6px;
-  opacity:.45;
+.breadcrumbs__sep {
+  margin: 0 6px;
+  opacity: 0.45;
 }
 
-.breadcrumbs__current{
-  color:rgba(15,23,42,.85);
-  font-weight:600;
+.breadcrumbs__current {
+  color: rgba(15, 23, 42, 0.85);
+  font-weight: 600;
 }
 /* =========================================================
    Boxfox1 V3.5 — Interiores STPS / Brigadas / Cursos
@@ -2314,113 +2080,17 @@ a.link:hover {
   color: var(--muted);
 }
 
-@media (max-width: 900px) {
-  .infoGrid,
-  .infoGrid--2,
-  .infoGrid--4 {
-    grid-template-columns: 1fr;
-  }
-
-  .ctaInline {
-    align-items: stretch;
-  }
-
-  .ctaInline__copy,
-  .ctaInline__actions {
-    width: 100%;
-  }
-}
-/* =========================================================
-   COMPONENTES – INFO / BLOQUES DE CONTENIDO
-========================================================= */
-
-.infoGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin-top:10px;
-}
-
-@media (max-width:900px){
-.infoGrid{
-grid-template-columns:1fr;
-}
-}
-
-.infoCard{
-background:#fff;
-border:1px solid rgba(15,23,42,0.14);
-border-top:2px solid rgba(26,120,255,0.55);
-padding:18px;
-}
-
-.infoCard__k{
-font-weight:900;
-margin:0 0 8px;
-}
-
-
-/* =========================================================
-   NOTAS
-========================================================= */
-
-.note{
-margin-top:14px;
-padding:14px 16px;
-border:1px solid rgba(255,159,26,0.25);
-background:rgba(255,159,26,0.08);
-}
-
-.note__k{
-font-weight:900;
-margin-bottom:6px;
-}
-
-.note__v{
-color:rgba(15,23,42,0.78);
-font-size:13px;
-line-height:1.55;
-}
-
-
-/* =========================================================
-   CTA INLINE
-========================================================= */
-
-.ctaInline{
-margin-top:14px;
-padding:16px;
-border:1px solid rgba(26,120,255,0.2);
-background:rgba(26,120,255,0.06);
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:14px;
-flex-wrap:wrap;
-}
-
-.ctaInline__k{
-font-weight:900;
-}
-
-.ctaInline__v{
-color:rgba(15,23,42,0.72);
-font-size:13px;
-margin-top:4px;
-}
-
-
 /* =========================================================
    LISTA DE DESCARGABLES
 ========================================================= */
 
-.dlList{
-margin:0;
-padding-left:18px;
+.dlList {
+  margin: 0;
+  padding-left: 18px;
 }
 
-.dlList li{
-margin:6px 0;
+.dlList li {
+  margin: 6px 0;
 }
 /* =========================
    Biblioteca / Checklists
@@ -2549,192 +2219,406 @@ margin:6px 0;
    TABLA CURSOS COMERCIAL
    ========================================================= */
 
-.heroSub{
-  margin-top:10px;
-  color:rgba(15,23,42,.78);
-  font-weight:700;
-  max-width:90ch;
+.heroSub {
+  margin-top: 10px;
+  color: rgba(15, 23, 42, 0.78);
+  font-weight: 700;
+  max-width: 90ch;
 }
 
 /* Banda azul */
-.bandBlue{
-  background:#0796c9;
-  color:#0b1220;
-  padding:18px 0;
-  border-top:1px solid rgba(15,23,42,.08);
-  border-bottom:1px solid rgba(15,23,42,.12);
+.bandBlue {
+  background: #0796c9;
+  color: #0b1220;
+  padding: 18px 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
 }
 
-.bandBlue p{
-  margin:0;
-  color:rgba(0,0,0,.78);
-  font-weight:700;
-  font-size:13px;
-  line-height:1.55;
+.bandBlue p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.78);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 /* CONTROLES BUSQUEDA */
 
-.controls{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:space-between;
-  margin-top:10px;
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
-.search{
-  flex:1 1 280px;
-  display:flex;
-  gap:10px;
-  align-items:center;
-  border:1px solid rgba(15,23,42,.14);
-  background:#fff;
-  padding:10px 12px;
-  box-shadow:0 6px 14px rgba(2,6,23,.05);
+.search {
+  flex: 1 1 280px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #fff;
+  padding: 10px 12px;
+  box-shadow: 0 6px 14px rgba(2, 6, 23, 0.05);
 }
 
-.search input{
-  width:100%;
-  border:0;
-  outline:none;
-  font:inherit;
-  color:inherit;
-  background:transparent;
+.search input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: transparent;
 }
 
-.search .k{
-  font-weight:900;
-  font-size:12px;
-  color:rgba(15,23,42,.62);
-  letter-spacing:.08em;
-  text-transform:uppercase;
+.search .k {
+  font-weight: 900;
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.62);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.chips{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-.chipbtn{
-  border:1px solid rgba(15,23,42,.14);
-  background:#fff;
-  padding:8px 10px;
-  font-weight:900;
-  font-size:12px;
-  color:rgba(15,23,42,.74);
-  cursor:pointer;
+.chipbtn {
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #fff;
+  padding: 8px 10px;
+  font-weight: 900;
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.74);
+  cursor: pointer;
 }
 
-.chipbtn[aria-pressed="true"]{
-  border-color:rgba(26,120,255,.28);
-  background:rgba(26,120,255,.08);
-  color:rgba(15,23,42,.92);
+.chipbtn[aria-pressed="true"] {
+  border-color: rgba(26, 120, 255, 0.28);
+  background: rgba(26, 120, 255, 0.08);
+  color: rgba(15, 23, 42, 0.92);
 }
 
 /* TABLA */
 
-.tableCard{
-  border:1px solid rgba(15,23,42,.14);
-  background:#fff;
-  padding:12px;
-  box-shadow:0 10px 24px rgba(2,6,23,.08);
+.tableCard {
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.08);
 }
 
-.tableWrap{
-  overflow:auto;
-  border:1px solid rgba(15,23,42,.1);
+.tableWrap {
+  overflow: auto;
+  border: 1px solid rgba(15, 23, 42, 0.1);
 }
 
-#coursesTable{
-  width:100%;
-  border-collapse:separate;
-  border-spacing:0;
-  min-width:980px;
-  font-size:13px;
+#coursesTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 980px;
+  font-size: 13px;
 }
 
-#coursesTable thead th{
-  position:sticky;
-  top:0;
-  z-index:2;
-  background:linear-gradient(180deg,#0e1628,#0b1220);
-  color:rgba(255,255,255,.92);
-  text-align:left;
-  padding:12px;
-  font-weight:900;
-  letter-spacing:.02em;
-  border-bottom:1px solid rgba(255,255,255,.12);
-  white-space:nowrap;
+#coursesTable thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, #0e1628, #0b1220);
+  color: rgba(255, 255, 255, 0.92);
+  text-align: left;
+  padding: 12px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
 }
 
-#coursesTable tbody td{
-  padding:12px;
-  border-bottom:1px solid rgba(15,23,42,.08);
-  vertical-align:top;
-  color:rgba(15,23,42,.82);
+#coursesTable tbody td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  vertical-align: top;
+  color: rgba(15, 23, 42, 0.82);
 }
 
-#coursesTable tbody tr:nth-child(even) td{
-  background:rgba(15,23,42,.02);
+#coursesTable tbody tr:nth-child(even) td {
+  background: rgba(15, 23, 42, 0.02);
 }
 
-#coursesTable tbody tr:hover td{
-  background:rgba(26,120,255,.06);
+#coursesTable tbody tr:hover td {
+  background: rgba(26, 120, 255, 0.06);
 }
 
-.groupRow td{
-  background:#f3f5f8!important;
-  font-weight:900;
-  color:rgba(15,23,42,.82);
-  border-bottom:1px solid rgba(15,23,42,.12);
+.groupRow td {
+  background: #f3f5f8 !important;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.82);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
 }
 
-.tblpill{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  font-weight:900;
-  font-size:11px;
-  padding:6px 10px;
-  border:1px solid rgba(15,23,42,.14);
-  background:#fff;
-  color:rgba(15,23,42,.72);
-  white-space:nowrap;
-  margin:2px 4px 2px 0;
+.tblpill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 900;
+  font-size: 11px;
+  padding: 6px 10px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #fff;
+  color: rgba(15, 23, 42, 0.72);
+  white-space: nowrap;
+  margin: 2px 4px 2px 0;
 }
 
-.tblpill--blue{
-  border-color:rgba(26,120,255,.28);
-  background:rgba(26,120,255,.08);
-  color:rgba(15,23,42,.9);
+.tblpill--blue {
+  border-color: rgba(26, 120, 255, 0.28);
+  background: rgba(26, 120, 255, 0.08);
+  color: rgba(15, 23, 42, 0.9);
 }
 
-.mut{
-  color:rgba(15,23,42,.68);
+.mut {
+  color: rgba(15, 23, 42, 0.68);
 }
 
-.footNote{
-  margin-top:12px;
-  font-size:12px;
-  color:rgba(15,23,42,.68);
+.footNote {
+  margin-top: 12px;
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.68);
 }
 
-.footNote b{
-  color:rgba(15,23,42,.86);
+.footNote b {
+  color: rgba(15, 23, 42, 0.86);
 }
 
-@media(max-width:980px){
-
-  .controls{
-    justify-content:flex-start;
+@media (max-width: 980px) {
+  .controls {
+    justify-content: flex-start;
   }
 
-  .chips{
-    justify-content:flex-start;
+  .chips {
+    justify-content: flex-start;
+  }
+}
+/* =========================
+   Separador en títulos de cards
+   ========================= */
+
+#biblioteca .card .h3,
+#diagnosticos .card .h3,
+#accesos .card .h3,
+#programas .card .h3,
+#paquetes .card .h3,
+#cursos .card .h3 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+/* Nota diagnósticos */
+#diagnosticos .note {
+  margin-top: 18px;
+}
+
+/* =========================
+   Cards con botón alineado abajo
+   ========================= */
+
+#programas .cards3 .card,
+#paquetes .cards3 .card,
+#cursos .cards3 .card {
+  display: flex;
+  flex-direction: column;
+}
+
+#programas .cards3 .card .btn,
+#paquetes .cards3 .card .btn,
+#cursos .cards3 .card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Espacio antes del botón */
+#programas .cards3 .card .list,
+#paquetes .cards3 .card .list,
+#cursos .cards3 .card .list {
+  margin-bottom: 20px;
+}
+/* =========================================
+   COMERCIAL / SECTORES
+   ========================================= */
+
+/* Hero interior editorial */
+.hero--inner {
+  padding: 42px 0 34px;
+  background: #dee1e4;
+}
+
+.heroCopy {
+  max-width: 78ch;
+}
+
+.heroCopy--narrow {
+  max-width: 72ch;
+}
+
+.heroTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.heroTags .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(26, 120, 255, 0.06);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.72);
+}
+
+.prose {
+  max-width: 72ch;
+}
+
+/* Head compacta */
+.seccion__head--compact {
+  margin-bottom: 16px;
+}
+
+.h2--line {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: rgba(15, 23, 42, 0.1);
+  margin: 28px 0;
+}
+
+/* Sector grid */
+.sectorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.sectorCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-top: 2px solid rgba(26, 120, 255, 0.55);
+  box-shadow: 0 8px 18px rgba(2, 6, 23, 0.04);
+}
+
+.sectorCard__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.sectorCard__emoji {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.sectorCard__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+}
+
+.u-mt-12 {
+  margin-top: 12px;
+}
+
+.sectorCard__cta {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.linkCta {
+  font-weight: 800;
+  color: rgba(26, 120, 255, 0.95);
+}
+
+.linkCta:hover {
+  text-decoration: underline;
+}
+
+/* CTA final */
+.sectionCTA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border: 1px solid rgba(26, 120, 255, 0.18);
+  background: rgba(26, 120, 255, 0.06);
+}
+
+.sectionCTA__k {
+  font-weight: 900;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.sectionCTA__v {
+  margin-top: 4px;
+  color: rgba(15, 23, 42, 0.74);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .sectorGrid {
+    grid-template-columns: 1fr;
   }
 
+  .sectionCTA {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* Sectores: hero más ancho */
+.hero--inner .heroCopy,
+.hero--inner .heroCopy--narrow,
+.hero--inner .prose {
+  max-width: 110ch;
+}
+.hero--inner .h1 {
+  max-width: 34ch;
+}
+/* Metodología – separador título */
+#metodologia .card .h3 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+}
+/* Sectores – separar título y contenido */
+#principal .cards3 .card .h3 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
 }
