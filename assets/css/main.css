@@ -3090,3 +3090,58 @@ a.link:hover {
 #docsModal .modal__actions {
   margin-top: 16px;
 }
+/* =========================
+   Brigadas / recursos
+   Responsive grid
+   ========================= */
+
+.brigadeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.brigadeCard {
+  min-width: 0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .brigadeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Móvil */
+@media (max-width: 640px) {
+  .brigadeGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .brigadeCard {
+    width: 100%;
+  }
+
+  .nomActions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nomActions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 640px) {
+  .nomCard__title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .list--tight li {
+    word-break: break-word;
+  }
+}
