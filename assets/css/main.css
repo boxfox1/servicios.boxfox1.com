@@ -48,7 +48,6 @@ body {
   color: var(--texto);
   margin: 0;
   padding: 0;
-  overscroll-behavior-y: none;
   overflow-x: clip;
 }
 
