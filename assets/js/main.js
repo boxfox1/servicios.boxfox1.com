@@ -276,3 +276,103 @@
     schemaEl.textContent = JSON.stringify(schema, null, 2);
   }
 })();
+
+// ============================
+// Modal documentación NOM
+// ============================
+
+const docButtons = document.querySelectorAll("[data-open-doc]");
+const docsModal = document.getElementById("docsModal");
+
+docButtons.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    docsModal.setAttribute("aria-hidden", "false");
+  });
+});
+document.querySelectorAll(".nomAccordion__btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const accordion = this.closest(".nomAccordion");
+    const isOpen = accordion.classList.toggle("open");
+    this.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+});
+/* =========================
+   Biblioteca NOM: búsqueda + filtros
+   ========================= */
+
+(function () {
+  const searchInput = document.getElementById("nomSearchInput");
+  const countEl = document.getElementById("nomCount");
+  const cards = Array.from(document.querySelectorAll(".nomCard"));
+  const filterButtons = Array.from(document.querySelectorAll(".nomFilter"));
+
+  if (!cards.length) return;
+
+  const state = {
+    categoria: "all",
+    curso: "all",
+    q: "",
+  };
+
+  function normalize(text) {
+    return (text || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+  }
+
+  function updateCount(visibleCount) {
+    if (!countEl) return;
+    countEl.textContent = `${visibleCount} norma${visibleCount === 1 ? "" : "s"} visible${visibleCount === 1 ? "" : "s"}`;
+  }
+
+  function applyFilters() {
+    let visible = 0;
+    const q = normalize(state.q);
+
+    cards.forEach((card) => {
+      const categoria = card.dataset.categoria || "";
+      const curso = card.dataset.curso || "";
+      const search = normalize(card.dataset.search || card.textContent || "");
+
+      const matchCategoria = state.categoria === "all" || categoria === state.categoria;
+      const matchCurso = state.curso === "all" || curso === state.curso;
+      const matchSearch = !q || search.includes(q);
+
+      const show = matchCategoria && matchCurso && matchSearch;
+
+      card.classList.toggle("is-hidden", !show);
+      if (show) visible += 1;
+    });
+
+    updateCount(visible);
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      state.q = e.target.value || "";
+      applyFilters();
+    });
+  }
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const group = btn.dataset.filterGroup;
+      const value = btn.dataset.filterValue;
+
+      state[group] = value;
+
+      filterButtons
+        .filter((b) => b.dataset.filterGroup === group)
+        .forEach((b) => b.classList.remove("is-active"));
+
+      btn.classList.add("is-active");
+      applyFilters();
+    });
+  });
+
+  applyFilters();
+})();

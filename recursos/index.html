@@ -245,7 +245,7 @@
       <section
         id="inicio"
         class="hero"
-        aria-label="Centro de recursos técnicos"
+        aria-label="Centro de recursos y mapa documental"
       >
         <div class="wrap hero__inner">
           <div class="hero__left">
@@ -254,65 +254,63 @@
               SISTEMA BOXFOX1 · RECURSOS TÉCNICOS
             </div>
 
-            <h1 class="h1">Centro de Recursos Técnicos</h1>
+            <h1 class="h1">Centro de Recursos y Mapa Documental</h1>
 
             <p class="lead">
-              Recursos prácticos para cumplir NOM-STPS más rápido:
-              <strong>checklists</strong> listas para usar,
-              <strong>diagnósticos</strong> operativos y
-              <strong>formatos</strong> aplicables en piso.
+              Visualiza qué <strong>documentos</strong>,
+              <strong>registros</strong> y <strong>evidencias</strong> suelen
+              requerirse por <strong>NOM-STPS</strong> o por
+              <strong>brigada</strong>.
             </p>
 
-            <p class="p" style="max-width: 72ch; margin-top: 12px">
-              Pensado para responsables de seguridad, operaciones y cumplimiento
-              industrial. Si hay algo más que necesites, puede ponerse en
-              contacto con nosotros y con gusto lo atendemos.
-            </p>
-
-            <p class="p" style="margin-top: 14px; font-weight: 600">
-              NOM-STPS · Brigadas · Operación · Evidencia
+            <p class="p hero__text">
+              El acceso completo a carpetas, plantillas editables y control
+              documental está disponible para
+              <strong>clientes corporativos Boxfox1</strong>.
             </p>
 
             <div class="hero__actions">
-              <a class="btn btn--primario" href="#diagnosticos"
-                >Hacer diagnóstico</a
+              <a class="btn btn--primario" href="#mapa-nom"
+                >Ver mapa documental</a
               >
-              <a class="btn btn--cta" href="#biblioteca">Ver recursos</a>
+              <a class="btn btn--cta" href="#corporativo">Acceso corporativo</a>
             </div>
           </div>
 
-          <div class="hero__right" aria-label="Starter pack">
+          <div class="hero__right" aria-label="Documentos más consultados">
             <div class="heroCard">
               <div class="heroCard__top">
-                <div class="heroCard__title">Gratis · Starter Pack</div>
-                <span class="pill">RECURSOS</span>
+                <div class="heroCard__title">Documentos más consultados</div>
+                <span class="pill">RÁPIDO</span>
               </div>
 
               <div class="heroCard__grid">
                 <div class="mini">
-                  <div class="mini__k">Diagnóstico</div>
-                  <div class="mini__v">NOM-002 (Incendio)</div>
-                  <a class="microcta" href="/stps/diagnostico-industrial.html"
-                    >Ver más →</a
+                  <div class="mini__k">NOM-001-STPS</div>
+                  <div class="mini__v">Edificios, áreas y orden en planta</div>
+                  <a class="microcta" href="#nom-001">Abrir →</a>
+                </div>
+
+                <div class="mini">
+                  <div class="mini__k">NOM-002-STPS</div>
+                  <div class="mini__v">
+                    Prevención y protección contra incendios
+                  </div>
+                  <a class="microcta" href="#nom-002">Abrir →</a>
+                </div>
+
+                <div class="mini">
+                  <div class="mini__k">Brigada contra incendios</div>
+                  <div class="mini__v">Organización y evidencia operativa</div>
+                  <a class="microcta" href="#brigada-incendios">Abrir →</a>
+                </div>
+
+                <div class="mini">
+                  <div class="mini__k">Brigada primeros auxilios</div>
+                  <div class="mini__v">Botiquines, protocolos y registros</div>
+                  <a class="microcta" href="#brigada-primeros-auxilios"
+                    >Abrir →</a
                   >
-                </div>
-
-                <div class="mini">
-                  <div class="mini__k">Descarga</div>
-                  <div class="mini__v">Checklist express NOM-002</div>
-                  <a class="microcta" href="/stps/checklists/">Ver más →</a>
-                </div>
-
-                <div class="mini">
-                  <div class="mini__k">Formato</div>
-                  <div class="mini__v">Bitácora de extintores</div>
-                  <a class="microcta" href="/recursos/">Ver más →</a>
-                </div>
-
-                <div class="mini">
-                  <div class="mini__k">Origen</div>
-                  <div class="mini__v">servicios.boxfox1.com</div>
-                  <a class="microcta" href="#biblioteca">Ir al centro →</a>
                 </div>
               </div>
             </div>
@@ -328,54 +326,2415 @@
       ></nav>
       <script id="breadcrumbs-schema" type="application/ld+json"></script>
 
-      <!-- BIBLIOTECA -->
+      <!-- MAPA NOM -->
       <section
-        id="biblioteca"
+        id="mapa-nom"
         class="seccion seccion--banda"
-        aria-label="Biblioteca por tema"
+        aria-label="Mapa documental por NOM"
       >
         <div class="wrap">
           <header class="seccion__head">
-            <div class="label">RECURSOS</div>
-            <h2 class="h2">Biblioteca por tema</h2>
-            <p class="p">Diseñado para lectura rápida y ejecución en piso.</p>
+            <div class="label">MAPA DOCUMENTAL</div>
+            <h2 class="h2">Qué documentos se requieren por NOM</h2>
+            <p class="p">
+              Vista estructurada para entender el alcance documental esperado,
+              tipos de evidencia y nivel de acceso disponible.
+            </p>
+          </header>
+
+          <div
+            class="nomToolbar"
+            aria-label="Herramientas de búsqueda y filtro"
+          >
+            <div class="nomSearch">
+              <label class="sr-only" for="nomSearchInput"
+                >Buscar NOM o palabra clave</label
+              >
+              <input
+                id="nomSearchInput"
+                class="nomSearch__input"
+                type="search"
+                placeholder="Buscar NOM o palabra clave"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="nomCount" id="nomCount" aria-live="polite"></div>
+          </div>
+
+          <div class="nomFilters" aria-label="Filtros de biblioteca NOM">
+            <div class="nomFilterGroup">
+              <button
+                class="nomFilter is-active"
+                type="button"
+                data-filter-group="categoria"
+                data-filter-value="all"
+              >
+                Todas
+              </button>
+              <button
+                class="nomFilter"
+                type="button"
+                data-filter-group="categoria"
+                data-filter-value="seguridad"
+              >
+                Seguridad
+              </button>
+              <button
+                class="nomFilter"
+                type="button"
+                data-filter-group="categoria"
+                data-filter-value="organizacion"
+              >
+                Organización
+              </button>
+              <button
+                class="nomFilter"
+                type="button"
+                data-filter-group="categoria"
+                data-filter-value="salud"
+              >
+                Salud
+              </button>
+              <button
+                class="nomFilter"
+                type="button"
+                data-filter-group="categoria"
+                data-filter-value="especifica"
+              >
+                Específicas
+              </button>
+              <button
+                class="nomFilter"
+                type="button"
+                data-filter-group="categoria"
+                data-filter-value="producto"
+              >
+                Producto
+              </button>
+            </div>
+
+            <div class="nomFilterGroup">
+              <button
+                class="nomFilter is-active"
+                type="button"
+                data-filter-group="curso"
+                data-filter-value="all"
+              >
+                Todos
+              </button>
+              <button
+                class="nomFilter"
+                type="button"
+                data-filter-group="curso"
+                data-filter-value="si"
+              >
+                Con curso
+              </button>
+              <button
+                class="nomFilter"
+                type="button"
+                data-filter-group="curso"
+                data-filter-value="no"
+              >
+                Sin curso
+              </button>
+            </div>
+          </div>
+
+          <div class="cards3">
+            <!-- SEGURIDAD -->
+
+            <article id="nom-001" class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-001-STPS-2008</h3>
+                <span class="nomStatus nomStatus--ok">Seguridad</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Checklist general por área</li>
+                  <li>Levantamiento de hallazgos</li>
+                  <li>Evidencia fotográfica</li>
+                  <li>Plan de acciones correctivas</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-001-STPS-2008"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece las condiciones de seguridad en edificios,
+                    instalaciones y áreas de los centros de trabajo, incluyendo
+                    orden, limpieza, circulación, accesos, salidas y
+                    mantenimiento general.
+                  </p>
+                  <p class="p">
+                    Es una de las normas base del sistema de seguridad laboral
+                    en México y suele ser el punto inicial para auditorías
+                    internas y diagnósticos de cumplimiento STPS.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article id="nom-002" class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-002-STPS-2010</h3>
+                <span class="nomStatus nomStatus--ok">Seguridad</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Checklist express de revisión</li>
+                  <li>Bitácora de extintores</li>
+                  <li>Croquis y rutas de evacuación</li>
+                  <li>Evidencia de señalética y equipo</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-002-STPS-2010"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Define las condiciones de prevención y protección contra
+                    incendios en los centros de trabajo.
+                  </p>
+                  <p class="p">
+                    Incluye clasificación de riesgo, equipo contra incendio,
+                    brigadas, rutas de evacuación, simulacros y control
+                    documental de inspección y mantenimiento.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-003-STPS-2023</h3>
+                <span class="nomStatus nomStatus--ok">Específica</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Diagnóstico por actividad agrícola</li>
+                  <li>Registros de seguridad y salud</li>
+                  <li>Procedimientos operativos</li>
+                  <li>Evidencia por área y tarea</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-003-STPS-2023"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Regula condiciones de seguridad y salud en actividades
+                    agrícolas.
+                  </p>
+                  <p class="p">
+                    Aplica principalmente a centros de trabajo del sector
+                    agrícola, con enfoque en riesgos operativos, instalaciones y
+                    tareas específicas del giro.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-004-STPS-1999</h3>
+                <span class="nomStatus nomStatus--ok">Seguridad</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Inventario de maquinaria</li>
+                  <li>Inspección por equipo</li>
+                  <li>Resguardos y puntos de riesgo</li>
+                  <li>Seguimiento correctivo</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-004-STPS-1999"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece condiciones de seguridad en maquinaria y equipo
+                    para prevenir riesgos mecánicos y de operación.
+                  </p>
+                  <p class="p">
+                    Incluye dispositivos de protección, procedimientos seguros,
+                    mantenimiento y control de puntos peligrosos.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-006-STPS-2023</h3>
+                <span class="nomStatus nomStatus--ok">Seguridad</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Checklist de operación</li>
+                  <li>Evaluación de estiba y tránsito</li>
+                  <li>Control de áreas y rutas</li>
+                  <li>Evidencia de condiciones inseguras</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-006-STPS-2023"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Regula el almacenamiento y manejo de materiales mediante el
+                    uso de maquinaria.
+                  </p>
+                  <p class="p">
+                    Considera condiciones de operación, tránsito, apilado,
+                    equipos de carga y medidas para reducir accidentes durante
+                    maniobras.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-007-STPS-2000</h3>
+                <span class="nomStatus nomStatus--ok">Específica</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Inventario de instalaciones y equipo</li>
+                  <li>Inspecciones periódicas</li>
+                  <li>Procedimientos de trabajo</li>
+                  <li>Evidencia de mantenimiento</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-007-STPS-2000"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a instalaciones, maquinaria, equipo y herramientas en
+                    actividades agrícolas.
+                  </p>
+                  <p class="p">
+                    Se enfoca en control operativo y condiciones seguras de uso,
+                    revisión y mantenimiento.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-008-STPS-2013</h3>
+                <span class="nomStatus nomStatus--ok">Específica</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Diagnóstico por centro de trabajo</li>
+                  <li>Procedimientos de seguridad</li>
+                  <li>Registros de inspección</li>
+                  <li>Evidencia de control operativo</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-008-STPS-2013"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a aprovechamiento forestal maderable y centros de
+                    almacenamiento y transformación en actividad primaria.
+                  </p>
+                  <p class="p">
+                    Incluye condiciones de seguridad y salud ligadas al entorno
+                    operativo y al tipo de actividad forestal.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-009-STPS-2011</h3>
+                <span class="nomStatus nomStatus--ok">Seguridad</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Permisos y autorizaciones</li>
+                  <li>Inspección de equipos</li>
+                  <li>Procedimientos de trabajo seguro</li>
+                  <li>Evidencia de capacitación y control</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-009-STPS-2011"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece condiciones de seguridad para realizar trabajos en
+                    altura.
+                  </p>
+                  <p class="p">
+                    Incluye equipos de protección, sistemas de acceso, líneas de
+                    vida, inspección, permisos y procedimientos seguros.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- SALUD / HIGIENE -->
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-010-STPS-2014</h3>
+                <span class="nomStatus nomStatus--ok">Salud</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Reconocimiento de agentes químicos</li>
+                  <li>Evaluación de exposición</li>
+                  <li>Controles implementados</li>
+                  <li>Registros de seguimiento</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-010-STPS-2014"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Regula el reconocimiento, evaluación y control de agentes
+                    químicos contaminantes del ambiente laboral.
+                  </p>
+                  <p class="p">
+                    Busca reducir exposición y proteger la salud de los
+                    trabajadores mediante controles y seguimiento técnico.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-011-STPS-2001</h3>
+                <span class="nomStatus nomStatus--ok">Salud</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Medición de ruido</li>
+                  <li>Mapa de áreas expuestas</li>
+                  <li>Controles implementados</li>
+                  <li>Registros de vigilancia y capacitación</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-011-STPS-2001"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece condiciones de seguridad e higiene en centros de
+                    trabajo donde se genere ruido.
+                  </p>
+                  <p class="p">
+                    Incluye medición, control, protección auditiva y seguimiento
+                    para prevenir daños a la salud.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-012-STPS-2012</h3>
+                <span class="nomStatus nomStatus--ok">Salud</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Inventario de fuentes</li>
+                  <li>Control de acceso y operación</li>
+                  <li>Registros de seguridad</li>
+                  <li>Evidencia de capacitación especializada</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-012-STPS-2012"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a centros de trabajo donde se manejen fuentes de
+                    radiación ionizante.
+                  </p>
+                  <p class="p">
+                    Implica controles altamente especializados para seguridad y
+                    salud ocupacional.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-013-STPS-1993</h3>
+                <span class="nomStatus nomStatus--ok">Salud</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Evaluación de fuentes</li>
+                  <li>Control por áreas</li>
+                  <li>Registros de exposición</li>
+                  <li>Medidas preventivas</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-013-STPS-1993"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Regula condiciones de seguridad e higiene donde existan
+                    radiaciones electromagnéticas no ionizantes.
+                  </p>
+                  <p class="p">
+                    Su enfoque es la prevención y el control de exposición en
+                    actividades específicas.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-015-STPS-2001</h3>
+                <span class="nomStatus nomStatus--ok">Salud</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Evaluación térmica</li>
+                  <li>Control por puestos</li>
+                  <li>Medidas preventivas</li>
+                  <li>Registros de seguimiento</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-015-STPS-2001"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece condiciones de seguridad e higiene cuando existan
+                    temperaturas elevadas o abatidas.
+                  </p>
+                  <p class="p">
+                    Busca prevenir afectaciones por exposición térmica en el
+                    trabajo y definir controles adecuados.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-016-STPS-2001</h3>
+                <span class="nomStatus nomStatus--ok">Específica</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Procedimientos operativos</li>
+                  <li>Inspecciones y mantenimiento</li>
+                  <li>Control de riesgos</li>
+                  <li>Registros de seguridad</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-016-STPS-2001"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Regula la operación y mantenimiento de ferrocarriles en
+                    materia de seguridad e higiene.
+                  </p>
+                  <p class="p">
+                    Aplica a actividades y entornos de operación ferroviaria.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- ORGANIZACION -->
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-017-STPS-2008</h3>
+                <span class="nomStatus nomStatus--ok">Organización</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Matriz de EPP</li>
+                  <li>Asignación por puesto</li>
+                  <li>Registros de entrega</li>
+                  <li>Evidencia de capacitación y uso</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-017-STPS-2008"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece criterios para la selección, uso y manejo del
+                    equipo de protección personal.
+                  </p>
+                  <p class="p">
+                    Es fundamental para definir controles por puesto, riesgo y
+                    actividad.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-018-STPS-2015</h3>
+                <span class="nomStatus nomStatus--ok">Organización</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Inventario de sustancias químicas</li>
+                  <li>Etiquetado y señalización</li>
+                  <li>Hojas de datos de seguridad</li>
+                  <li>Capacitación y comunicación de riesgos</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-018-STPS-2015"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece el sistema armonizado para identificación y
+                    comunicación de peligros y riesgos por sustancias químicas
+                    peligrosas.
+                  </p>
+                  <p class="p">
+                    Su aplicación es clave en etiquetado, HDS y capacitación al
+                    personal expuesto.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-019-STPS-2011</h3>
+                <span class="nomStatus nomStatus--ok">Organización</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Acta de constitución</li>
+                  <li>Programa de recorridos</li>
+                  <li>Minutas y seguimiento</li>
+                  <li>Registro de acciones correctivas</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-019-STPS-2011"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Regula la constitución, organización y funcionamiento de las
+                    comisiones de seguridad e higiene.
+                  </p>
+                  <p class="p">
+                    Es una norma organizativa básica para inspección interna,
+                    prevención y seguimiento.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-020-STPS-2011</h3>
+                <span class="nomStatus nomStatus--ok">Seguridad</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Inventario técnico</li>
+                  <li>Expediente de mantenimiento</li>
+                  <li>Registros de revisión</li>
+                  <li>Evidencia documental de control</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-020-STPS-2011"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a recipientes sujetos a presión, recipientes
+                    criogénicos y generadores de vapor o calderas.
+                  </p>
+                  <p class="p">
+                    Se enfoca en funcionamiento seguro, mantenimiento,
+                    revisiones y control documental técnico.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-022-STPS-2015</h3>
+                <span class="nomStatus nomStatus--ok">Seguridad</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Diagnóstico de áreas</li>
+                  <li>Control de riesgos por electricidad estática</li>
+                  <li>Procedimientos y medidas preventivas</li>
+                  <li>Registros de verificación</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-022-STPS-2015"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece condiciones de seguridad para controlar riesgos
+                    por electricidad estática en centros de trabajo.
+                  </p>
+                  <p class="p">
+                    Aplica en procesos donde puedan presentarse descargas
+                    peligrosas o afectaciones por acumulación electrostática.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-023-STPS-2012</h3>
+                <span class="nomStatus nomStatus--ok">Específica</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Diagnóstico de mina o sitio</li>
+                  <li>Procedimientos operativos</li>
+                  <li>Registros de seguridad y salud</li>
+                  <li>Evidencia de inspección</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-023-STPS-2012"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a minas subterráneas y minas a cielo abierto en
+                    materia de seguridad y salud.
+                  </p>
+                  <p class="p">
+                    Corresponde a un sector altamente especializado con
+                    controles técnicos específicos.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-025-STPS-2008</h3>
+                <span class="nomStatus nomStatus--ok">Salud</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Evaluación de iluminación</li>
+                  <li>Mapa de áreas y niveles</li>
+                  <li>Acciones de mejora</li>
+                  <li>Registros de verificación</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-025-STPS-2008"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece condiciones de iluminación en los centros de
+                    trabajo.
+                  </p>
+                  <p class="p">
+                    Busca asegurar niveles adecuados para prevenir fatiga
+                    visual, errores y riesgos operativos.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-026-STPS-2008</h3>
+                <span class="nomStatus nomStatus--ok">Organización</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Matriz de señalización</li>
+                  <li>Inventario de señales y colores</li>
+                  <li>Identificación de tuberías</li>
+                  <li>Evidencia de implementación</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-026-STPS-2008"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece colores y señales de seguridad e higiene, así como
+                    identificación de riesgos por fluidos conducidos en
+                    tuberías.
+                  </p>
+                  <p class="p">
+                    Es clave para señalización visual y control operativo en
+                    planta.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-029-STPS-2011</h3>
+                <span class="nomStatus nomStatus--ok">Seguridad</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Programa de mantenimiento eléctrico</li>
+                  <li>Procedimientos seguros</li>
+                  <li>Permisos y bloqueos</li>
+                  <li>Registros de inspección</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-029-STPS-2011"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Regula el mantenimiento de instalaciones eléctricas en los
+                    centros de trabajo.
+                  </p>
+                  <p class="p">
+                    Incluye procedimientos, autorizaciones, seguridad operativa
+                    y prevención de riesgos eléctricos.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-030-STPS-2009</h3>
+                <span class="nomStatus nomStatus--ok">Organización</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Diagnóstico de seguridad y salud</li>
+                  <li>Programa preventivo</li>
+                  <li>Registros de seguimiento</li>
+                  <li>Evidencia de cumplimiento</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-030-STPS-2009"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Define funciones y actividades de los servicios preventivos
+                    de seguridad y salud en el trabajo.
+                  </p>
+                  <p class="p">
+                    Ayuda a estructurar la gestión preventiva y el control
+                    documental de cumplimiento.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-031-STPS-2011</h3>
+                <span class="nomStatus nomStatus--ok">Específica</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Diagnóstico por obra</li>
+                  <li>Permisos y procedimientos</li>
+                  <li>Controles por actividad</li>
+                  <li>Evidencia de seguridad en sitio</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-031-STPS-2011"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a condiciones de seguridad y salud en trabajos de
+                    construcción.
+                  </p>
+                  <p class="p">
+                    Requiere control por frente de trabajo, actividad y riesgo
+                    específico de obra.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-033-STPS-2015</h3>
+                <span class="nomStatus nomStatus--ok">Seguridad</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Permisos de entrada</li>
+                  <li>Análisis de riesgos</li>
+                  <li>Procedimientos de rescate</li>
+                  <li>Evidencia de capacitación y control</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-033-STPS-2015"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece condiciones de seguridad para realizar trabajos en
+                    espacios confinados.
+                  </p>
+                  <p class="p">
+                    Incluye permisos, monitoreo, rescate, procedimientos y
+                    control estricto de acceso y operación.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-035-STPS-2018</h3>
+                <span class="nomStatus nomStatus--ok">Salud</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Política y medidas preventivas</li>
+                  <li>Evaluación de factores psicosociales</li>
+                  <li>Registros de acciones</li>
+                  <li>Evidencia de difusión y atención</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-035-STPS-2018"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Regula la identificación, análisis y prevención de factores
+                    de riesgo psicosocial en el trabajo.
+                  </p>
+                  <p class="p">
+                    Incluye medidas de prevención, entorno organizacional
+                    favorable y seguimiento de acciones.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-036-1-STPS-2018</h3>
+                <span class="nomStatus nomStatus--ok">Salud</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Identificación de manejo manual de cargas</li>
+                  <li>Evaluación de riesgo ergonómico</li>
+                  <li>Medidas de control</li>
+                  <li>Capacitación y seguimiento</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-036-1-STPS-2018"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Regula la identificación, análisis, prevención y control de
+                    factores de riesgo ergonómico por manejo manual de cargas.
+                  </p>
+                  <p class="p">
+                    Ayuda a prevenir lesiones musculoesqueléticas mediante
+                    evaluación y rediseño operativo.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-037-STPS-2023</h3>
+                <span class="nomStatus nomStatus--ok">Específica</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Política de teletrabajo</li>
+                  <li>Diagnóstico de condiciones</li>
+                  <li>Registro de personas en teletrabajo</li>
+                  <li>Evidencia de capacitación y seguimiento</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-037-STPS-2023"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Establece condiciones de seguridad y salud en el trabajo
+                    para teletrabajo.
+                  </p>
+                  <p class="p">
+                    Incluye obligaciones documentales, condiciones del puesto y
+                    gestión preventiva a distancia.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCTO -->
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-100-STPS-1994</h3>
+                <span class="nomStatus nomStatus--ok">Producto</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Ficha técnica del producto</li>
+                  <li>Especificaciones de conformidad</li>
+                  <li>Registros de prueba</li>
+                  <li>Evidencia de cumplimiento</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-100-STPS-1994"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a extintores contra incendio a base de polvo químico
+                    seco con presión contenida.
+                  </p>
+                  <p class="p">
+                    Su enfoque es de especificaciones de producto y conformidad
+                    técnica.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-104-STPS-2001</h3>
+                <span class="nomStatus nomStatus--ok">Producto</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Ficha técnica</li>
+                  <li>Especificación de agente extinguidor</li>
+                  <li>Registros de prueba</li>
+                  <li>Evidencia de cumplimiento técnico</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-104-STPS-2001"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a agentes extinguidores de polvo químico seco tipo
+                    ABC a base de fosfato mono amónico.
+                  </p>
+                  <p class="p">
+                    Corresponde a especificaciones técnicas de producto.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-113-STPS-1994</h3>
+                <span class="nomStatus nomStatus--ok">Producto</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Ficha técnica</li>
+                  <li>Especificaciones del calzado</li>
+                  <li>Pruebas de conformidad</li>
+                  <li>Documentación de cumplimiento</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-113-STPS-1994"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a calzado de protección y sus especificaciones
+                    técnicas.
+                  </p>
+                  <p class="p">
+                    Se relaciona con conformidad de producto y selección
+                    adecuada de protección.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card nomCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">NOM-115-STPS-1994</h3>
+                <span class="nomStatus nomStatus--ok">Producto</span>
+              </div>
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Ficha técnica</li>
+                  <li>Métodos de prueba</li>
+                  <li>Clasificación del casco</li>
+                  <li>Evidencia de cumplimiento</li>
+                </ul>
+              </div>
+              <div class="nomActions">
+                <span class="btn btn--secundario btn--mute">Ver curso</span>
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="NOM-115-STPS-1994"
+                  >Solicitar documentación</a
+                >
+              </div>
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la norma
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Aplica a cascos de protección, sus métodos de prueba y
+                    clasificación.
+                  </p>
+                  <p class="p">
+                    Es una norma de producto para especificación técnica y
+                    evaluación de conformidad.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAPA BRIGADAS -->
+      <section
+        id="mapa-brigadas"
+        class="seccion"
+        aria-label="Mapa documental por brigada"
+      >
+        <div class="wrap">
+          <header class="seccion__head">
+            <div class="label">BRIGADAS</div>
+            <h2 class="h2">Qué documentos se requieren por brigada</h2>
+            <p class="p">
+              Estructura base para organización, operación, simulacros,
+              responsables y evidencia de cumplimiento.
+            </p>
           </header>
 
           <div class="cards4">
+            <!-- BRIGADA CONTRA INCENDIOS -->
+            <article id="brigada-incendios" class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">Brigada contra incendios</h3>
+                <span class="nomStatus nomStatus--ok">Brigada básica</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Organigrama y responsables</li>
+                  <li>Inventario de equipos contra incendio</li>
+                  <li>Bitácoras de revisión y control</li>
+                  <li>Programa de simulacros</li>
+                  <li>Registros de participación</li>
+                  <li>Evidencia fotográfica por turno o área</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada contra incendios"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Atiende la respuesta inicial ante conatos de incendio, uso
+                    de extintores, identificación de riesgos y coordinación
+                    inmediata de acciones de control.
+                  </p>
+                  <p class="p">
+                    Es una brigada base dentro del programa interno de
+                    protección civil y suele ser de las primeras en auditarse en
+                    plantas y centros de trabajo.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA DE EVACUACION -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">Brigada de evacuación</h3>
+                <span class="nomStatus nomStatus--ok">Brigada básica</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Croquis y rutas de evacuación</li>
+                  <li>Asignación de jefes de piso</li>
+                  <li>Listados y conteo por área</li>
+                  <li>Bitácora de ejercicios</li>
+                  <li>Evidencia de señalización</li>
+                  <li>Registros de simulacros</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada de evacuación"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Coordina la salida ordenada del personal, visitantes o
+                    contratistas hacia puntos seguros durante una emergencia.
+                  </p>
+                  <p class="p">
+                    Su función incluye rutas, puntos de reunión, control de
+                    personas y comunicación operativa con responsables por piso
+                    o área.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA DE PRIMEROS AUXILIOS -->
+            <article
+              id="brigada-primeros-auxilios"
+              class="card nomCard brigadeCard"
+            >
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">Brigada de primeros auxilios</h3>
+                <span class="nomStatus nomStatus--ok">Brigada básica</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Asignación de brigadistas</li>
+                  <li>Inventario y revisión de botiquines</li>
+                  <li>Capacitación y constancias</li>
+                  <li>Registro de simulacros</li>
+                  <li>Protocolos de atención inicial</li>
+                  <li>Evidencia de práctica y seguimiento</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada de primeros auxilios"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Proporciona atención inmediata básica ante lesiones o
+                    eventos médicos mientras llega apoyo especializado.
+                  </p>
+                  <p class="p">
+                    Es una brigada esencial para respuesta temprana, control del
+                    incidente y soporte al sistema general de emergencias.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA DE BUSQUEDA Y RESCATE -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">Brigada de búsqueda y rescate</h3>
+                <span class="nomStatus nomStatus--ok">Brigada básica</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Roles y asignación de integrantes</li>
+                  <li>Equipo y control de uso</li>
+                  <li>Procedimientos internos de revisión</li>
+                  <li>Registro de prácticas</li>
+                  <li>Bitácoras de intervención</li>
+                  <li>Evidencia documental y fotográfica</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada de búsqueda y rescate"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Se enfoca en localizar personas, revisar zonas afectadas y
+                    apoyar la extracción o recuperación inicial dentro de
+                    escenarios controlados.
+                  </p>
+                  <p class="p">
+                    Es especialmente relevante en entornos industriales con
+                    riesgos físicos, estructuras complejas o eventos que
+                    impliquen revisión de áreas.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA TECNICA -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">Brigada técnica</h3>
+                <span class="nomStatus nomStatus--ok">Apoyo operativo</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Asignación de personal técnico</li>
+                  <li>Procedimientos de aislamiento y apoyo</li>
+                  <li>Listados de equipos críticos</li>
+                  <li>Bitácoras de intervención</li>
+                  <li>Registros de mantenimiento relacionado</li>
+                  <li>Evidencia de prácticas y soporte</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada técnica"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Apoya la atención de emergencias desde el punto de vista
+                    técnico, especialmente en equipos, energía, aislamientos y
+                    restablecimiento seguro.
+                  </p>
+                  <p class="p">
+                    Es muy recomendable en industria cuando existen procesos,
+                    maquinaria o sistemas críticos que requieren apoyo
+                    especializado durante una contingencia.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA DE COMUNICACION -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">Brigada de comunicación</h3>
+                <span class="nomStatus nomStatus--ok">Apoyo operativo</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Roles y responsables de comunicación</li>
+                  <li>Directorio de contactos internos y externos</li>
+                  <li>Protocolos de aviso y escalamiento</li>
+                  <li>Bitácoras de comunicación</li>
+                  <li>Formatos de reporte</li>
+                  <li>Evidencia de simulacros</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada de comunicación"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Gestiona la comunicación durante la emergencia: avisos,
+                    activación de protocolos, enlace interno y notificaciones
+                    necesarias.
+                  </p>
+                  <p class="p">
+                    Su correcta integración reduce confusión, mejora tiempos de
+                    respuesta y fortalece la coordinación entre brigadas y
+                    mandos.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA DE SEGURIDAD -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">Brigada de seguridad</h3>
+                <span class="nomStatus nomStatus--ok">Apoyo operativo</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Asignación y cobertura por turnos</li>
+                  <li>Control de accesos y perímetros</li>
+                  <li>Procedimientos de apoyo a control</li>
+                  <li>Bitácoras de incidencias</li>
+                  <li>Registros de apoyo en simulacros</li>
+                  <li>Evidencia de actuación</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada de seguridad"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Brinda apoyo a control de accesos, delimitación de zonas,
+                    resguardo y orden operativo durante la atención de una
+                    emergencia.
+                  </p>
+                  <p class="p">
+                    Es especialmente útil en plantas medianas y grandes donde el
+                    flujo de personas, contratistas o vehículos requiere control
+                    adicional.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA DE MATERIALES PELIGROSOS -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">
+                  Brigada de materiales peligrosos (HAZMAT)
+                </h3>
+                <span class="nomStatus nomStatus--ok">Especializada</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Inventario de materiales peligrosos</li>
+                  <li>Hojas de datos de seguridad</li>
+                  <li>Procedimientos de contención y respuesta</li>
+                  <li>Equipo y control de disponibilidad</li>
+                  <li>Registros de capacitación especializada</li>
+                  <li>Bitácoras de incidentes y simulacros</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada de materiales peligrosos (HAZMAT)"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Interviene en incidentes relacionados con sustancias o
+                    materiales peligrosos, enfocándose en contención inicial,
+                    control y aislamiento.
+                  </p>
+                  <p class="p">
+                    Su integración depende del riesgo del sitio y del manejo de
+                    químicos, residuos peligrosos o materiales con
+                    requerimientos especiales.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA DE RESCATE ESPECIALIZADO -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">
+                  Brigada de rescate especializado
+                </h3>
+                <span class="nomStatus nomStatus--ok">Especializada</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Procedimientos específicos de rescate</li>
+                  <li>Roles y competencias del equipo</li>
+                  <li>Inventario de equipos especializados</li>
+                  <li>Bitácoras de inspección y disponibilidad</li>
+                  <li>Registros de práctica</li>
+                  <li>Evidencia de capacitación avanzada</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada de rescate especializado"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Se integra cuando el riesgo del proceso, instalación o
+                    actividad exige capacidades superiores de rescate.
+                  </p>
+                  <p class="p">
+                    Puede vincularse con altura, espacios confinados,
+                    estructuras complejas o escenarios especiales de
+                    intervención.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA DE EMERGENCIAS MEDICAS AVANZADAS -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">
+                  Brigada de atención a emergencias médicas avanzadas
+                </h3>
+                <span class="nomStatus nomStatus--ok">Especializada</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Perfil y asignación de integrantes</li>
+                  <li>Protocolos de atención médica avanzada</li>
+                  <li>Inventario y control de equipo médico</li>
+                  <li>Registros de revisión y disponibilidad</li>
+                  <li>Bitácoras de intervención</li>
+                  <li>Evidencia de capacitación y práctica</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada de atención a emergencias médicas avanzadas"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Atiende escenarios que requieren una respuesta médica de
+                    mayor nivel antes del arribo de servicios externos.
+                  </p>
+                  <p class="p">
+                    Suele implementarse en operaciones de riesgo elevado o
+                    sitios con alta exposición operativa y tiempos de respuesta
+                    externos más largos.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- SCI -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">
+                  Sistema de Comando de Incidentes (SCI)
+                </h3>
+                <span class="nomStatus nomStatus--ok">Coordinación</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Estructura de mando y funciones</li>
+                  <li>Asignación de comandante e integrantes clave</li>
+                  <li>Formatos de coordinación y reporte</li>
+                  <li>Protocolos de activación</li>
+                  <li>Registros de simulacros</li>
+                  <li>Evidencia de integración con brigadas</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Sistema de Comando de Incidentes"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Coordina la respuesta integral a la emergencia,
+                    distribuyendo funciones y control operativo entre mando,
+                    operaciones, planeación, logística y administración.
+                  </p>
+                  <p class="p">
+                    No sustituye a las brigadas; las integra y las coordina para
+                    lograr una atención estructurada, ordenada y documentada.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- BRIGADA MULTIFUNCIONAL -->
+            <article class="card nomCard brigadeCard">
+              <div class="nomCard__top">
+                <h3 class="h3 nomCard__title">Brigada multifuncional</h3>
+                <span class="nomStatus nomStatus--ok">Modelo integrado</span>
+              </div>
+
+              <div class="nomDocs">
+                <div class="nomDocs__title">Documentación requerida</div>
+                <ul class="list list--tight">
+                  <li>Asignación de integrantes multifunción</li>
+                  <li>Matriz de roles y cobertura</li>
+                  <li>Programa de capacitación integrada</li>
+                  <li>Bitácoras de revisión y práctica</li>
+                  <li>Registros de simulacros</li>
+                  <li>Evidencia de desempeño y control</li>
+                </ul>
+              </div>
+
+              <div class="nomActions">
+                <a class="btn btn--secundario btn--verde" href="/capacitacion/"
+                  >Ver curso</a
+                >
+                <a
+                  class="btn btn--primario"
+                  href="#"
+                  data-open-doc
+                  data-nom="Brigada multifuncional"
+                >
+                  Documentación
+                </a>
+              </div>
+
+              <div class="nomAccordion">
+                <button
+                  class="nomAccordion__btn"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Alcance de la brigada
+                </button>
+                <div class="nomAccordion__content">
+                  <p class="p">
+                    Agrupa varias funciones en una sola brigada capacitada para
+                    cubrir respuesta inicial, control, apoyo y coordinación
+                    básica.
+                  </p>
+                  <p class="p">
+                    Es útil en empresas pequeñas o medianas donde se requiere
+                    eficiencia operativa sin perder estructura documental y de
+                    entrenamiento.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLIENTE CORPORATIVO -->
+      <section id="corporativo" class="seccion" aria-label="Acceso corporativo">
+        <div class="wrap">
+          <header class="seccion__head">
+            <div class="label">CLIENTE CORPORATIVO</div>
+            <h2 class="h2">
+              Acceso completo a carpetas, formatos y control documental
+            </h2>
+            <p class="p">
+              El valor principal no es solo descargar un formato, sino operar un
+              sistema documental coherente por NOM, brigada, sitio y nivel de
+              riesgo.
+            </p>
+          </header>
+
+          <div class="cta2">
             <article class="card">
-              <h3 class="h3">NOM-STPS</h3>
-              <p class="p">Checklists, formatos, evidencia y guías.</p>
-              <a class="microcta" href="/stps/checklists/">Explorar →</a>
+              <h3 class="h3">Qué recibe un cliente corporativo</h3>
+              <ul class="list list--tight">
+                <li>Matriz documental por NOM aplicable</li>
+                <li>Carpetas por planta, área o sitio</li>
+                <li>Formatos editables y plantillas base</li>
+                <li>Control de evidencia y seguimiento</li>
+                <li>Ruta de implementación por prioridad</li>
+                <li>Vinculación con capacitación y brigadas</li>
+              </ul>
+              <div class="actions">
+                <a class="btn btn--primario" href="#contacto"
+                  >Solicitar propuesta</a
+                >
+                <a class="btn btn--secundario" href="/clientes/"
+                  >Ir a clientes</a
+                >
+              </div>
             </article>
 
             <article class="card">
-              <h3 class="h3">Brigadas</h3>
-              <p class="p">Organización, roles, bitácoras y simulacros.</p>
-              <a class="microcta" href="/stps/brigadas/">Explorar →</a>
-            </article>
-
-            <article class="card">
-              <h3 class="h3">Operación</h3>
-              <p class="p">Rutinas, inspección y control por áreas.</p>
-              <a class="microcta" href="/stps/">Explorar →</a>
-            </article>
-
-            <article class="card">
-              <h3 class="h3">Capacitación</h3>
-              <p class="p">Material de apoyo, guías y formación por rol.</p>
-              <a class="microcta" href="/capacitacion/">Explorar →</a>
-            </article>
-
-            <article class="card">
-              <h3 class="h3">Formatos</h3>
-              <p class="p">Plantillas listas para adaptar por empresa.</p>
-              <a class="microcta" href="/recursos/">Explorar →</a>
-            </article>
-
-            <article class="card">
-              <h3 class="h3">Inspecciones</h3>
-              <p class="p">Prevención, evidencia y seguimiento.</p>
-              <a class="microcta" href="/stps/checklists/">Explorar →</a>
+              <h3 class="h3">Para quién está pensado</h3>
+              <ul class="list list--tight">
+                <li>Parques industriales</li>
+                <li>Plantas manufactureras</li>
+                <li>Centros logísticos</li>
+                <li>Operaciones multisede</li>
+                <li>Equipos EHS, RH y mantenimiento</li>
+                <li>Empresas con auditoría o crecimiento operativo</li>
+              </ul>
+              <div class="note note--soft" role="note">
+                <p class="note__v">
+                  <strong>Enfoque Boxfox1:</strong> ordenar primero, implementar
+                  con criterio y sostener evidencia útil, no solo generar
+                  formatos sueltos.
+                </p>
+              </div>
             </article>
           </div>
         </div>
@@ -384,16 +2743,16 @@
       <!-- DIAGNÓSTICOS -->
       <section
         id="diagnosticos"
-        class="seccion"
+        class="seccion seccion--banda"
         aria-label="Diagnósticos rápidos"
       >
         <div class="wrap">
           <header class="seccion__head">
             <div class="label">DIAGNÓSTICOS</div>
-            <h2 class="h2">Diagnósticos rápidos</h2>
+            <h2 class="h2">Diagnósticos rápidos para ubicar brechas</h2>
             <p class="p">
-              Autoevaluaciones iniciales para visualizar score, brechas y
-              siguientes pasos.
+              Antes de pedir acceso completo, el cliente puede ubicar su nivel
+              actual y detectar prioridades de acción.
             </p>
           </header>
 
@@ -401,24 +2760,24 @@
             <article class="card">
               <h3 class="h3">Diagnóstico industrial</h3>
               <p class="p">
-                Evalúa madurez operativa, cumplimiento documental, brigadas,
-                control por áreas y prioridades de implementación.
+                Evalúa madurez operativa, control documental, brigadas, orden
+                por áreas y prioridades de implementación.
               </p>
               <div class="actions">
                 <a class="btn btn--cta" href="/stps/diagnostico-industrial.html"
                   >Iniciar</a
                 >
-                <a class="btn btn--secundario" href="/stps/checklists/"
-                  >Ver recursos</a
+                <a class="btn btn--secundario" href="#mapa-nom"
+                  >Ver mapa documental</a
                 >
               </div>
             </article>
 
             <article class="card">
-              <h3 class="h3">Más diagnósticos</h3>
+              <h3 class="h3">Diagnósticos específicos</h3>
               <p class="p">
-                NOM-002, brigadas, SCI y otras evaluaciones rápidas con enfoque
-                breve y accionable.
+                NOM-002, brigadas, control documental, inspección por áreas y
+                revisión inicial de cumplimiento.
               </p>
               <div class="actions">
                 <a class="btn btn--secundario" href="/stps/">Ver industrial</a>
@@ -429,61 +2788,10 @@
 
           <div class="note" role="note" aria-label="Nota diagnósticos">
             <p class="note__v">
-              <strong>Nota:</strong> Los diagnósticos son autoevaluación
-              inicial. Para cumplimiento formal se requiere evidencia
-              documental, validación técnica y adecuación por giro.
+              <strong>Nota:</strong> El diagnóstico es una evaluación inicial.
+              El cumplimiento formal requiere evidencia documental, validación
+              técnica y adecuación al giro, proceso y nivel de riesgo.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ACCESOS -->
-      <section
-        id="accesos"
-        class="seccion seccion--banda"
-        aria-label="Niveles de acceso"
-      >
-        <div class="wrap">
-          <header class="seccion__head">
-            <div class="label">ACCESOS</div>
-            <h2 class="h2">Niveles de acceso</h2>
-            <p class="p">
-              Un mismo ecosistema, distintos niveles de profundidad.
-            </p>
-          </header>
-
-          <div class="cards4">
-            <article class="card">
-              <h3 class="h3">Público</h3>
-              <p class="p">
-                Guías intro, recursos de consulta y enlaces esenciales.
-              </p>
-              <a class="microcta" href="/recursos/">Entrar →</a>
-            </article>
-
-            <article class="card">
-              <h3 class="h3">Registro</h3>
-              <p class="p">
-                Checklists y plantillas listas para adaptar por empresa.
-              </p>
-              <a class="microcta" href="/stps/checklists/">Entrar →</a>
-            </article>
-
-            <article class="card">
-              <h3 class="h3">Clientes</h3>
-              <p class="p">
-                Carpetas, rutinas y control para sostener cumplimiento.
-              </p>
-              <a class="microcta" href="/clientes/">Entrar →</a>
-            </article>
-
-            <article class="card">
-              <h3 class="h3">Academy</h3>
-              <p class="p">
-                Curso, evidencia, evaluación y DC-3 según programa.
-              </p>
-              <a class="microcta" href="/capacitacion/">Ir →</a>
-            </article>
           </div>
         </div>
       </section>
@@ -757,6 +3065,63 @@
         <p class="muted" style="font-size: 12px; margin-top: 10px">
           Origen: servicios.boxfox1.com
         </p>
+      </div>
+    </div>
+
+    <!-- MODAL DOCUMENTACION -->
+    <div
+      class="modal"
+      id="docsModal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="docsTitle"
+    >
+      <div class="modal__backdrop" data-modal-close></div>
+
+      <div class="modal__panel" role="document">
+        <div class="modal__top">
+          <div class="modal__kicker">
+            <span class="kicker__dot"></span>
+            DOCUMENTACIÓN NOM
+          </div>
+
+          <button
+            class="modal__x"
+            type="button"
+            aria-label="Cerrar"
+            data-modal-close
+          >
+            ×
+          </button>
+        </div>
+
+        <h2 class="h2" id="docsTitle">Solicitud de documentación</h2>
+
+        <p class="p">
+          La documentación técnica y formatos operativos de cada NOM están
+          disponibles exclusivamente para
+          <strong>clientes corporativos Boxfox1</strong>.
+        </p>
+
+        <p class="p">
+          Para acceder a estos documentos, solicita su habilitación con tu
+          <strong>vendedor asignado</strong>. Una vez autorizado, aparecerán en
+          tu <strong>portal de clientes</strong>.
+        </p>
+
+        <div class="modal__actions">
+          <a class="btn btn--primario" href="/clientes/">
+            Ir al portal de clientes
+          </a>
+
+          <a
+            class="btn btn--secundario"
+            href="mailto:info@boxfox1.com?subject=Solicitud%20de%20documentación%20NOM-STPS&body=Hola%20Boxfox1,%20quiero%20solicitar%20acceso%20a%20documentación%20técnica.%0A%0AEmpresa:%0ANOM%20de%20interés:%0A"
+          >
+            Contactar asesor
+          </a>
+        </div>
       </div>
     </div>
 
