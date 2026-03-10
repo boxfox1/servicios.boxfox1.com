@@ -3052,18 +3052,41 @@ a.link:hover {
 }
 /* Mini cards del hero */
 
-.heroCard__grid .mini{
-display:flex;
-flex-direction:column;
-min-height:100%;
-padding:12px;
+.heroCard__grid .mini {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 12px;
 }
 
 /* empuja el link hacia abajo */
 
-.heroCard__grid .mini .microcta{
-margin-top:auto;
-align-self:flex-start;
-font-weight:700;
-color:var(--azul);
+.heroCard__grid .mini .microcta {
+  margin-top: auto;
+  align-self: flex-start;
+  font-weight: 700;
+  color: var(--azul);
+}
+/* =========================
+   Modal documentación
+   ajuste de jerarquía
+   ========================= */
+
+#docsModal .modal__panel {
+  width: min(640px, calc(100% - 32px));
+}
+
+#docsModal .h2 {
+  font-size: 24px;
+  line-height: 1.2;
+  max-width: none;
+}
+
+#docsModal .p {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+#docsModal .modal__actions {
+  margin-top: 16px;
 }

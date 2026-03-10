@@ -277,27 +277,60 @@
   }
 })();
 
-// ============================
-// Modal documentación NOM
-// ============================
+/* =========================
+   Modal documentación NOM
+   ========================= */
+(function () {
+  const docsModal = document.getElementById("docsModal");
+  const docButtons = document.querySelectorAll("[data-open-doc]");
+  const docsTitle = document.getElementById("docsTitle");
 
-const docButtons = document.querySelectorAll("[data-open-doc]");
-const docsModal = document.getElementById("docsModal");
+  if (!docsModal || !docButtons.length) return;
 
-docButtons.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-
+  const openDocsModal = (nomName = "") => {
+    docsModal.classList.add("is-open");
     docsModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("is-modal-open");
+
+    if (docsTitle && nomName) {
+      docsTitle.textContent = `Solicitud de documentación — ${nomName}`;
+    } else if (docsTitle) {
+      docsTitle.textContent = "Solicitud de documentación";
+    }
+  };
+
+  const closeDocsModal = () => {
+    docsModal.classList.remove("is-open");
+    docsModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("is-modal-open");
+
+    if (docsTitle) {
+      docsTitle.textContent = "Solicitud de documentación";
+    }
+  };
+
+  docButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const nomName = btn.getAttribute("data-nom") || "";
+      openDocsModal(nomName);
+    });
   });
-});
-document.querySelectorAll(".nomAccordion__btn").forEach((btn) => {
-  btn.addEventListener("click", function () {
-    const accordion = this.closest(".nomAccordion");
-    const isOpen = accordion.classList.toggle("open");
-    this.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+  docsModal.addEventListener("click", (e) => {
+    if (e.target.closest("[data-modal-close]")) {
+      e.preventDefault();
+      closeDocsModal();
+    }
   });
-});
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && docsModal.classList.contains("is-open")) {
+      closeDocsModal();
+    }
+  });
+})();
+
 /* =========================
    Biblioteca NOM: búsqueda + filtros
    ========================= */
