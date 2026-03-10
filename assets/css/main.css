@@ -3192,3 +3192,104 @@ a.link:hover {
   background: #ffffff;
   flex: 0 0 auto;
 }
+/* =========================================
+   Nota cursos — espacio visual
+   ========================================= */
+
+#cursos .note {
+  margin-top: 30px;
+  padding: 16px 18px;
+}
+/* =========================================
+   Nota CTA cursos
+   ========================================= */
+
+.note--cta {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 18px 20px;
+}
+
+.note--cta .note__v {
+  flex: 1 1 420px;
+}
+
+.note__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#cursos .note__v{
+  font-weight: 600;
+  color: rgba(15, 23, 42, 0.92);
+}
+/* =========================================
+   Cursos capacitación — precio + CTA
+   ========================================= */
+
+#cursos .cards3 .card {
+  display: flex;
+  flex-direction: column;
+}
+
+#cursos .coursePrice {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 4px 0 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(26, 120, 255, 0.16);
+  background: rgba(26, 120, 255, 0.05);
+}
+
+#cursos .coursePrice strong {
+  font-size: 18px;
+  line-height: 1.1;
+  color: rgba(15, 23, 42, 0.94);
+}
+
+#cursos .coursePrice span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.58);
+}
+
+#cursos .card__actions {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+#cursos .card__actions .btn {
+  width: 100%;
+  justify-content: center;
+}
+/* =========================================
+   Precios — acciones
+   ========================================= */
+
+#precios .card{
+  display:flex;
+  flex-direction:column;
+}
+
+#precios .card__actions{
+  margin-top:auto;
+  padding-top:16px;
+}
+
+#precios .card__actions .btn{
+  width:100%;
+  justify-content:center;
+}
+.arrow{
+  font-size: 20px;
+  font-weight: 900;
+  margin-left: 6px;
+  line-height: .90;
+}
