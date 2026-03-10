@@ -594,11 +594,6 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
-.cards4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-}
 
 .tiles {
   display: grid;
@@ -3090,58 +3085,63 @@ a.link:hover {
 #docsModal .modal__actions {
   margin-top: 16px;
 }
-/* =========================
-   Brigadas / recursos
-   Responsive grid
-   ========================= */
+/* =========================================================
+   MAPA BRIGADAS — responsive real
+   ========================================================= */
 
-.brigadeGrid {
+.cards4 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
   align-items: start;
 }
 
-.brigadeCard {
+.cards4 > * {
   min-width: 0;
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .brigadeGrid {
+  .cards4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 /* Móvil */
 @media (max-width: 640px) {
-  .brigadeGrid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .cards4 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 
-  .brigadeCard {
-    width: 100%;
+  .cards4 > .card,
+  .cards4 > .nomCard,
+  .cards4 > .brigadeCard {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
 
-  .nomActions {
+  .cards4 .nomActions {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  .nomActions .btn {
+  .cards4 .nomActions .btn {
     width: 100%;
     justify-content: center;
   }
-}
-@media (max-width: 640px) {
-  .nomCard__title {
-    font-size: 1.8rem;
+
+  .cards4 .nomCard__title,
+  .cards4 .h3 {
+    font-size: clamp(1.5rem, 5vw, 1.9rem);
     line-height: 1.2;
+    word-break: break-word;
   }
 
-  .list--tight li {
+  .cards4 .list--tight li {
     word-break: break-word;
   }
 }
