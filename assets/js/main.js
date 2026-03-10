@@ -371,7 +371,8 @@
       const curso = card.dataset.curso || "";
       const search = normalize(card.dataset.search || card.textContent || "");
 
-      const matchCategoria = state.categoria === "all" || categoria === state.categoria;
+      const matchCategoria =
+        state.categoria === "all" || categoria === state.categoria;
       const matchCurso = state.curso === "all" || curso === state.curso;
       const matchSearch = !q || search.includes(q);
 
@@ -408,4 +409,54 @@
   });
 
   applyFilters();
+})();
+
+/* =========================
+   Portal de clientes → acceso por correo
+   ========================= */
+(function () {
+  const form = document.getElementById("clientAccessForm");
+  const emailInput = document.getElementById("clientEmail");
+  const msg = document.getElementById("clientAccessMsg");
+
+  if (!form || !emailInput) return;
+
+  const clientFolders = {
+    "cliente1@empresa.com":
+      "https://drive.google.com/drive/folders/AAAAAAAAAAAAAAAAAAAAA",
+    "cliente2@empresa.com":
+      "https://drive.google.com/drive/folders/BBBBBBBBBBBBBBBBBBBBB",
+    "compras@empresa3.com":
+      "https://drive.google.com/drive/folders/CCCCCCCCCCCCCCCCCCCCC",
+  };
+
+  const setMsg = (text = "", isError = false) => {
+    if (!msg) return;
+    msg.textContent = text;
+    msg.style.color = isError ? "#b42318" : "rgba(15, 23, 42, 0.72)";
+  };
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const email = (emailInput.value || "").trim().toLowerCase();
+
+    if (!email) {
+      setMsg("Ingresa un correo válido.", true);
+      return;
+    }
+
+    const folderUrl = clientFolders[email];
+
+    if (folderUrl) {
+      setMsg("Acceso encontrado. Abriendo carpeta...");
+      window.location.href = folderUrl;
+      return;
+    }
+
+    setMsg(
+      "Este correo no tiene acceso habilitado todavía. Solicita tu acceso con tu asesor de ventas.",
+      true,
+    );
+  });
 })();
