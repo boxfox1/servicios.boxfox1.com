@@ -707,6 +707,11 @@ a {
 
 /* ===== Tiles ===== */
 .tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+
   transition:
     transform 0.12s ease,
     box-shadow 0.12s ease,
@@ -723,7 +728,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.tile__more {
+  margin-top: auto;
+}
+.tile__desc {
+  flex: 1;
+  margin-bottom: 4px;
 }
 
 .badge {
@@ -3223,7 +3236,7 @@ a.link:hover {
   gap: 10px;
   flex-wrap: wrap;
 }
-#cursos .note__v{
+#cursos .note__v {
   font-weight: 600;
   color: rgba(15, 23, 42, 0.92);
 }
@@ -3273,23 +3286,23 @@ a.link:hover {
    Precios — acciones
    ========================================= */
 
-#precios .card{
-  display:flex;
-  flex-direction:column;
+#precios .card {
+  display: flex;
+  flex-direction: column;
 }
 
-#precios .card__actions{
-  margin-top:auto;
-  padding-top:16px;
+#precios .card__actions {
+  margin-top: auto;
+  padding-top: 16px;
 }
 
-#precios .card__actions .btn{
-  width:100%;
-  justify-content:center;
+#precios .card__actions .btn {
+  width: 100%;
+  justify-content: center;
 }
-.arrow{
+.arrow {
   font-size: 20px;
   font-weight: 900;
   margin-left: 6px;
-  line-height: .90;
+  line-height: 0.9;
 }
