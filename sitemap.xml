@@ -94,13 +94,13 @@
 <loc>https://servicios.boxfox1.com/stps/ocupaciones-especificas.html</loc>
 </url>
 
-<!-- STPS REPORTES -->
+<!-- REPORTES -->
 <url>
-<loc>https://servicios.boxfox1.com/stps/reportes/</loc>
+<loc>https://servicios.boxfox1.com/reportes/</loc>
 </url>
 
 <url>
-<loc>https://servicios.boxfox1.com/stps/reportes/incidentes.html</loc>
+<loc>https://servicios.boxfox1.com/reportes/incidentes.html</loc>
 </url>
 
 <!-- DIAGNOSTICO -->
