@@ -3306,3 +3306,24 @@ a.link:hover {
   margin-left: 6px;
   line-height: 0.9;
 }
+/* =========================================
+   Reportes — acciones alineadas abajo
+   ========================================= */
+#reportes .cards3 {
+  align-items: stretch;
+}
+
+#reportes .cards3 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#reportes .cards3 .card .card__actions {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+#reportes .cards3 .card .card__actions .btn {
+  align-self: flex-start;
+}
