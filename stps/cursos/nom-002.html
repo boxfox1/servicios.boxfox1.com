@@ -154,6 +154,63 @@
         }
       }
     </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué empresas deben cumplir la NOM-002-STPS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aplica a los centros de trabajo donde existan condiciones que requieran medidas de prevención y protección contra incendios, conforme al riesgo y características de la operación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La NOM-002 exige brigada contra incendio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del nivel de riesgo y de la organización del centro de trabajo, pero en la práctica es común que se revisen responsabilidades, capacitación, integración operativa y evidencia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cada cuánto deben realizarse simulacros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La frecuencia depende del contexto operativo y del programa interno aplicable. Lo importante es que la ejecución sea verificable, evaluada y respaldada con evidencia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El curso puede incluir constancia DC-3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, puede contemplarse constancia DC-3 y evaluación según alcance, modalidad, perfil de participantes y condiciones previamente acordadas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué evidencia suele pedirse en auditoría o inspección?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Normalmente se revisan registros, listas, evidencia de simulacros, integración operativa, acciones correctivas, control documental y condiciones físicas en planta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El checklist sustituye un diagnóstico técnico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El checklist ayuda a una autoevaluación preliminar, pero no reemplaza una revisión técnica específica del centro de trabajo ni el criterio profesional por área y riesgo."
+      }
+    }
+  ]
+}
+</script>
   </head>
 
   <body>
@@ -273,7 +330,7 @@
               carpeta documental lista para inspección y auditoría.
             </p>
 
-            <div class="hero__actions" style="margin-top: 12px">
+            <div class="hero__actions heroActions--mt">
               <a class="btn btn--primario" href="#temario">Ver temario</a>
               <a class="btn btn--primario" href="#fallas">Fallas típicas</a>
               <a class="btn btn--cta" href="/stps/diagnostico-industrial.html">
@@ -383,6 +440,56 @@
               </ul>
             </article>
           </div>
+
+          <header class="seccion__head sectionHead--mt">
+  <div class="label">IMPLEMENTACIÓN</div>
+  <h2 class="h2">Cómo implementar la NOM-002 en 5 pasos</h2>
+  <p class="p">
+    Ruta práctica para pasar de criterio general a control verificable en planta.
+  </p>
+</header>
+
+<div class="implGrid">
+  <article class="implCard">
+    <div class="implCard__num">1</div>
+    <h3 class="implCard__title">Evaluar riesgo de incendio</h3>
+    <p class="implCard__desc">
+      Revisar procesos, materiales combustibles, fuentes de ignición y condiciones del área para clasificar el nivel de riesgo.
+    </p>
+  </article>
+
+  <article class="implCard">
+    <div class="implCard__num">2</div>
+    <h3 class="implCard__title">Definir medidas por área</h3>
+    <p class="implCard__desc">
+      Alinear extintores, señalización, rutas, control visual y medidas preventivas según el riesgo real de cada zona.
+    </p>
+  </article>
+
+  <article class="implCard">
+    <div class="implCard__num">3</div>
+    <h3 class="implCard__title">Integrar brigada y responsables</h3>
+    <p class="implCard__desc">
+      Asignar funciones, roles y responsables por turno o área para respuesta inicial, evacuación y control operativo.
+    </p>
+  </article>
+
+  <article class="implCard">
+    <div class="implCard__num">4</div>
+    <h3 class="implCard__title">Ejecutar simulacros y verificación</h3>
+    <p class="implCard__desc">
+      Probar rutas, tiempos de respuesta, comunicación y criterios de operación para identificar brechas reales.
+    </p>
+  </article>
+
+  <article class="implCard">
+    <div class="implCard__num">5</div>
+    <h3 class="implCard__title">Cerrar evidencia documental</h3>
+    <p class="implCard__desc">
+      Consolidar listas, hallazgos, acciones, seguimiento y carpeta mínima para inspección, auditoría o revisión interna.
+    </p>
+  </article>
+</div>
 
           <header
             class="seccion__head"
@@ -538,6 +645,63 @@
             </article>
           </div>
 
+          <header class="seccion__head sectionHead--mt">
+  <div class="label">TIPOS DE FUEGO</div>
+  <h2 class="h2">Clases de fuego y selección básica de extintor</h2>
+  <p class="p">
+    Referencia práctica para capacitación inicial y criterio de inspección en planta.
+  </p>
+</header>
+
+<div class="fireGrid">
+  <article class="fireCard">
+    <div class="fireCard__tag">Clase A</div>
+    <h3 class="fireCard__title">Sólidos combustibles</h3>
+    <p class="fireCard__desc">
+      Papel, cartón, madera, tela y materiales sólidos ordinarios que dejan brasa o ceniza.
+    </p>
+  </article>
+
+  <article class="fireCard">
+    <div class="fireCard__tag">Clase B</div>
+    <h3 class="fireCard__title">Líquidos inflamables</h3>
+    <p class="fireCard__desc">
+      Solventes, pinturas, gasolina, aceites y otros líquidos o vapores inflamables.
+    </p>
+  </article>
+
+  <article class="fireCard">
+    <div class="fireCard__tag">Clase C</div>
+    <h3 class="fireCard__title">Equipos energizados</h3>
+    <p class="fireCard__desc">
+      Riesgo asociado a instalaciones o equipos eléctricos con presencia de energía.
+    </p>
+  </article>
+
+  <article class="fireCard">
+    <div class="fireCard__tag">Clase D</div>
+    <h3 class="fireCard__title">Metales combustibles</h3>
+    <p class="fireCard__desc">
+      Riesgo especial en procesos donde existen metales combustibles o polvos metálicos reactivos.
+    </p>
+  </article>
+
+  <article class="fireCard">
+    <div class="fireCard__tag">Clase K</div>
+    <h3 class="fireCard__title">Grasas y aceites de cocina</h3>
+    <p class="fireCard__desc">
+      Aplicable principalmente en cocinas industriales, comedores y áreas con aceites vegetales o animales.
+    </p>
+  </article>
+</div>
+
+<div class="fireNote">
+  <p class="fireNote__k">Nota técnica</p>
+  <p class="fireNote__v">
+    La selección del extintor no debe resolverse solo por disponibilidad del equipo. Debe corresponder al riesgo del área, materiales presentes, condiciones de operación y criterio técnico aplicable.
+  </p>
+</div>
+
           <header
             class="seccion__head"
             style="margin-top: 28px; margin-bottom: 12px"
@@ -590,6 +754,58 @@
               </li>
             </ul>
           </article>
+
+          <header class="seccion__head sectionHead--mt">
+  <div class="label">PREGUNTAS FRECUENTES</div>
+  <h2 class="h2">Dudas comunes sobre la NOM-002-STPS</h2>
+  <p class="p">
+    Respuestas breves para responsables de seguridad, brigadas, supervisión y capacitación.
+  </p>
+</header>
+
+<div class="faqGrid">
+  <article class="faqCard">
+    <h3 class="faqCard__q">¿Qué empresas deben cumplir la NOM-002-STPS?</h3>
+    <p class="faqCard__a">
+      Aplica a los centros de trabajo donde existan condiciones que requieran medidas de prevención y protección contra incendios, conforme al riesgo y características de la operación.
+    </p>
+  </article>
+
+  <article class="faqCard">
+    <h3 class="faqCard__q">¿La NOM-002 exige brigada contra incendio?</h3>
+    <p class="faqCard__a">
+      Depende del nivel de riesgo y de la organización del centro de trabajo, pero en la práctica es común que se revisen responsabilidades, capacitación, integración operativa y evidencia.
+    </p>
+  </article>
+
+  <article class="faqCard">
+    <h3 class="faqCard__q">¿Cada cuánto deben realizarse simulacros?</h3>
+    <p class="faqCard__a">
+      La frecuencia depende del contexto operativo y del programa interno aplicable. Lo importante es que la ejecución sea verificable, evaluada y respaldada con evidencia.
+    </p>
+  </article>
+
+  <article class="faqCard">
+    <h3 class="faqCard__q">¿El curso puede incluir constancia DC-3?</h3>
+    <p class="faqCard__a">
+      Sí, puede contemplarse constancia DC-3 y evaluación según alcance, modalidad, perfil de participantes y condiciones previamente acordadas.
+    </p>
+  </article>
+
+  <article class="faqCard">
+    <h3 class="faqCard__q">¿Qué evidencia suele pedirse en auditoría o inspección?</h3>
+    <p class="faqCard__a">
+      Normalmente se revisan registros, listas, evidencia de simulacros, integración operativa, acciones correctivas, control documental y condiciones físicas en planta.
+    </p>
+  </article>
+
+  <article class="faqCard">
+    <h3 class="faqCard__q">¿El checklist sustituye un diagnóstico técnico?</h3>
+    <p class="faqCard__a">
+      No. El checklist ayuda a una autoevaluación preliminar, pero no reemplaza una revisión técnica específica del centro de trabajo ni el criterio profesional por área y riesgo.
+    </p>
+  </article>
+</div>
 
           <div class="ctaInline" style="margin-top: 16px">
             <div>
