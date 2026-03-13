@@ -31,10 +31,7 @@
     <meta name="author" content="Boxfox1" />
     <meta name="copyright" content="Boxfox1" />
 
-    <link
-      rel="canonical"
-      href="https://servicios.boxfox1.com/diagnostico/"
-    />
+    <link rel="canonical" href="https://servicios.boxfox1.com/diagnostico/" />
     <link
       rel="alternate"
       hreflang="es-MX"
@@ -473,17 +470,17 @@
             </h1>
 
             <p class="lead heroLine__sub">
-              Diagnóstico inicial para definir alcance NOM aplicable,
-              prioridades por riesgo, brigadas sugeridas y evidencia mínima para
-              auditoría. Empieza con el sistema y aterriza la ruta para tu
-              operación.
+              Diagnóstico de cumplimiento NOM-STPS para empresas en México,
+              inicial para definir alcance NOM aplicable, prioridades por riesgo,
+              brigadas sugeridas y evidencia mínima para auditoría. Empieza con
+              el sistema y aterriza la ruta para tu operación.
             </p>
 
             <div class="hero__actions">
               <a class="btn btn--tab" href="#evaluamos">Qué evaluamos</a>
               <a class="btn btn--tab" href="#incluye">Qué incluye</a>
               <a class="btn btn--tab" href="#metodo">Metodología</a>
-              <a class="btn btn--cta" href="#sistema">Ir a diagnóstico</a>
+              <a class="btn btn--cta" href="#sistema">Abrir sistema</a>
             </div>
           </div>
         </div>
@@ -512,7 +509,9 @@
                   EHS)
                 </li>
                 <li>Alcance NOM-STPS aplicable por giro y procesos</li>
-                <li>Brigadas y respuesta a emergencias por nivel de exposición</li>
+                <li>
+                  Brigadas y respuesta a emergencias por nivel de exposición
+                </li>
                 <li>Documentación mínima y evidencia para auditoría</li>
                 <li>Capacitación requerida por rol (DC-3 según aplique)</li>
                 <li>Prioridades por criticidad (impacto / probabilidad)</li>
@@ -588,7 +587,7 @@
                   "
                 >
                   Nota: La aplicabilidad depende de procesos, sustancias,
-                  energía, alturas, presión, espacios confinados, maquinaria,
+                  energía, alturas, espacios confinados, maquinaria,
                   almacenamiento y nivel de riesgo.
                 </div>
               </div>
@@ -664,7 +663,11 @@
         </div>
       </section>
 
-      <section id="sistema" class="seccion seccion--alt" aria-label="Sistema de diagnóstico">
+      <section
+        id="sistema"
+        class="seccion seccion--alt"
+        aria-label="Sistema de diagnóstico"
+      >
         <div class="wrap">
           <header class="seccion__head">
             <div class="label">SISTEMA OPERATIVO</div>
@@ -691,7 +694,12 @@
                 <div class="diagGrid">
                   <div class="diagField diagField--full">
                     <label class="diagLabel" for="giro">Giro / sector</label>
-                    <select class="diagControl" id="giro" name="giro">
+                    <select
+                      class="diagControl"
+                      id="giro"
+                      name="giro"
+                      autocomplete="organization-title"
+                    >
                       <option value="">Selecciona</option>
                       <option>Manufactura</option>
                       <option>Metal-mecánica</option>
@@ -713,6 +721,7 @@
                       class="diagControl"
                       id="personalTurno"
                       name="personalTurno"
+                      autocomplete="off"
                     >
                       <option value="">Selecciona</option>
                       <option>1 a 10</option>
@@ -725,7 +734,12 @@
 
                   <div class="diagField">
                     <label class="diagLabel" for="turnos">Turnos</label>
-                    <select class="diagControl" id="turnos" name="turnos">
+                    <select
+                      class="diagControl"
+                      id="turnos"
+                      name="turnos"
+                      autocomplete="off"
+                    >
                       <option value="">Selecciona</option>
                       <option>1 turno</option>
                       <option>2 turnos</option>
@@ -742,6 +756,7 @@
                       id="nombre"
                       name="nombre"
                       placeholder="Nombre"
+                      autocomplete="name"
                     />
                   </div>
 
@@ -753,6 +768,7 @@
                       id="empresa"
                       name="empresa"
                       placeholder="Empresa"
+                      autocomplete="organization"
                     />
                   </div>
 
@@ -767,6 +783,7 @@
                       name="whatsapp"
                       inputmode="numeric"
                       placeholder="WhatsApp (10 dígitos)"
+                      autocomplete="tel"
                     />
                   </div>
 
@@ -778,6 +795,7 @@
                       id="email"
                       name="email"
                       placeholder="Email (opcional)"
+                      autocomplete="email"
                     />
                   </div>
 
@@ -788,6 +806,7 @@
                       id="nota"
                       name="nota"
                       placeholder="Ej. inspección próxima, auditoría interna, cambios de layout, sustancias peligrosas, alturas, etc."
+                      autocomplete="off"
                     ></textarea>
                   </div>
                 </div>
@@ -841,7 +860,9 @@
               <div class="diagMeter">
                 <div class="diagMeter__top">
                   <span class="diagMeter__label">Estado del sistema</span>
-                  <span class="diagMeter__value" id="estadoSistemaValor">0%</span>
+                  <span class="diagMeter__value" id="estadoSistemaValor"
+                    >0%</span
+                  >
                 </div>
                 <div class="diagMeter__bar" aria-hidden="true">
                   <div class="diagMeter__fill" id="estadoSistemaBar"></div>
@@ -851,14 +872,16 @@
               <div class="diagResultBox">
                 <h4 class="diagResultBox__title">Resultado (resumen)</h4>
                 <div class="diagResultBox__body" id="resultadoResumen">
-                  Completa el checklist base y presiona “Generar resultado operativo”.
+                  Completa el checklist base y presiona “Generar resultado
+                  operativo”.
                 </div>
               </div>
 
               <div class="diagResultBox">
                 <h4 class="diagResultBox__title">Siguiente paso recomendado</h4>
                 <div class="diagResultBox__body" id="siguientePaso">
-                  Reunir información operativa y preparar visita o llamada de validación.
+                  Reunir información operativa y preparar visita o llamada de
+                  validación.
                 </div>
               </div>
             </aside>
@@ -1116,4 +1139,20 @@
         <div class="modal__actions">
           <button
             class="btn btn--primario"
-            type
+            type="button"
+            id="privacyAccept"
+            data-modal-close
+          >
+            Aceptar
+          </button>
+        </div>
+
+        <p class="muted" style="font-size: 12px; margin-top: 10px">
+          Origen: servicios.boxfox1.com/diagnostico/
+        </p>
+      </div>
+    </div>
+
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>

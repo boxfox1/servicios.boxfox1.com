@@ -464,37 +464,57 @@
   });
 })();
 
-document.getElementById("btnReporte").addEventListener("click", function () {
+(function () {
+  const btnReporte = document.getElementById("btnReporte");
+  if (!btnReporte) return;
 
-  const empresa = document.querySelector("input[name='empresa']").value;
-  const giro = document.querySelector("select[name='giro']").value;
-  const personal = document.querySelector("select[name='personal']").value;
-  const turnos = document.querySelector("select[name='turnos']").value;
+  btnReporte.addEventListener("click", function () {
+    const empresa = document.querySelector("input[name='empresa']")?.value || "";
+    const giro = document.querySelector("select[name='giro']")?.value || "";
+    const personal = document.querySelector("select[name='personal']")?.value || "";
+    const turnos = document.querySelector("select[name='turnos']")?.value || "";
 
-  const score = document.getElementById("scoreFinal").textContent;
+    const scoreEl = document.getElementById("scoreFinal");
+    const repEmpresa = document.getElementById("repEmpresa");
+    const repGiro = document.getElementById("repGiro");
+    const repPersonal = document.getElementById("repPersonal");
+    const repTurnos = document.getElementById("repTurnos");
+    const repScore = document.getElementById("repScore");
+    const reporte = document.getElementById("reporteBoxfox1");
 
-  document.getElementById("repEmpresa").textContent = empresa;
-  document.getElementById("repGiro").textContent = giro;
-  document.getElementById("repPersonal").textContent = personal;
-  document.getElementById("repTurnos").textContent = turnos;
-  document.getElementById("repScore").textContent = score;
+    if (
+      !scoreEl ||
+      !repEmpresa ||
+      !repGiro ||
+      !repPersonal ||
+      !repTurnos ||
+      !repScore ||
+      !reporte ||
+      typeof html2pdf !== "function"
+    ) {
+      return;
+    }
 
-  const reporte = document.getElementById("reporteBoxfox1");
+    repEmpresa.textContent = empresa;
+    repGiro.textContent = giro;
+    repPersonal.textContent = personal;
+    repTurnos.textContent = turnos;
+    repScore.textContent = scoreEl.textContent;
 
-  reporte.style.display = "block";
+    reporte.style.display = "block";
 
-  html2pdf()
-    .set({
-      margin: 10,
-      filename: "reporte-boxfox1-diagnostico.pdf",
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
-    })
-    .from(reporte)
-    .save()
-    .then(() => {
-      reporte.style.display = "none";
-    });
-
-});
+    html2pdf()
+      .set({
+        margin: 10,
+        filename: "reporte-boxfox1-diagnostico.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+      })
+      .from(reporte)
+      .save()
+      .then(() => {
+        reporte.style.display = "none";
+      });
+  });
+})();
