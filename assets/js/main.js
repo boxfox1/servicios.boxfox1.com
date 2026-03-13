@@ -160,6 +160,7 @@
 
   const nameMap = {
     stps: "STPS",
+    biblioteca: "Biblioteca",
     comercial: "Comercial",
     recursos: "Recursos",
     capacitacion: "Capacitación",
@@ -176,18 +177,12 @@
   };
 
   const pageMap = {
+    "industrial.html": "Industrial",
     "diagnostico-industrial.html": "Diagnóstico industrial",
     "documentacion-para-dc3.html": "Documentación para DC-3",
     "brigadas-por-tamano-o-giro.html": "Brigadas por tamaño o giro",
     "incidentes.html": "Incidentes",
     "reporte-de-incidentes.html": "Incidentes",
-    "nom-002.html": "NOM-002",
-    "nom-004.html": "NOM-004",
-    "nom-006.html": "NOM-006",
-    "nom-009.html": "NOM-009",
-    "nom-018.html": "NOM-018",
-    "nom-020.html": "NOM-020",
-    "nom-033.html": "NOM-033",
     "cursos-noms.html": "Cursos NOM-STPS",
     "cursos-para-la-industria.html": "Capacitación industrial",
     "ocupaciones-especificas.html": "Ocupaciones específicas",
@@ -199,6 +194,10 @@
   function prettifySlug(slug) {
     if (pageMap[slug]) return pageMap[slug];
     if (nameMap[slug]) return nameMap[slug];
+
+    if (/^nom-\d{3}\.html$/i.test(slug)) {
+      return slug.replace(/\.html$/i, "").toUpperCase();
+    }
 
     return slug
       .replace(/\.html$/, "")
@@ -464,3 +463,38 @@
     );
   });
 })();
+
+document.getElementById("btnReporte").addEventListener("click", function () {
+
+  const empresa = document.querySelector("input[name='empresa']").value;
+  const giro = document.querySelector("select[name='giro']").value;
+  const personal = document.querySelector("select[name='personal']").value;
+  const turnos = document.querySelector("select[name='turnos']").value;
+
+  const score = document.getElementById("scoreFinal").textContent;
+
+  document.getElementById("repEmpresa").textContent = empresa;
+  document.getElementById("repGiro").textContent = giro;
+  document.getElementById("repPersonal").textContent = personal;
+  document.getElementById("repTurnos").textContent = turnos;
+  document.getElementById("repScore").textContent = score;
+
+  const reporte = document.getElementById("reporteBoxfox1");
+
+  reporte.style.display = "block";
+
+  html2pdf()
+    .set({
+      margin: 10,
+      filename: "reporte-boxfox1-diagnostico.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+    })
+    .from(reporte)
+    .save()
+    .then(() => {
+      reporte.style.display = "none";
+    });
+
+});
