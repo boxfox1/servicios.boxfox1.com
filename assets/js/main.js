@@ -65,19 +65,19 @@
     });
   };
 
-$$("a[href^='#']").forEach((a) => {
-  a.addEventListener("click", (e) => {
-    const href = a.getAttribute("href");
-    if (!href || href === "#") return;
+  $$("a[href^='#']").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const href = a.getAttribute("href");
+      if (!href || href === "#") return;
 
-    const target = document.getElementById(href.slice(1));
-    if (!target) return;
+      const target = document.getElementById(href.slice(1));
+      if (!target) return;
 
-    e.preventDefault();
-    history.pushState(null, "", href);
-    goToHash(href);
+      e.preventDefault();
+      history.pushState(null, "", href);
+      goToHash(href);
+    });
   });
-});
 
   window.addEventListener("load", () => {
     if (location.hash) goToHash(location.hash);
@@ -159,7 +159,7 @@ $$("a[href^='#']").forEach((a) => {
   const parts = cleanPath.split("/").filter(Boolean);
 
   const nameMap = {
-    stps: "Industrial",
+    stps: "STPS",
     comercial: "Comercial",
     recursos: "Recursos",
     capacitacion: "Capacitación",
