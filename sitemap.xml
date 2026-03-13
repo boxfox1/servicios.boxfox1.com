@@ -113,6 +113,9 @@
 
 <!-- DIAGNOSTICO -->
 <url>
+<loc>https://servicios.boxfox1.com/diagnostico/</loc>
+</url>
+<url>
 <loc>https://servicios.boxfox1.com/diagnostico/industrial.html</loc>
 </url>
 
