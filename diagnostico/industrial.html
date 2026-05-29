@@ -128,8 +128,7 @@
         },
         "sameAs": [
           "https://www.linkedin.com/company/boxfox1industry",
-          "https://www.facebook.com/boxfox1industria",
-          "https://x.com/Boxfox1industry",
+
           "https://www.instagram.com/boxfox1.industry"
         ]
       }
@@ -787,27 +786,26 @@
             </div>
             <p class="lead heroLine__sub">
               Evaluación preliminar para revisar seguridad industrial,
-              cumplimiento NOM-STPS, brigadas, evidencia documental y condiciones
-              críticas de operación. Selecciona giro, tamaño y responde el
-              checklist para generar score, criticidad y acciones recomendadas.
+              cumplimiento NOM-STPS, brigadas, evidencia documental y
+              condiciones críticas de operación. Selecciona giro, tamaño y
+              responde el checklist para generar score, criticidad y acciones
+              recomendadas.
             </p>
 
             <div class="diagHeroMeta">
-              <span class="tag tag--soft">Evaluación preliminar automática</span>
+              <span class="tag tag--soft"
+                >Evaluación preliminar automática</span
+              >
               <span class="tag tag--soft">Tiempo estimado: 3–5 min</span>
               <span class="tag tag--soft">Sin registro obligatorio</span>
             </div>
 
             <div class="hero__actions" style="margin-top: 12px">
-              <a class="btn btn--tab" href="/stps/brigadas/"
-                >Ver brigadas</a
-              >
+              <a class="btn btn--tab" href="/stps/brigadas/">Ver brigadas</a>
               <a class="btn btn--tab" href="/stps/biblioteca/"
                 >Ver biblioteca STPS</a
               >
-              <a class="btn btn--tab" href="/reportes/"
-                >Ver reportes</a
-              >
+              <a class="btn btn--tab" href="/reportes/">Ver reportes</a>
               <a class="btn btn--cta" href="/contacto.html">
                 Hablar con un consultor
               </a>
@@ -831,8 +829,9 @@
             <article class="diagCard">
               <h2 class="h2" style="margin-top: 0">Diagnóstico industrial</h2>
               <p class="p">
-                Selecciona giro y personal simultáneo por turno. Después responde
-                el checklist por categoría para obtener un resultado preliminar.
+                Selecciona giro y personal simultáneo por turno. Después
+                responde el checklist por categoría para obtener un resultado
+                preliminar.
               </p>
 
               <div class="fieldLabel">Giro / Sector</div>
@@ -995,7 +994,8 @@
               <div id="resultado" class="outBox" style="margin-top: 14px">
                 <div class="outTitle">Resultado (resumen)</div>
                 <div class="small">
-                  Completa el checklist y presiona “Generar resultado operativo”.
+                  Completa el checklist y presiona “Generar resultado
+                  operativo”.
                 </div>
               </div>
 
@@ -1007,7 +1007,9 @@
               </div>
 
               <div class="diagLegend">
-                <div class="outTitle" style="margin-bottom: 0">Lectura del resultado</div>
+                <div class="outTitle" style="margin-bottom: 0">
+                  Lectura del resultado
+                </div>
                 <div class="diagLegend__row">
                   <span class="pill pill--g">80–100% · Condición sólida</span>
                   <span class="pill pill--y">60–79% · Atención media</span>
@@ -1150,34 +1152,6 @@
 
                 <a
                   class="iconlink"
-                  href="https://www.facebook.com/boxfox1industria/"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Facebook"
-                >
-                  <img
-                    src="/assets/img/icons/facebook.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-
-                <a
-                  class="iconlink"
-                  href="https://x.com/Boxfox1industry"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="X"
-                >
-                  <img
-                    src="/assets/img/icons/x.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-
-                <a
-                  class="iconlink"
                   href="https://www.instagram.com/boxfox1.industry/"
                   target="_blank"
                   rel="noopener"
@@ -1246,14 +1220,19 @@
         <div class="reportDoc__box">
           <h3>Contexto operativo</h3>
           <p><strong>Giro:</strong> <span id="repGiro">—</span></p>
-          <p><strong>Personal por turno:</strong> <span id="repPersonal">—</span></p>
+          <p>
+            <strong>Personal por turno:</strong> <span id="repPersonal">—</span>
+          </p>
           <p><strong>Turnos:</strong> <span id="repTurnos">—</span></p>
           <p><strong>Fecha:</strong> <span id="repFecha">—</span></p>
         </div>
 
         <div class="reportDoc__box">
           <h3>Resultado preliminar</h3>
-          <p><strong>Índice de cumplimiento:</strong> <span id="repScore">0%</span></p>
+          <p>
+            <strong>Índice de cumplimiento:</strong>
+            <span id="repScore">0%</span>
+          </p>
           <p><strong>Riesgo:</strong> <span id="repRisk">—</span></p>
           <p><strong>Prioridad:</strong> <span id="repPriority">—</span></p>
         </div>
@@ -1262,8 +1241,8 @@
           <h3>Estado del sistema</h3>
           <p id="repStatus">Preparando análisis…</p>
           <p class="reportDoc__muted">
-            Este resultado es preliminar y depende de la información capturada en
-            el sistema.
+            Este resultado es preliminar y depende de la información capturada
+            en el sistema.
           </p>
         </div>
 
@@ -1418,16 +1397,20 @@
           const getText = (id) =>
             (document.getElementById(id)?.textContent || "").trim() || "—";
 
-          document.getElementById("repEmpresa").textContent = getValue("company");
+          document.getElementById("repEmpresa").textContent =
+            getValue("company");
           document.getElementById("repNombre").textContent = getValue("name");
-          document.getElementById("repTelefono").textContent = getValue("phone");
+          document.getElementById("repTelefono").textContent =
+            getValue("phone");
           document.getElementById("repEmail").textContent = getValue("email");
           document.getElementById("repNota").textContent = getValue("nota");
-          document.getElementById("repScore").textContent = getText("scoreFinal");
+          document.getElementById("repScore").textContent =
+            getText("scoreFinal");
           document.getElementById("repRisk").textContent = getText("riskTxt");
           document.getElementById("repPriority").textContent =
             getText("priorityTxt");
-          document.getElementById("repStatus").textContent = getText("statusTxt");
+          document.getElementById("repStatus").textContent =
+            getText("statusTxt");
 
           const giroSel = document.getElementById("giro");
           const personalSel = document.getElementById("turnoCount");
@@ -1449,7 +1432,10 @@
               minute: "2-digit",
             });
 
-          setListFromHtml(document.getElementById("noms"), document.getElementById("repNoms"));
+          setListFromHtml(
+            document.getElementById("noms"),
+            document.getElementById("repNoms"),
+          );
           setListFromHtml(
             document.getElementById("brigadas"),
             document.getElementById("repBrigadas"),
